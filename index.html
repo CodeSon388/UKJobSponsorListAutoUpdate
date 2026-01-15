@@ -243,7 +243,11 @@
     <div class="container">
         <header>
             <h1>UK Sponsor Register Tracker</h1>
-            <p id="last-updated" class="updated-text">Loading...</p>
+            <div
+                style="display: flex; gap: 1.5rem; color: var(--text-secondary); font-size: 0.9rem; align-items: center;">
+                <p><strong>Created:</strong> 2026-01-15</p>
+                <p id="last-updated">Loading...</p>
+            </div>
         </header>
 
         <!-- Key Metrics -->
@@ -360,7 +364,7 @@
                 const data = await response.json();
 
                 // Update text metrics
-                document.getElementById('last-updated').textContent = `Last Updated: ${data.generated_at}`;
+                document.getElementById('last-updated').innerHTML = `<strong>Last Updated:</strong> ${data.generated_at}`;
                 document.getElementById('total-active').textContent = data.daily_metrics.total_active_sponsors.toLocaleString();
                 document.getElementById('added-today').textContent = `+${data.daily_metrics.added_today}`;
                 document.getElementById('removed-today').textContent = `-${data.daily_metrics.removed_today}`;

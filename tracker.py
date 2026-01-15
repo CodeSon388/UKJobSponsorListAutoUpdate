@@ -161,8 +161,9 @@ def generate_stats(master_df, added_count, removed_count):
     if "Town/City" in active_df.columns:
         active_df["Town/City"] = active_df["Town/City"].astype(str).fillna("").str.strip().str.title()
     
+    # Use UTC for standard server time
     stats = {
-        "generated_at": today,
+        "generated_at": datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC'),
         "daily_metrics": {
             "added_today": added_count,
             "removed_today": removed_count,
