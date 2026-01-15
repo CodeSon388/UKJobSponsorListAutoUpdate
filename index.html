@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Sponsor Register Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --accent: #3b82f6;
+            --danger: #ef4444;
+            --success: #10b981;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .updated-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .metric-title {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+        }
+
+        .metric-value.success {
+            color: var(--success);
+        }
+
+        .metric-value.danger {
+            color: var(--danger);
+        }
+
+        .metric-value.accent {
+            color: var(--accent);
+        }
+
+        .charts-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        .badge {
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-new {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+
+        .badge-removed {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>UK Sponsor Register Tracker</h1>
+            <p id="last-updated" class="updated-text">Loading...</p>
+        </header>
+
+        <!-- Key Metrics -->
+        <div class="grid">
+            <div class="card">
+                <div class="metric-title">Active Sponsors</div>
+                <div id="total-active" class="metric-value accent">-</div>
+            </div>
+            <div class="card">
+                <div class="metric-title">Added Today</div>
+                <div id="added-today" class="metric-value success">-</div>
+            </div>
+            <div class="card">
+                <div class="metric-title">Removed Today</div>
+                <div id="removed-today" class="metric-value danger">-</div>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="charts-section">
+            <div class="card">
+                <h3>Top 5 Routes</h3>
+                <div class="chart-container">
+                    <canvas id="routesChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Top 5 Cities</h3>
+                <div class="chart-container">
+                    <canvas id="citiesChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Top 5 Ratings</h3>
+                <div class="chart-container">
+                    <canvas id="ratingsChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lists -->
+        <div class="grid">
+            <div class="card">
+                <h3>Recently Added (Last 7 Days)</h3>
+                <div style="overflow-x: auto;">
+                    <table id="added-table">
+                        <thead>
+                            <tr>
+                                <th>Organisation</th>
+                                <th>City</th>
+                                <th>Route</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Recently Removed (Last 14 Days)</h3>
+                <div style="overflow-x: auto;">
+                    <table id="removed-table">
+                        <thead>
+                            <tr>
+                                <th>Organisation</th>
+                                <th>City</th>
+                                <th>Route</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function loadStats() {
+            try {
+                const response = await fetch('stats.json');
+                const data = await response.json();
+
+                // Update text metrics
+                document.getElementById('last-updated').textContent = `Last Updated: ${data.generated_at}`;
+                document.getElementById('total-active').textContent = data.daily_metrics.total_active_sponsors.toLocaleString();
+                document.getElementById('added-today').textContent = `+${data.daily_metrics.added_today}`;
+                document.getElementById('removed-today').textContent = `-${data.daily_metrics.removed_today}`;
+
+                // Render Charts
+                renderChart('routesChart', data.rankings.top_routes, 'Sponsors per Route');
+                renderChart('citiesChart', data.rankings.top_cities, 'Sponsors per City');
+                renderChart('ratingsChart', data.rankings.top_ratings, 'Sponsors per Rating');
+
+                // Render Tables
+                renderTable('added-table', data.recency.added_last_7_days, 'first_seen');
+                renderTable('removed-table', data.recency.removed_last_14_days, 'removed_date');
+
+            } catch (error) {
+                console.error('Error loading stats:', error);
+                document.getElementById('last-updated').textContent = 'Error loading data. Please check console.';
+            }
+        }
+
+        function renderChart(elementId, dataObj, label) {
+            const ctx = document.getElementById(elementId).getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(dataObj),
+                    datasets: [{
+                        label: label,
+                        data: Object.values(dataObj),
+                        backgroundColor: '#3b82f6',
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        function renderTable(tableId, dataList, dateField) {
+            const tbody = document.querySelector(`#${tableId} tbody`);
+            tbody.innerHTML = '';
+
+            dataList.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item['Organisation Name']}</td>
+                    <td>${item['Town/City']}</td>
+                    <td><span class="badge badge-new">${item.Route}</span></td>
+                    <td>${item[dateField]}</td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            if (dataList.length === 0) {
+                const row = document.createElement('tr');
+                row.innerHTML = '<td colspan="4" style="text-align:center; color: #aaa;">No Recent Changes</td>';
+                tbody.appendChild(row);
+            }
+        }
+
+        loadStats();
+    </script>
+</body>
+
+</html>

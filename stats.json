@@ -1,0 +1,40 @@
+{
+    "generated_at": "2026-01-15",
+    "daily_metrics": {
+        "added_today": 139552,
+        "removed_today": 0,
+        "total_active_sponsors": 139552
+    },
+    "categorical_totals": {
+        "unique_organisations": 124920,
+        "unique_cities": 6225,
+        "unique_routes": 17
+    },
+    "rankings": {
+        "top_routes": {
+            "Skilled Worker": 119983,
+            "Global Business Mobility: Senior or Specialist Worker": 10263,
+            "Tier 2 Ministers of Religion": 1836,
+            "Creative Worker": 1557,
+            "Charity Worker": 1500
+        },
+        "top_cities": {
+            "London": 42454,
+            "Birmingham": 3299,
+            "Manchester": 3077,
+            "Leicester": 1481,
+            "Glasgow": 1452
+        },
+        "top_ratings": {
+            "Worker (A rating)": 133885,
+            "Temporary Worker (A rating)": 5478,
+            "Worker (UK Expansion Worker: Provisional)": 163,
+            "Worker (B rating)": 18,
+            "Worker (A (Premium))": 4
+        }
+    },
+    "recency": {
+        "added_last_7_days": [],
+        "removed_last_14_days": []
+    }
+}

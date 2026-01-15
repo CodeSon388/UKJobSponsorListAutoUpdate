@@ -1,0 +1,24 @@
+# Python internals
+__pycache__/
+*.pyc
+
+# Virtual Environments
+venv/
+.venv/
+env/
+
+# Environment Variables (Protect Secrets)
+.env
+.env.local
+
+# IDE Settings (Personal preferences)
+.vscode/
+.idea/
+
+# OS System Files
+.DS_Store
+Thumbs.db
+
+# NOTE: We DO NOT ignore 'master_register.csv' or 'stats.json' below.
+# These act as your database and must be committed for the automation 
+# to calculate history and for the Dashboard to display data.
