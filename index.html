@@ -6,7 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UK Sponsor Register Tracker</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     <style>
+        /* New Table Styles */
+        .data-section {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 1rem;
+            min-width: 200px;
+        }
+
+        .table-container {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .full-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .full-table th,
+        .full-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .full-table th {
+            background-color: #f9fafb;
+            cursor: pointer;
+            user-select: none;
+            font-weight: 600;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
+        .full-table th:hover {
+            background-color: #f3f4f6;
+        }
+
+        .full-table th.sort-asc::after {
+            content: " ▲";
+            font-size: 0.8em;
+        }
+
+        .full-table th.sort-desc::after {
+            content: " ▼";
+            font-size: 0.8em;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid #d1d5db;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background-color: #f3f4f6;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .loading-overlay {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+        }
+
         :root {
             --bg-color: #f3f4f6;
             --card-bg: #ffffff;
@@ -220,6 +319,38 @@
                 </div>
             </div>
         </div>
+
+        <!-- Full Data Table -->
+        <div class="data-section">
+            <h2>Full Sponsor Register</h2>
+            <div class="controls">
+                <input type="text" id="searchInput" class="search-input"
+                    placeholder="Search by Company, City, or Route...">
+            </div>
+            <div class="table-container">
+                <div id="tableLoading" class="loading-overlay">Loading full register data (this may take a moment)...
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="full-table" id="mainTable" style="display: none;">
+                        <thead>
+                            <tr>
+                                <th data-sort="Organisation Name">Organisation Name</th>
+                                <th data-sort="Town/City">Town/City</th>
+                                <th data-sort="Route">Route</th>
+                                <th data-sort="Type & Rating">Rating</th>
+                                <th data-sort="first_seen">First Seen</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                </div>
+                <div class="pagination" id="paginationControls" style="display: none;">
+                    <button class="btn" id="prevBtn" onclick="changePage(-1)">Previous</button>
+                    <span id="pageInfo">Page 1 of -</span>
+                    <button class="btn" id="nextBtn" onclick="changePage(1)">Next</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -297,7 +428,102 @@
             }
         }
 
+        // --- Full Data Table Logic ---
+        let allSponsors = [];
+        let filteredSponsors = [];
+        let currentPage = 1;
+        const itemsPerPage = 15;
+        let currentSort = { field: 'Organisation Name', dir: 'asc' };
+
+        function loadFullData() {
+            Papa.parse('master_register.csv', {
+                download: true,
+                header: true,
+                skipEmptyLines: true,
+                complete: function (results) {
+                    allSponsors = results.data.filter(row => !row.removed_date);
+                    applyFilter();
+                    document.getElementById('tableLoading').style.display = 'none';
+                    document.getElementById('mainTable').style.display = 'table';
+                    document.getElementById('paginationControls').style.display = 'flex';
+                },
+                error: function (err) {
+                    console.error("Error parsing CSV:", err);
+                    document.getElementById('tableLoading').textContent = "Error loading data file.";
+                }
+            });
+        }
+
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            applyFilter(e.target.value);
+        });
+
+        function applyFilter(searchTerm = "") {
+            const term = searchTerm.toLowerCase();
+            filteredSponsors = allSponsors.filter(item => {
+                return (
+                    (item['Organisation Name'] && item['Organisation Name'].toLowerCase().includes(term)) ||
+                    (item['Town/City'] && item['Town/City'].toLowerCase().includes(term)) ||
+                    (item['Route'] && item['Route'].toLowerCase().includes(term))
+                );
+            });
+            sortData(currentSort.field, currentSort.dir, false);
+            currentPage = 1;
+            renderMainTable();
+        }
+
+        document.querySelectorAll('.full-table th[data-sort]').forEach(th => {
+            th.addEventListener('click', () => {
+                const field = th.dataset.sort;
+                const dir = (currentSort.field === field && currentSort.dir === 'asc') ? 'desc' : 'asc';
+                sortData(field, dir);
+            });
+        });
+
+        function sortData(field, dir, reRender = true) {
+            currentSort = { field, dir };
+            document.querySelectorAll('.full-table th').forEach(th => {
+                th.classList.remove('sort-asc', 'sort-desc');
+                if (th.dataset.sort === field) th.classList.add(dir === 'asc' ? 'sort-asc' : 'sort-desc');
+            });
+            filteredSponsors.sort((a, b) => {
+                const valA = (a[field] || "").toString().toLowerCase();
+                const valB = (b[field] || "").toString().toLowerCase();
+                if (valA < valB) return dir === 'asc' ? -1 : 1;
+                if (valA > valB) return dir === 'asc' ? 1 : -1;
+                return 0;
+            });
+            if (reRender) renderMainTable();
+        }
+
+        function renderMainTable() {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            filteredSponsors.slice(start, end).forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td>${item['Organisation Name'] || '-'}</td><td>${item['Town/City'] || '-'}</td><td>${item['Route'] || '-'}</td><td>${item['Type & Rating'] || '-'}</td><td>${item['first_seen'] || '-'}</td>`;
+                tbody.appendChild(row);
+            });
+            if (filteredSponsors.length === 0) tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding: 2rem;">No matching records found</td></tr>';
+            const totalPages = Math.ceil(filteredSponsors.length / itemsPerPage);
+            document.getElementById('pageInfo').textContent = `Page ${currentPage} of ${totalPages || 1}`;
+            document.getElementById('prevBtn').disabled = currentPage === 1;
+            document.getElementById('nextBtn').disabled = currentPage >= totalPages;
+        }
+
+        function changePage(delta) {
+            const totalPages = Math.ceil(filteredSponsors.length / itemsPerPage);
+            const newPage = currentPage + delta;
+            if (newPage >= 1 && newPage <= totalPages) {
+                currentPage = newPage;
+                renderMainTable();
+            }
+        }
+
         loadStats();
+        loadFullData();
     </script>
 </body>
 
