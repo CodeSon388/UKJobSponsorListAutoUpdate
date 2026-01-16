@@ -14,6 +14,7 @@ GOV_UK_URL = "https://www.gov.uk/government/publications/register-of-licensed-sp
 MASTER_FILE = "master_register.csv"
 STATS_FILE = "stats.json"
 HISTORY_FILE = "history.json"
+DELTA_FILE = "daily_delta.json"
 
 def get_csv_url():
     """Scrapes the GOV.UK page to find the latest CSV download link and extracts the date."""
@@ -162,7 +163,11 @@ def update_master_register(new_df, file_date):
     logging.info(f"Saving {MASTER_FILE}...")
     master_df.to_csv(MASTER_FILE, index=False)
     
-    return master_df, len(added_ids), len(removed_ids)
+    # Extract dataframes for delta API
+    added_df = master_df[master_df['id'].isin(added_ids)].copy()
+    removed_df = master_df[(master_df['id'].isin(removed_ids)) & (master_df['removed_date'] == today)].copy()
+    
+    return master_df, added_df, removed_df
 
 def generate_stats(master_df, added_count, removed_count):
     """Generates statistics from the master register."""
@@ -264,15 +269,31 @@ def update_history_log(added_count, removed_count, total_active):
         json.dump(history_data, f, indent=4)
     logging.info(f"Updated {HISTORY_FILE}")
 
+def generate_daily_delta(added_df, removed_df, file_date):
+    """Generates a tiny JSON file containing only today's changes."""
+    delta = {
+        "date": file_date,
+        "added": added_df[['Organisation Name', 'Town/City', 'Route', 'Type & Rating', 'first_seen']].to_dict('records'),
+        "removed": removed_df[['Organisation Name', 'Town/City', 'Route', 'Type & Rating', 'removed_date']].to_dict('records')
+    }
+    
+    with open(DELTA_FILE, 'w') as f:
+        json.dump(delta, f, indent=4)
+    logging.info(f"Generated {DELTA_FILE}")
+
 def main():
     try:
         csv_url, file_date = get_csv_url()
         new_df = download_csv(csv_url)
-        master_df, added, removed = update_master_register(new_df, file_date)
+        master_df, added_df, removed_df = update_master_register(new_df, file_date)
+        
+        added_count = len(added_df)
+        removed_count = len(removed_df)
         active_count = len(master_df[master_df['removed_date'].isna()])
         
-        generate_stats(master_df, added, removed)
-        update_history_log(added, removed, active_count)
+        generate_stats(master_df, added_count, removed_count)
+        update_history_log(added_count, removed_count, active_count)
+        generate_daily_delta(added_df, removed_df, file_date)
         
         print("Tracker run completed successfully.")
         
