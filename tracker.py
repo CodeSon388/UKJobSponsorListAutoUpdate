@@ -163,16 +163,17 @@ def update_master_register(new_df, file_date):
     logging.info(f"Saving {MASTER_FILE}...")
     master_df.to_csv(MASTER_FILE, index=False)
     
-    # Extract dataframes for delta API
-    added_df = master_df[master_df['id'].isin(added_ids)].copy()
-    removed_df = master_df[(master_df['id'].isin(removed_ids)) & (master_df['removed_date'] == today)].copy()
-    
-    return master_df, added_df, removed_df
+    return master_df, file_date
 
-def generate_stats(master_df, added_count, removed_count):
+def generate_stats(master_df, file_date):
     """Generates statistics from the master register."""
     
-    today = datetime.now().strftime('%Y-%m-%d')
+    # Calculate daily counts from Master (Cumulative for the date)
+    added_today_df = master_df[master_df['first_seen'] == file_date]
+    removed_today_df = master_df[master_df['removed_date'] == file_date]
+    added_count = len(added_today_df)
+    removed_count = len(removed_today_df)
+
     active_df = master_df[master_df['removed_date'].isna()].copy()
     
     # Ensure standard casing for stats (even if master has inconsistencies)
@@ -198,35 +199,30 @@ def generate_stats(master_df, added_count, removed_count):
             "top_ratings": active_df['Type & Rating'].value_counts().head(5).to_dict()
         },
         "recency": {
-            "added_last_7_days": [], # To be populated
-            "removed_last_14_days": [] # To be populated
+            "added_last_7_days": [], 
+            "removed_last_14_days": [] 
         }
     }
     
-    # Recency Lists
-    # Added last 7 days
-    # Need to convert dates to datetime objects for comparison
+    # Recency Lists Logic
     master_df['first_seen_dt'] = pd.to_datetime(master_df['first_seen'], errors='coerce')
     master_df['removed_date_dt'] = pd.to_datetime(master_df['removed_date'], errors='coerce')
     
-    # Day 1 Logic: If we added > 90% of the total database today, assume it's Day 1 and don't list them all.
-    if added_count > (len(active_df) * 0.9):
+    # Use baseline date for comparison logic
+    if added_count > (len(active_df) * 0.9) and file_date == "2026-01-15":
         logging.info("Bulk import detected (Day 1). Skipping 'Added Last 7 Days' list to avoid UI clutter.")
         stats['recency']['added_last_7_days'] = []
     else:
         recent_added = master_df[
-            (master_df['first_seen_dt'] >= (pd.Timestamp(today) - pd.Timedelta(days=7))) & 
-            (master_df['first_seen'] != "2026-01-15") & # Exclude baseline bulk import
-            (master_df['removed_date'].isna()) # Only show active ones as "recently added"
+            (master_df['first_seen_dt'] >= (pd.Timestamp(file_date) - pd.Timedelta(days=7))) & 
+            (master_df['first_seen'] != "2026-01-15") & 
+            (master_df['removed_date'].isna())
         ].sort_values('first_seen_dt', ascending=False)
-        # User requested "whole added list", so we removed .head(20)
-        # But we might cap it at a reasonable number (e.g. 1000) to prevent browser crash if accidental dump occurs
-        # For now, providing up to 1000 to be safe.
         stats['recency']['added_last_7_days'] = recent_added[['Organisation Name', 'Town/City', 'Route', 'first_seen']].head(1000).to_dict('records')
     
     recent_removed = master_df[
-        master_df['removed_date_dt'] >= (pd.Timestamp(today) - pd.Timedelta(days=14))
-    ].sort_values('removed_date_dt', ascending=False) # .head(20) removed per request
+        master_df['removed_date_dt'] >= (pd.Timestamp(file_date) - pd.Timedelta(days=14))
+    ].sort_values('removed_date_dt', ascending=False)
     
     stats['recency']['removed_last_14_days'] = recent_removed[['Organisation Name', 'Town/City', 'Route', 'removed_date']].to_dict('records')
 
@@ -234,9 +230,12 @@ def generate_stats(master_df, added_count, removed_count):
         json.dump(stats, f, indent=4)
     logging.info(f"Saved stats to {STATS_FILE}")
 
-def update_history_log(added_count, removed_count, total_active):
-    """Appends the daily stats to a persistent history file."""
-    today = datetime.now().strftime('%Y-%m-%d')
+def update_history_log(master_df, file_date):
+    """Appends the cumulative daily stats for file_date to a persistent history file."""
+    
+    added_count = len(master_df[master_df['first_seen'] == file_date])
+    removed_count = len(master_df[master_df['removed_date'] == file_date])
+    total_active = len(master_df[master_df['removed_date'].isna()])
     
     history_data = []
     if os.path.exists(HISTORY_FILE):
@@ -246,9 +245,7 @@ def update_history_log(added_count, removed_count, total_active):
         except:
              history_data = []
     
-    # Check if today already exists, if so update it, else append
-    # We use a dictionary for O(1) lookup if needed, but list is fine for small history
-    entry = next((item for item in history_data if item["date"] == today), None)
+    entry = next((item for item in history_data if item["date"] == file_date), None)
     
     if entry:
         entry["added"] = added_count
@@ -256,21 +253,23 @@ def update_history_log(added_count, removed_count, total_active):
         entry["total"] = total_active
     else:
         history_data.append({
-            "date": today,
+            "date": file_date,
             "added": added_count,
             "removed": removed_count,
             "total": total_active
         })
     
-    # Sort by date just in case
     history_data.sort(key=lambda x: x['date'])
     
     with open(HISTORY_FILE, 'w') as f:
         json.dump(history_data, f, indent=4)
     logging.info(f"Updated {HISTORY_FILE}")
 
-def generate_daily_delta(added_df, removed_df, file_date):
-    """Generates a tiny JSON file containing only today's changes."""
+def generate_daily_delta(master_df, file_date):
+    """Generates a tiny JSON file containing all changes for the given date."""
+    added_df = master_df[master_df['first_seen'] == file_date]
+    removed_df = master_df[master_df['removed_date'] == file_date]
+    
     delta = {
         "date": file_date,
         "added": added_df[['Organisation Name', 'Town/City', 'Route', 'Type & Rating', 'first_seen']].to_dict('records'),
@@ -285,15 +284,11 @@ def main():
     try:
         csv_url, file_date = get_csv_url()
         new_df = download_csv(csv_url)
-        master_df, added_df, removed_df = update_master_register(new_df, file_date)
+        master_df, data_date = update_master_register(new_df, file_date)
         
-        added_count = len(added_df)
-        removed_count = len(removed_df)
-        active_count = len(master_df[master_df['removed_date'].isna()])
-        
-        generate_stats(master_df, added_count, removed_count)
-        update_history_log(added_count, removed_count, active_count)
-        generate_daily_delta(added_df, removed_df, file_date)
+        generate_stats(master_df, data_date)
+        update_history_log(master_df, data_date)
+        generate_daily_delta(master_df, data_date)
         
         print("Tracker run completed successfully.")
         
