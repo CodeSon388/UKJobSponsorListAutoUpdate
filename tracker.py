@@ -13,6 +13,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 GOV_UK_URL = "https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers"
 MASTER_FILE = "master_register.csv"
 STATS_FILE = "stats.json"
+HISTORY_FILE = "history.json"
 
 def get_csv_url():
     """Scrapes the GOV.UK page to find the latest CSV download link."""
@@ -211,17 +212,55 @@ def generate_stats(master_df, added_count, removed_count):
     
     stats['recency']['removed_last_14_days'] = recent_removed[['Organisation Name', 'Town/City', 'Route', 'removed_date']].to_dict('records')
 
-    
     with open(STATS_FILE, 'w') as f:
         json.dump(stats, f, indent=4)
     logging.info(f"Saved stats to {STATS_FILE}")
+
+def update_history_log(added_count, removed_count, total_active):
+    """Appends the daily stats to a persistent history file."""
+    today = datetime.now().strftime('%Y-%m-%d')
+    
+    history_data = []
+    if os.path.exists(HISTORY_FILE):
+        try:
+            with open(HISTORY_FILE, 'r') as f:
+                history_data = json.load(f)
+        except:
+             history_data = []
+    
+    # Check if today already exists, if so update it, else append
+    # We use a dictionary for O(1) lookup if needed, but list is fine for small history
+    entry = next((item for item in history_data if item["date"] == today), None)
+    
+    if entry:
+        entry["added"] = added_count
+        entry["removed"] = removed_count
+        entry["total"] = total_active
+    else:
+        history_data.append({
+            "date": today,
+            "added": added_count,
+            "removed": removed_count,
+            "total": total_active
+        })
+    
+    # Sort by date just in case
+    history_data.sort(key=lambda x: x['date'])
+    
+    with open(HISTORY_FILE, 'w') as f:
+        json.dump(history_data, f, indent=4)
+    logging.info(f"Updated {HISTORY_FILE}")
 
 def main():
     try:
         csv_url = get_csv_url()
         new_df = download_csv(csv_url)
         master_df, added, removed = update_master_register(new_df)
+        active_count = len(master_df[master_df['removed_date'].isna()])
+        
         generate_stats(master_df, added, removed)
+        update_history_log(added, removed, active_count)
+        
         print("Tracker run completed successfully.")
         
     except Exception as e:

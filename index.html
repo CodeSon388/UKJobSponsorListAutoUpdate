@@ -324,6 +324,35 @@
             </div>
         </div>
 
+        <!-- History Trends -->
+        <div class="data-section">
+            <h2>History Trends (Past 14 Days)</h2>
+            <div class="grid" style="grid-template-columns: 2fr 1fr;">
+                <div class="card">
+                    <h3>Daily Added / Removed</h3>
+                    <div style="height: 300px; width: 100%;">
+                        <canvas id="historyChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>History Log</h3>
+                    <div style="overflow-y: auto; max-height: 300px;">
+                        <table class="full-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Added</th>
+                                    <th>Removed</th>
+                                    <th>Total Active</th>
+                                </tr>
+                            </thead>
+                            <tbody id="historyTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Full Data Table -->
         <div class="data-section">
             <h2>Full Sponsor Register</h2>
@@ -527,7 +556,73 @@
         }
 
         loadStats();
+        loadHistory();
         loadFullData();
+
+        async function loadHistory() {
+            try {
+                const response = await fetch('history.json');
+                const historyData = await response.json();
+
+                // 1. Render Table (Show newest first)
+                const tbody = document.getElementById('historyTableBody');
+                tbody.innerHTML = '';
+                // Clone and reverse for table display
+                [...historyData].reverse().forEach(day => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${day.date}</td>
+                        <td class="success">+${day.added}</td>
+                        <td class="danger">-${day.removed}</td>
+                        <td>${day.total.toLocaleString()}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+
+                // 2. Render Chart (Last 14 days)
+                const recentHistory = historyData.slice(-14);
+                const ctx = document.getElementById('historyChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: recentHistory.map(d => d.date),
+                        datasets: [
+                            {
+                                label: 'Added',
+                                data: recentHistory.map(d => d.added),
+                                borderColor: '#10b981',
+                                backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                                tension: 0.3,
+                                fill: true
+                            },
+                            {
+                                label: 'Removed',
+                                data: recentHistory.map(d => d.removed),
+                                borderColor: '#ef4444',
+                                backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                                tension: 0.3,
+                                fill: true
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        interaction: {
+                            mode: 'index',
+                            intersect: false,
+                        },
+                        scales: {
+                            y: { beginAtZero: true }
+                        }
+                    }
+                });
+
+            } catch (error) {
+                console.error("Error loading history:", error);
+                document.querySelector('#historyChart').parentNode.innerHTML = '<p style="text-align:center; padding:2rem; color:#aaa;">History data will appear here after the next run.</p>';
+            }
+        }
     </script>
 </body>
 
