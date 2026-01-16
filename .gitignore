@@ -19,6 +19,9 @@ env/
 .DS_Store
 Thumbs.db
 
-# NOTE: We DO NOT ignore 'master_register.csv' or 'stats.json' below.
-# These act as your database and must be committed for the automation 
-# to calculate history and for the Dashboard to display data.
+# Data Files (Managed by GitHub Actions)
+# We ignore these locally to prevent accidental push/overwrites.
+# The GitHub Action uses 'git add -f' to ensure they stay updated.
+master_register.csv
+stats.json
+history.json
