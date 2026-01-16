@@ -407,8 +407,8 @@
                 // Update text metrics
                 document.getElementById('last-updated').innerHTML = `<strong>Last Updated:</strong> ${data.generated_at}`;
                 document.getElementById('total-active').textContent = data.daily_metrics.total_active_sponsors.toLocaleString();
-                document.getElementById('added-today').textContent = `+${data.daily_metrics.added_today}`;
-                document.getElementById('removed-today').textContent = `-${data.daily_metrics.removed_today}`;
+                document.getElementById('added-today').textContent = `+${data.daily_metrics.added_today.toLocaleString()}`;
+                document.getElementById('removed-today').textContent = `-${data.daily_metrics.removed_today.toLocaleString()}`;
 
                 // Render Charts
                 renderChart('routesChart', data.rankings.top_routes, 'Sponsors per Route');
@@ -584,8 +584,8 @@
                     const row = document.createElement('tr');
                     row.innerHTML = `
                         <td>${day.date}</td>
-                        <td class="success">+${day.added}</td>
-                        <td class="danger">-${day.removed}</td>
+                        <td class="success">+${day.added.toLocaleString()}</td>
+                        <td class="danger">-${day.removed.toLocaleString()}</td>
                         <td>${day.total.toLocaleString()}</td>
                     `;
                     tbody.appendChild(row);

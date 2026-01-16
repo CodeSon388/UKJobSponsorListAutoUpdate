@@ -16,7 +16,7 @@ STATS_FILE = "stats.json"
 HISTORY_FILE = "history.json"
 
 def get_csv_url():
-    """Scrapes the GOV.UK page to find the latest CSV download link."""
+    """Scrapes the GOV.UK page to find the latest CSV download link and extracts the date."""
     try:
         logging.info(f"Fetching {GOV_UK_URL}...")
         response = requests.get(GOV_UK_URL)
@@ -24,15 +24,10 @@ def get_csv_url():
         
         soup = BeautifulSoup(response.content, 'html.parser')
         
-        # Look for the link - method 1: specific link text
-        # The link text is usually "Register of Worker and Temporary Worker licensed sponsors"
-        # but file name usually ends in .csv
-        
-        # Searching for 'Register of Worker and Temporary Worker licensed sponsors'
+        # Look for the link
         link = soup.find('a', string=lambda t: t and 'Register of Worker and Temporary Worker licensed sponsors' in t)
         
         if not link:
-             # Fallback: look for any href ending in .csv that looks relevant
              links = soup.find_all('a', href=True)
              for l in links:
                  if l['href'].lower().endswith('.csv') and 'worker' in l['href'].lower():
@@ -41,12 +36,27 @@ def get_csv_url():
         
         if link:
             url = link['href']
-            # Handle relative URLs if necessary (though usually they are absolute or protocol-relative)
             if not url.startswith('http'):
-                url = "https://www.gov.uk" + url # simple guess, mostly they are absolute on assets.publishing
+                url = "https://www.gov.uk" + url
             
             logging.info(f"Found CSV URL: {url}")
-            return url
+            
+            # Extract date from URL (e.g., .../2026-01-15_-_Worker_...)
+            # Default to today if extraction fails
+            extracted_date = datetime.now().strftime('%Y-%m-%d')
+            try:
+                # Common format: /YYYY-MM-DD_-_Worker...
+                filename = url.split('/')[-1]
+                # Regex or simple split might work. It usually starts with YYYY-MM-DD
+                possible_date = filename[:10]
+                # Validate it's a date
+                datetime.strptime(possible_date, '%Y-%m-%d')
+                extracted_date = possible_date
+                logging.info(f"Extracted date from filename: {extracted_date}")
+            except Exception as e:
+                logging.warning(f"Could not extract date from filename ({filename}), using today's date: {e}")
+
+            return url, extracted_date
         else:
             raise Exception("Could not find CSV link on the page.")
 
@@ -57,6 +67,7 @@ def get_csv_url():
 def download_csv(url):
     """Downloads the CSV content."""
     logging.info("Downloading CSV...")
+    # ... previous code ...
     response = requests.get(url)
     response.raise_for_status()
     return pd.read_csv(io.StringIO(response.content.decode('utf-8')))
@@ -85,10 +96,11 @@ def generate_unique_id(df):
     
     return df.apply(lambda row: f"{row['Organisation Name']}|{row['Town/City']}|{row['County']}|{row['Type & Rating']}|{row['Route']}", axis=1)
 
-def update_master_register(new_df):
+def update_master_register(new_df, file_date):
     """Updates the master register with new data."""
     
-    today = datetime.now().strftime('%Y-%m-%d')
+    # Use the File Date as the "Today" for data purposes
+    today = file_date
     new_df['id'] = generate_unique_id(new_df)
     
     # DEDUPLICATE: The government file sometimes has duplicate rows.
@@ -253,9 +265,9 @@ def update_history_log(added_count, removed_count, total_active):
 
 def main():
     try:
-        csv_url = get_csv_url()
+        csv_url, file_date = get_csv_url()
         new_df = download_csv(csv_url)
-        master_df, added, removed = update_master_register(new_df)
+        master_df, added, removed = update_master_register(new_df, file_date)
         active_count = len(master_df[master_df['removed_date'].isna()])
         
         generate_stats(master_df, added, removed)
