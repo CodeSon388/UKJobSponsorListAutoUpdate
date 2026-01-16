@@ -211,6 +211,7 @@ def generate_stats(master_df, added_count, removed_count):
     else:
         recent_added = master_df[
             (master_df['first_seen_dt'] >= (pd.Timestamp(today) - pd.Timedelta(days=7))) & 
+            (master_df['first_seen'] != "2026-01-15") & # Exclude the baseline bulk import
             (master_df['removed_date'].isna()) # Only show active ones as "recently added"
         ].sort_values('first_seen_dt', ascending=False)
         # User requested "whole added list", so we removed .head(20)
