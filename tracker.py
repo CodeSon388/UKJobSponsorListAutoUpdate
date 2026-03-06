@@ -218,13 +218,13 @@ def generate_stats(master_df, file_date):
             (master_df['first_seen'] != "2026-01-15") & 
             (master_df['removed_date'].isna())
         ].sort_values('first_seen_dt', ascending=False)
-        stats['recency']['added_last_7_days'] = recent_added[['Organisation Name', 'Town/City', 'Route', 'first_seen']].head(1000).to_dict('records')
+        stats['recency']['added_last_7_days'] = recent_added[['Organisation Name', 'Town/City', 'Route', 'first_seen']].head(1000).fillna("").to_dict('records')
     
     recent_removed = master_df[
         master_df['removed_date_dt'] >= (pd.Timestamp(file_date) - pd.Timedelta(days=14))
     ].sort_values('removed_date_dt', ascending=False)
     
-    stats['recency']['removed_last_14_days'] = recent_removed[['Organisation Name', 'Town/City', 'Route', 'removed_date']].to_dict('records')
+    stats['recency']['removed_last_14_days'] = recent_removed[['Organisation Name', 'Town/City', 'Route', 'removed_date']].fillna("").to_dict('records')
 
     with open(STATS_FILE, 'w') as f:
         json.dump(stats, f, indent=4)
@@ -272,8 +272,8 @@ def generate_daily_delta(master_df, file_date):
     
     delta = {
         "date": file_date,
-        "added": added_df[['Organisation Name', 'Town/City', 'Route', 'Type & Rating', 'first_seen']].to_dict('records'),
-        "removed": removed_df[['Organisation Name', 'Town/City', 'Route', 'Type & Rating', 'removed_date']].to_dict('records')
+        "added": added_df[['Organisation Name', 'Town/City', 'Route', 'Type & Rating', 'first_seen']].fillna("").to_dict('records'),
+        "removed": removed_df[['Organisation Name', 'Town/City', 'Route', 'Type & Rating', 'removed_date']].fillna("").to_dict('records')
     }
     
     with open(DELTA_FILE, 'w') as f:
