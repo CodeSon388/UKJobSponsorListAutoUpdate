@@ -1,5 +1,5 @@
 {
-    "generated_at": "2026-03-09 13:00:23 UTC",
+    "generated_at": "2026-03-09 18:51:49 UTC",
     "daily_metrics": {
         "added_today": 284,
         "removed_today": 286,
@@ -7,7 +7,7 @@
     },
     "categorical_totals": {
         "unique_organisations": 125543,
-        "unique_cities": 6266,
+        "unique_cities": 6265,
         "unique_routes": 17
     },
     "rankings": {
