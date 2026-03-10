@@ -1,3997 +1,756 @@
 {
-    "date": "2026-03-09",
+    "date": "2026-03-10",
     "added": [
         {
-            "Organisation Name": "Al Arsh Al Malaki Technical Services UK Ltd",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "BEHIND THE SCENE DECOR UK LIMITED 15234479",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "RAINBOW POLYCARBONATE INDUSTRY TRADE LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Saga D&B Trading and Contracting UK Ltd",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Addison Partners Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Adorn Information Technology Systems UK Limited",
-            "Town/City": "Kington",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ADVANCED TECHNOLOGY FOR INFORMATION SYSTEMS SOLUTIONS UK LIMITED (15373821)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AIM Advanced Mobility Ltd",
-            "Town/City": "Norwich",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Al Mustafa Welfare Trust International Ltd",
-            "Town/City": "Brentford",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Al Mustafa Welfare Trust International Ltd",
-            "Town/City": "Brentford",
-            "Route": "Creative Worker",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Al Mustafa Welfare Trust International Ltd",
-            "Town/City": "Brentford",
-            "Route": "Charity Worker",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Al Rehab Al Arabi Bldg. Contracting UK Ltd",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AL SHAMIKHA COPPER & SCRAP UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AL-NARGIS LANGLEY HALAL MEAT & SUPERSTORE LIMITED",
-            "Town/City": "Slough",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ALI TEXTILES GLOBAL LTD",
-            "Town/City": "Southall",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Allied Automation And Software Solutions Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ALMASAH FOOD INDUSTRY UK LTD 14314568",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AMAFCO BUILDING CONTRACTING LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AME PUBLISHING LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "APM Retail Group Ltd",
-            "Town/City": "Bilston",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AQL INTERNATIONAL LTD",
-            "Town/City": "Bolton",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AR EXPRESS IMPEX LTD",
-            "Town/City": "Woking,",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ARENS MANAGEMENT LIMITED T/A Arens Bar & Grill",
-            "Town/City": "Ruislip",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ARJAN ENGEERING CONSULTANTS UK LTD-14648180",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Art House Carpets UK Limited 15386847",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ASDI EQUIPMENT RENTAL AND TRADING LTD (15444604)",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Atlantic Pools & Fountains UK Ltd-15479617",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Atlas UAV Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Aura Energy UK Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Authentic Kare",
-            "Town/City": "Leicester",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Awal Al Nahar Used Cars and Spare Part Tr UK Ltd",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AWRAQ OFFICE SUPPLIES & TRADING UK LTD (15276148)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AYUELA JIMENEZ LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "B'IOTA LABORATORIES UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Bangladesh Islamic Social Organisation and Modina Mosque",
-            "Town/City": "Birmingham",
-            "Route": "Tier 2 Ministers of Religion",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Barney's Sarnies UK Ltd",
-            "Town/City": "West Midlands",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Barter Hill Partnership Limited",
-            "Town/City": "Takeley",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "BATAL VISION LIMITED",
-            "Town/City": "Uxbridge",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Baxall Construction Ltd",
-            "Town/City": "Paddock Wood",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "BEN AHMED EXPORT & IMPORT UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Berrylands Stores",
-            "Town/City": "Surbiton",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Blend International UK Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Bloom Trade Limited",
-            "Town/City": "Glasgow",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "BLOOM&SQUARE LONDON LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "BLUE MOUNTAIN GENERAL TRADING UK LTD",
-            "Town/City": "Leicester",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Bolder Academy Trust",
-            "Town/City": "Isleworth",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Brielle Healthcare Services LTD",
-            "Town/City": "Milton Keynes",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Brookvale",
-            "Town/City": "Manchester",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "BUONKEY GENERAL TRADING UK LTD (15422771)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Business and Service Solutions Ltd",
-            "Town/City": "Stockport",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "BUTT&JUTT ENTERPRISES LIMITED",
-            "Town/City": "Chadwell Heath",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "C.A. MCMILLAN FINE ARTS LIMITED",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "CDP PR LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "CENTURAY TECHNOLOGIES UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "CEYLEX UK PVT LTD",
-            "Town/City": "High Wycombe",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "CEYLON TEA SHOP (UK) LTD",
-            "Town/City": "Sheffield",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "CHEMIAA UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Chenai Hollistic Home Care Agency Ltd",
-            "Town/City": "Chelmsford",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "CHLOE'S BOOZE LIMITED",
-            "Town/City": "Bristol",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Citadel Health Management Consultancy UK  Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "CLUB SPORTS GROUP MASTER FRANCHISE LTD",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "COCONE UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "COMERCIAL INVESTMENT OF UK LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Consider Solutions Ltd",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "COROS WEARABLES UK LTD",
-            "Town/City": "Skipton",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "COROS WEARABLES UK LTD",
-            "Town/City": "Skipton",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Crescent Pharmacy",
-            "Town/City": "Romford",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "CZAR VENTURES UK LIMITED(15345211)",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "DARK4 UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "DENTASAY LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "DIAMOND EXPORT INDUSTRIES LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "DIRECTIT UK LIMITED",
-            "Town/City": "Berkhamsted",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "DISPLAYX UK LTD (15452945)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "DIVYA DELIGHTS LTD t/a Ben Lui Restaurant",
-            "Town/City": "Crianlarich",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Dmatics IT Solutions UK Ltd 14833334",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Docsville Studios Ltd",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "DONG HWA IND UK LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Dover Holdings UK Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "DR. FRIGZ LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "DUBLIN AUTO SPARE PARTS TRADING UK LTD (15489767)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Duress UK Limited",
-            "Town/City": "Beaconsfield",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Eagle for Metal Machinning UK Limited 15386164",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "East Harling Dental care Ltd",
-            "Town/City": "Norwich",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "EasyLogix Ltd",
-            "Town/City": "Barnet",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ECOBUILD GREEN BUILDING CONSULTANTS LIMITED",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ECT AVIATION SUPPORT LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "eLearnAfricaLMS UK Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Embassy of Azerbaijan",
-            "Town/City": "",
-            "Route": "International Agreement",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "End Cue UK Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Energetika Industries LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Energex Partners Limited",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Eredu S.Coop",
-            "Town/City": "Nottingham",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ESAS TOURISM LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Evenwood Cricket Club",
-            "Town/City": "Bishop Auckland",
-            "Route": "International Sportsperson",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Fabexi Trading UK LTD",
-            "Town/City": "Manchester",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Family Homecare Ltd",
-            "Town/City": "Chelmsford",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "FIDES BOX AND PACK LIMITED",
-            "Town/City": "Canterbury",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "FITMINDS STRATEGY CONSULTING LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "FORCE HIRE EQUIPMENT UK LTD",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Fortesium Ltd",
-            "Town/City": "Middlesex",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "FS GROUP ADVISORY LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "FS GROUP ADVISORY LIMITED",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Gaia Dining Limited t/a Gaia",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Ganghong International Group (UK) Limited",
-            "Town/City": "Tunbridge Wells",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Gem La Viva Jewellery UK Ltd",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "GENOMADIX UK",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "GGM Gastro UK Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "GRAND PHARMA UK LTD",
-            "Town/City": "Hatfield",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "GRAND SPACE INTERIORS UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "GREEN CODE TECHNOLOGIES LIMITED",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Green Spaces (Cornwall) Ltd",
-            "Town/City": "Penryn",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Grove Surgery Ltd",
-            "Town/City": "Penarth",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "GUARDIAN JET UK LIMITED",
-            "Town/City": "Worcestershire",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Gujrat Construction Limited",
-            "Town/City": "Manchester",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "GURKHA 19 RESTAURANT LTD",
-            "Town/City": "Sleaford",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "HappySignals UK Limited",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "HATKO SPORT UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Heritage Law (Norwich) Limited",
-            "Town/City": "Norwich",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "HILL Corporation UK",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Hindocha Pandit & Co Ltd",
-            "Town/City": "Middlesex",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "HJK General Trading UK Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Hotic Shoes Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Hypes SB UK Limited",
-            "Town/City": "Mildenhall",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Ickenham Cricket Club",
-            "Town/City": "Ickenham",
-            "Route": "International Sportsperson",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ICON Clinical (UK) Limited",
-            "Town/City": "Reading",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "IMAN RESOURCES LIMITED",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "IMPERIAL RECRUITMENT SOLUTION LIMITED",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Indigo Computer Consultancy Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Infinity Sports Management Ltd",
-            "Town/City": "Towcester",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Innoverv Global Solutions Ltd",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "INTEC ENERGY SOLUTIONS LIMITED",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "INVESTIMATE RESEARCH SERVICES LIMITED",
-            "Town/City": "Acton",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "IRON SOLUTIONS LIMITED",
-            "Town/City": "Norton",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ISTANBUL CYMBALS AND MUSIC COMPANY UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ITE UK HOLDING LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ITS 4 POINT OF SALE LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "IVI Motorway Services Limited T/A German Doner Kebab",
-            "Town/City": "Boxworth",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "JAFTIM CARS UK LIMITED (15377879)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Jama Jewels UK Ltd 15210141",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "JEMAR GROUP LTD",
-            "Town/City": "Edinburgh",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "JOHN WARE LIMITED",
-            "Town/City": "Somerset",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "JOHNSON AMOO CONSULTANCY LIMITED",
-            "Town/City": "Derby",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "JOLIE SKIN CO. UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "JSR FINANCIAL SERVICES LTD.",
-            "Town/City": "Harrow",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "JU AI HEALTH SOLUTIONS UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "KA & KI BATH LIMITED",
-            "Town/City": "Bristol",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Kaswa Trader Ltd t/a M&N Licenced Grocers",
-            "Town/City": "Falkirk",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "KGRN & CO. LIMITED-15223905",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Khan Homes (Scotland) Limited",
-            "Town/City": "Falkirk",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "KWM (UK) LIMITED",
-            "Town/City": "Cambridge",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "LANGSAM LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Lazure Worldwide UK Ltd",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Lead Intelligent Equipment (UK) Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Leader Development Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Leasytax Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "LEEDS AND CUBE RESOURCES UK LIMITED",
-            "Town/City": "Manchester",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "LEENA SHIPPING UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "LEGACY PILATES APPARATUS UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Lenwood Capital Ltd.",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "LETS DEEL (1) LTD",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "LETS DEEL LTD",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Level Civils Limited",
-            "Town/City": "Stoke On Trent",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Llansamlet Surgery",
-            "Town/City": "Swansea",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "LORENTZEN & STEMOCO (UK) LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Lumenis BE UK Ltd",
-            "Town/City": "High Wycombe",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "M A Trading International UK Ltd",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "M S Z CORPORATE SERVICES PROVIDER UK LTD 14856521",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MAALEM ENGINEERING UK LTD 15049644",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MADEENAT KHALIFA BUILDING MATERIAL TRADING UK LTD 15286572",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MAHRAN HYPER MARKET UK LTD",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Malaysian Rubber Council London",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MARA LABS UK LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MARA LABS UK LIMITED",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Matternet UK Ltd",
-            "Town/City": "Cheltenham",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MEDICOM DISTRIBUTION LIMITED (15544816)",
-            "Town/City": "Leicestershire",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Mefco Interiors Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Middleton Cricket Club",
-            "Town/City": "Manchester",
-            "Route": "International Sportsperson",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MILHAAN METALS LIMITED",
-            "Town/City": "Peterborough",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MILLENNIUM MINI MARKET LTD",
-            "Town/City": "Wallsend",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Mobi Garden London Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MOGIC (UK) LIMITED",
-            "Town/City": "Beckenham",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MORGANITE JEWELLERY LIMITED (16037266)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MOSAIIC DECOR UK LTD 15168940",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Motoalliance Limited",
-            "Town/City": "Edinburgh",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MQAS CARS LTD",
-            "Town/City": "Blackburn",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Mr Muhammad Saqib t/a Dumbarton Stores",
-            "Town/City": "Dumbarton",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MUHAMMAD ASIF AUTO SPARE PARTS UK LTD (14476760)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "N.K.F INDUSTRIES UK LTD",
-            "Town/City": "Southall",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "NASMA AUTOS UK LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "NATCOVER CONSULTANCY LIMITED",
-            "Town/City": "Perivale",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Naveed Retail Ltd t/a Spar Store",
-            "Town/City": "Perth",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Needham Market Dental practice",
-            "Town/City": "Needham Market Ipswich",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Nevaeh IT Ltd",
-            "Town/City": "Milton Keynes",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "NEW TOPIC LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Newdawn Support Services Ltd",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (B rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Newton Vision Corp (UK) Ltd",
-            "Town/City": "Christchurch",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "NIAZI E COMMERCE AND SERVICE PROVIDERS UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Nippon Jidosha International Limited",
-            "Town/City": "Sutton",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Noodlesta (Leeds) Limited",
-            "Town/City": "Leeds",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "NOURINA PROPERTIES LIMITED (15482520)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Oblige Care Services Ltd",
-            "Town/City": "Feltham",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Omusubi Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "OPTION FASHION UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Orderlion UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Outfitters Stores UK Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "OVERNIGHT OPS LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Oxiway Limited t/a MeVitae",
-            "Town/City": "Didcot",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "OZONE AMD LIMITED T/A OZONE RESTAURANT",
-            "Town/City": "Aldershot",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "PASSCA UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "PBS4 U.K. Limited",
-            "Town/City": "Southampton",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "PBS870 LIVE SSW SPONSOR",
-            "Town/City": "Pbs870 Live Ssw Sponsor",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "PBS875 UAT3 SW SPONSOR",
-            "Town/City": "Pbs875 Uat3 Sw Sponsor",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "PBS927 LIVE CREATIVE WORK SPONSOR",
-            "Town/City": "Sheffield",
-            "Route": "Creative Worker",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "PCC of St Mary & St Ambrose Edgbaston (T/A Rea Church)",
-            "Town/City": "Birmingham",
-            "Route": "Charity Worker",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "PCC of St Mary & St Ambrose Edgbaston (T/A Rea Church)",
-            "Town/City": "Birmingham",
-            "Route": "Tier 2 Ministers of Religion",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "PCC of St Mary & St Ambrose Edgbaston (T/A Rea Church)",
-            "Town/City": "Birmingham",
-            "Route": "Religious Worker",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "PETROSHELL INDUSTRIES UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "PHAIDRA, LTD",
-            "Town/City": "Altrincham",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Phase Two UK, Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Port Innovative Solutions Ltd",
-            "Town/City": "Stockport",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Potente International LLP",
-            "Town/City": "Ongar",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "POWER BREAK UK LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "PROJECTS BULK PIPING LIMITED",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "RAGA OIL INDUSTRY UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "REZIN HONAR LTD",
-            "Town/City": "Ilford",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Rheinmetall Weapon Munitions UK Limited",
-            "Town/City": "Bristol",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "RIDA TECHNICAL SERVICES UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "SABARATNAM KUGANANTHAN T/A JAFFNA STORES",
-            "Town/City": "Aylesbury",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Sari Jehan Ltd",
-            "Town/City": "Dundee",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Scholars' Education Trust Central Team",
-            "Town/City": "St Albans",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Seoul Juice LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Sheriff Motors Edin Ltd",
-            "Town/City": "Edinburgh",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Siegmann Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "SIGNATURE LEISURE LIMITED",
-            "Town/City": "Batley",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Silver Regulatory Associates LLC",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Simon International Administrative Services Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Smartvie Ltd",
-            "Town/City": "London,",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "SMOOTHCART LIMITED",
-            "Town/City": "Milton Keynes",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Solid Group Properties Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Specright, Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "SPEEDWAY TRADING LIMITED-14416548",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Standard Cricket Club",
-            "Town/City": "Coventry",
-            "Route": "International Sportsperson",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Summerswood Primary School",
-            "Town/City": "Borehamwood",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Surface Measurement Systems Limited",
-            "Town/City": "Middlesex",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Susan Harter Studios Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Sussex Baby Scans Limited",
-            "Town/City": "Milton Keynes",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "TADEEM GENERAL TRADING UK LTD (15239213)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Taha Plastics Trading Limited",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Tangem AG (UK) Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "TAPI UK LTD",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "TAPI UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Teknokon Industry Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Terlos 1 Limited",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "The Bart Ingredients Co Ltd",
-            "Town/City": "Bristol",
-            "Route": "Global Business Mobility: Graduate Trainee",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "The Bart Ingredients Co Ltd",
-            "Town/City": "Bristol",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "The Big Cheeks Limited",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "The Pace Centre Limited",
-            "Town/City": "Aylesbury",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "The UK Dog Breeding Academy Ltd",
-            "Town/City": "Co Tyrone",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Thomas, Carroll (Brokers) Ltd",
-            "Town/City": "Caerphilly",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Thurmaston Dental Practice Limited",
-            "Town/City": "Leicester",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Towercraft UK :Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Traqcheck Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "TT &GIZMO Limited",
-            "Town/City": "Newbury",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "TYLI Ltd",
-            "Town/City": "Chelmsford",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ume Luxembourg SA",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "UN Global Trading Ltd",
-            "Town/City": "Hounslow",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "UNIT TECHNOLOGY LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "UNITED CATER LIMITED",
-            "Town/City": "Greenford",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "VentusVentures Holding UK Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Vilja Solutions Ltd",
-            "Town/City": "Northampton",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "VITALVIEW HEALTH LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "W&H Enterprises Limited",
-            "Town/City": "Glasgow",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "WATER ENGINEERING INDUSTRIAL EQUIPMENT (UK) LTD (16652955)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Westgreen Care Ltd",
-            "Town/City": "Wotton Under Edge",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "WOODWILL LIMITED",
-            "Town/City": "West Midlands",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "XAD TECHNOLOGIES LTD",
-            "Town/City": "Greenford",
-            "Route": "Global Business Mobility: Graduate Trainee",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "XAD TECHNOLOGIES LTD",
-            "Town/City": "Greenford",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "YANABIYA GULF INTERNATIONAL UK LTD",
-            "Town/City": "Morden",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Your Trip Mate UK Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ZAHRAT KURDUFAN GENERAL TRADING UK LTD 15213278",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Zaks IT Ltd",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ZENIYA UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ZH LONDON PROPERTIES LTD",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ZOZO U.K. LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "first_seen": "2026-03-09"
-        }
-    ],
-    "removed": [
-        {
-            "Organisation Name": "Accident Claims Lawyers",
-            "Town/City": "Liverpool",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Action Artificial Intelligence Limited",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Addison Partners Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Adorn Information Technology Systems UK Limited",
-            "Town/City": "Kington",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ADVANCED TECHNOLOGY FOR INFORMATION SYSTEMS SOLUTIONS UK LIMITED (15373821)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Aeristech Limited",
-            "Town/City": "Leamington Spa,",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AJT Dimsum Limited",
-            "Town/City": "North Woolwich",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Al Arsh Al Malaki Technical Services UK Ltd",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Al Mustafa Welfare Trust International Ltd",
-            "Town/City": "Hounslow",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Al Mustafa Welfare Trust International Ltd",
-            "Town/City": "Hounslow",
-            "Route": "Charity Worker",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Al Mustafa Welfare Trust International Ltd",
-            "Town/City": "Hounslow",
-            "Route": "Creative Worker",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Al Rehab Al Arabi Bldg. Contracting UK Ltd",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AL SHAMIKHA COPPER & SCRAP UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ALI TEXTILES GLOBAL LTD",
-            "Town/City": "Southall",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Allied Automation And Software Solutions Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ALMASAH FOOD INDUSTRY UK LTD 14314568",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AMAFCO BUILDING CONTRACTING LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AME PUBLISHING LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AMPOWERUK LTD",
-            "Town/City": "Milton Keynes",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Ananas Anam UK Limited",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "APM Retail Group Ltd",
-            "Town/City": "Bilston",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AR EXPRESS IMPEX LTD",
-            "Town/City": "West Byfleet",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Ardmore Construction Ltd",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ARJAN ENGEERING CONSULTANTS UK LTD-14648180",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Armadillo Managed Services",
-            "Town/City": "Uxbridge",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Art House Carpets UK Limited 15386847",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ASDI EQUIPMENT RENTAL AND TRADING LTD (15444604)",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Atlantic Pools & Fountains UK Ltd-15479617",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Aura Energy UK Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "authentic kare",
-            "Town/City": "Leicester",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Awal Al Nahar Used Cars and Spare Part Tr UK Ltd",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AWRAQ OFFICE SUPPLIES & TRADING UK LTD (15276148)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AYUELA JIMENEZ LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Barter Hill Partnership Limited",
-            "Town/City": "Ongar",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "BATAL VISION LIMITED",
-            "Town/City": "Uxbridge",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "BEHIND THE SCENE DECOR UK LIMITED 15234479",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "BEN AHMED EXPORT & IMPORT UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "B'IOTA LABORATORIES UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Blend International UK Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Bloom Trade Limited",
-            "Town/City": "Glasgow",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "BLOOM&SQUARE LONDON LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "BLUE MOUNTAIN GENERAL TRADING UK LTD",
-            "Town/City": "Leicester",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "BUONKEY GENERAL TRADING UK LTD (15422771)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Business and Service Solutions Ltd",
-            "Town/City": "Southend-On-Sea",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "BUTT&JUTT ENTERPRISES LIMITED",
-            "Town/City": "Ilford",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "C.A. MCMILLAN FINE ARTS LIMITED",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Care 4 You Care Agency Ltd",
-            "Town/City": "Hoo, Rochester",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Carenova Ltd",
-            "Town/City": "Exeter",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "CDP PR LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "CENTURAY TECHNOLOGIES UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "CEYLEX UK PVT LTD",
-            "Town/City": "High Wycombe",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "CEYLON TEA SHOP (UK) LTD",
-            "Town/City": "Sheffield",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "CHEMIAA UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Chenai Hollistic Home Care Agency Ltd",
-            "Town/City": "Chelmsford",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "CHLOE'S BOOZE LIMITED",
-            "Town/City": "Bristol",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Christ Exalted Church",
-            "Town/City": "Wellingborough",
-            "Route": "Tier 2 Ministers of Religion",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Christ Exalted Church",
-            "Town/City": "Wellingborough",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Christ Exalted Church",
-            "Town/City": "Wellingborough",
-            "Route": "Charity Worker",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Christ Exalted Church",
-            "Town/City": "Wellingborough",
-            "Route": "Religious Worker",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "CIRCLE OF CARE SERVICE LIMITED",
+            "Organisation Name": "ABP Wellcare (Northolt) Ltd",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Citadel Health Management Consultancy UK  Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "COMERCIAL INVESTMENT OF UK LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "Conlog UK Limited",
-            "Town/City": "Englefield Green",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Consider Solutions Ltd",
-            "Town/City": "London",
+            "Organisation Name": "Accupro Bookkeeping Ltd",
+            "Town/City": "Ashton Under Lyne",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "CZAR VENTURES UK LIMITED(15345211)",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "DARK4 UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "Definition Health",
-            "Town/City": "Brighton",
+            "Organisation Name": "Agile without borders Ltd",
+            "Town/City": "Stratford-Upon-Avon",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "Dendra Systems Ltd",
+            "Organisation Name": "Albion Consult Limited",
             "Town/City": "Oxford",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "DENTASAY LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Dentogenics",
-            "Town/City": "Harrogate",
+            "Organisation Name": "ARA PL LTD",
+            "Town/City": "Plymouth",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "Destination Foods Limited",
-            "Town/City": "Reading",
+            "Organisation Name": "ARIS Software UK Limited",
+            "Town/City": "Bracknell",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "DIAMOND EXPORT INDUSTRIES LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "DIRECT CARE SERVICE LIMITED",
-            "Town/City": "Bathgate",
+            "Organisation Name": "Bhandal Care Group (1st Care UK) Ltd",
+            "Town/City": "Woodhall Spa",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "DISPLAYX UK LTD (15452945)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Divine Christian Church",
-            "Town/City": "Catford, London",
-            "Route": "Tier 2 Ministers of Religion",
+            "Organisation Name": "BLUEBIRD CARE STEVENAGE & NORTH HERTS",
+            "Town/City": "Hitchin",
+            "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "Dmatics IT Solutions UK Ltd 14833334",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
+            "Organisation Name": "BM BATH ROAD LIMITED",
+            "Town/City": "Bristol",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "DNANUDGE LIMITED",
+            "Organisation Name": "BURLINGTON UNIFORMS LIMITED",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Coombefish Fleetwood Ltd",
+            "Town/City": "Fleetwood",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Crescent Print Ltd",
+            "Town/City": "Edinburgh",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
         },
         {
             "Organisation Name": "DONG HWA IND UK LIMITED",
-            "Town/City": "London",
+            "Town/City": "Kingston Upon Thames",
             "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "Dover Holdings UK Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "DR. FRIGZ LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "DUBLIN AUTO SPARE PARTS TRADING UK LTD (15489767)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "DUNALASTAIR HOTEL SUITES LIMITED",
-            "Town/City": "Pitlorchy",
+            "Organisation Name": "Elmfield Care Limited",
+            "Town/City": "Lincoln",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "Duress UK Limited",
-            "Town/City": "Beaconsfield",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Eagle for Metal Machinning UK Limited 15386164",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "EAST LONDON LIQUOR COMPANY LIMITED",
-            "Town/City": "London",
+            "Organisation Name": "EURO CARFIX GARAGE LTD",
+            "Town/City": "Wirral",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Eastern Airways (UK) Limited",
-            "Town/City": "Kirmington",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "EasyLogix Ltd",
-            "Town/City": "Barnet",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ECOBUILD GREEN BUILDING CONSULTANTS LIMITED",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ECT AVIATION SUPPORT LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "eLearnAfricaLMS UK Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ELEMENTS (EUROPE) LIMITED",
-            "Town/City": "Telford",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ELEV8 ACCESS PLATFORMS LIMITED",
-            "Town/City": "Sheffield",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Elite Associates Europe Limited",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Embassy of Azerbaijan",
-            "Town/City": "Nan",
-            "Route": "International Agreement",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "End Cue UK Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Energetika Industries LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ESAS TOURISM LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
             "Organisation Name": "Eusebi Deli Ltd",
             "Town/City": "Glasgow",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "Fabexi Trading UK LTD",
+            "Organisation Name": "EVERGOOD MEDICALS LTD",
+            "Town/City": "Manor Royal",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Hasienda Limited t/as Casa De Moor",
             "Town/City": "Manchester",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "FIDES BOX AND PACK LIMITED",
-            "Town/City": "Canterbury",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "FITMINDS STRATEGY CONSULTING LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "FORCE HIRE EQUIPMENT UK LTD",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Gamma Telecom Holdings Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Ganghong International Group (UK) Limited",
-            "Town/City": "Tunbridge Wells",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Gem La Viva Jewellery UK Ltd",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "GENOMADIX UK",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "GGM Gastro UK Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "GRAND PHARMA UK LTD",
-            "Town/City": "Hatfield",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "GRAND SPACE INTERIORS UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "GUARDIAN JET UK LIMITED",
-            "Town/City": "Worcestershire",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Gujrat Construction Limited",
-            "Town/City": "Rossendale",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "HappySignals UK Limited",
+            "Organisation Name": "HERO MANAGEMENT LTD T/A HERO",
+            "Town/City": "Belfast",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "INNVOTEC LIMITED",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "HATKO SPORT UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "HILL Corporation UK",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "HJK General Trading UK Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Hotic Shoes Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "IFFAS ADVISORY UK LIMITED",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
+            "Organisation Name": "KAR GOLDEN BARBERS LTD",
+            "Town/City": "Cornwall",
+            "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "IMAN RESOURCES LIMITED",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
+            "Organisation Name": "Kateg Limited",
+            "Town/City": "Newry",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "IMPERIAL RECRUITMENT SOLUTION LIMITED",
+            "Organisation Name": "M95 Lymington Ltd",
+            "Town/City": "Lymington",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Mums & Spice Company Ltd",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "Indigo Computer Consultancy Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Innoverv Global Solutions Ltd",
-            "Town/City": "Welvwyn Garden City",
+            "Organisation Name": "NEDAL FOOD PRODUCTS LTD",
+            "Town/City": "Walsall",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "INTEGRATIVE SUPPORTED LIVING CARE LTD",
-            "Town/City": "Northampton",
+            "Organisation Name": "NHS Frimley ICB",
+            "Town/City": "Aldershot",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "Intercept Pharma Europe Limited",
-            "Town/City": "London",
+            "Organisation Name": "Northfield Care Limited",
+            "Town/City": "Stroud",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "Intercept Pharma Europe Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "INVESTIMATE RESEARCH SERVICES LIMITED",
-            "Town/City": "Acton",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "IRON SOLUTIONS LIMITED",
-            "Town/City": "Norton",
+            "Organisation Name": "Novada Cement UK Limited",
+            "Town/City": "Liverpool",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "ISTANBUL CYMBALS AND MUSIC COMPANY UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ITE UK HOLDING LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ITS 4 POINT OF SALE LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "JAFTIM CARS UK LIMITED (15377879)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Jama Jewels UK Ltd 15210141",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "JOHNSON AMOO CONSULTANCY LIMITED",
-            "Town/City": "Derby",
+            "Organisation Name": "O'Hares Supermarket Ltd",
+            "Town/City": "Newry",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "JSR FINANCIAL SERVICES LTD.",
+            "Organisation Name": "Phoenix Global Media Network Limited",
             "Town/City": "Harrow",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "JU AI HEALTH SOLUTIONS UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "KA & KI BATH LIMITED",
-            "Town/City": "Bristol",
+            "Organisation Name": "PMJ HOSPITALITY LTD T/A FIFE ARM HOTEL",
+            "Town/City": "Aberdeenshire",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "Kaswa Trader Ltd t/a M&N Licenced Grocers",
-            "Town/City": "Falkirk",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Kentucky Fried Chicken (Great Britain) Limited",
-            "Town/City": "Woking",
-            "Route": "Global Business Mobility: Graduate Trainee",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "KGRN & CO. LIMITED-15223905",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Khan Homes (Scotland) Limited",
-            "Town/City": "Falkirk",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "KWM (UK) LIMITED",
-            "Town/City": "Cambridge",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "LANGSAM LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Lazure Worldwide UK Ltd",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Lead Intelligent Equipment (UK) Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Leader Development Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Leasytax Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "LEEDS AND CUBE RESOURCES UK LIMITED",
-            "Town/City": "Manchester",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "LEENA SHIPPING UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "LEGACY PILATES APPARATUS UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Lenwood Capital Ltd.",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "LETS DEEL (1) LTD",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "LETS DEEL LTD",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Liva Europe GmbH UK Branch",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "LORENTZEN & STEMOCO (UK) LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Lumenis BE UK Ltd",
-            "Town/City": "High Wycombe",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "M A Trading International UK Ltd",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "M S Z CORPORATE SERVICES PROVIDER UK LTD 14856521",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MAALEM ENGINEERING UK LTD 15049644",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MADEENAT KHALIFA BUILDING MATERIAL TRADING UK LTD 15286572",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MAHRAN HYPER MARKET UK LTD",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Malaysian Rubber Council London",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MALIK & SHAH ASSOCIATES LTD T/As AL HASHIM KHYBER GRILL",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MALWA CONSTRUCTION WORK LTD",
-            "Town/City": "Kent",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MARWA CARGO SERVICES UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MEDICARE LINK LTD",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Mefco Interiors Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Meisam Kaghaz Industrial Productive Company UK Limited",
-            "Town/City": "Morden",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MILHAAN METALS LIMITED",
-            "Town/City": "Peterborough",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Mobi Garden London Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MORGANITE JEWELLERY LIMITED (16037266)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MOSAIIC DECOR UK LTD 15168940",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Motoalliance Limited",
-            "Town/City": "Edinburgh",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Mr Muhammad Saqib t/a Dumbarton Stores",
-            "Town/City": "Dumbarton",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MUHAMMAD ASIF AUTO SPARE PARTS UK LTD (14476760)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "N.K.F INDUSTRIES UK LTD",
-            "Town/City": "Southall",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "NASMA AUTOS UK LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Naveed Retail Ltd t/a Spar Store",
-            "Town/City": "Perth",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "NEW TOPIC LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Newton Vision Corp (UK) Ltd",
-            "Town/City": "Christchurch",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "NIAZI E COMMERCE AND SERVICE PROVIDERS UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Nima's Ltd.",
+            "Organisation Name": "Riley Square Limited T/A Nisa Local",
             "Town/City": "Coventry",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "Nippon Jidosha International Limited",
-            "Town/City": "Sutton",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
+            "Organisation Name": "RTM CORPORATION LTD",
+            "Town/City": "Airdrie",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
         },
         {
-            "Organisation Name": "Noodlesta (Leeds) Limited",
+            "Organisation Name": "S & M RECRUITMENT LTD",
+            "Town/City": "Dereham",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "S&A Hospitality N.I Ltd",
+            "Town/City": "Belfast",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Siemens eMobility Charging Ltd",
+            "Town/City": "Hampshire",
+            "Route": "Global Business Mobility: Senior or Specialist Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Siemens eMobility Charging Ltd",
+            "Town/City": "Hampshire",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Sigma Broking Limited",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Techspire Consulting Limited",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "The All Star Property Company Limited t/a Ellis & Co (Islington)",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "The Benin Trust",
+            "Town/City": "Forest Gate",
+            "Route": "Charity Worker",
+            "Type & Rating": "Temporary Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "The Performants Group Limited (Trading as T-minus)",
+            "Town/City": "St Albans",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "TIC Poultry Ltd",
+            "Town/City": "Omagh",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Transforming Support (Surrey) Ltd",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Vegware Ltd",
+            "Town/City": "Edinburgh",
+            "Route": "Global Business Mobility: Senior or Specialist Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Vegware Ltd",
+            "Town/City": "Edinburgh",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "WALHAM LIMITED T/a Jahangir Balti & Tandoori Restaurant",
+            "Town/City": "St Andrews",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Welford Healthcare Limited",
+            "Town/City": "Leicester",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Yarrowside Ltd t/a Bluebird Care (Wiltshire South)",
+            "Town/City": "Salisbury",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Yorkshire Dales Ice Cream Ltd",
+            "Town/City": "Bolton Abbey",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-03-10"
+        }
+    ],
+    "removed": [
+        {
+            "Organisation Name": "123 Ideas Limited",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "3 Copper Pots Limited",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Agile without borders Ltd",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Ahmed & Gul Ltd T/A Bluebird Care",
+            "Town/City": "Luton",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Aptine Care Services Ltd",
+            "Town/City": "Bracknell",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "ARIS Software UK Limited",
+            "Town/City": "Derby",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "ARTEZZAN RESTAURANTS LIMITED",
+            "Town/City": "Chester",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Arts Alliance Media Limited",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Arts Alliance Media Limited",
+            "Town/City": "London",
+            "Route": "Global Business Mobility: Senior or Specialist Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Automotive Transformation Group Limited",
+            "Town/City": "Maidstone",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Axiom Ince Limited",
+            "Town/City": "Middlesex",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Axis Technology and Development Limited",
+            "Town/City": "Gilford",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "AZS FOODS LTD/The hunger spot",
+            "Town/City": "Cardiff",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "BARAK LEISURE LTD T/A Lavanta",
             "Town/City": "Leeds",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "removed_date": "2026-03-10"
         },
         {
-            "Organisation Name": "NOURINA PROPERTIES LIMITED (15482520)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Oakleys Living",
-            "Town/City": "Ilford",
+            "Organisation Name": "BECK Interiors Ltd",
+            "Town/City": "Chessington",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "removed_date": "2026-03-10"
         },
         {
-            "Organisation Name": "Olive Tree (Kirklees) LTD",
-            "Town/City": "Heckmondwike",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "OM London Limited",
+            "Organisation Name": "Bervera Foods Limited",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "removed_date": "2026-03-10"
         },
         {
-            "Organisation Name": "Omusubi Ltd",
+            "Organisation Name": "BLUEBIRD CARE STEVENAGE & NORTH HERTS",
+            "Town/City": "Letchworth",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Boldyn Networks Communications UK Limited",
+            "Town/City": "Reading",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Bower Mount Medical Practice",
+            "Town/City": "Maidstone",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "CA006 Ltd",
+            "Town/City": "Pontefract",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "CAPITAL GRID DESIGN LTD",
+            "Town/City": "Westlea",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "CAPITAL GRID DESIGN LTD",
+            "Town/City": "Westlea",
+            "Route": "Creative Worker",
+            "Type & Rating": "Temporary Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Cherished Care Ltd",
+            "Town/City": "Romford",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Crescent Print Edinburgh Ltd",
+            "Town/City": "Edinburgh",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "D J HASWELL LTD.",
+            "Town/City": "Boldon Colliery",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Dev Bhumi UK Limited T/A Bagheera Indian & Indo Chinese Restaurant",
+            "Town/City": "Staines-Upon-Thames",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Elmfield Care Limited",
+            "Town/City": "Leeds",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Epic Graduate School",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Ernest Brooks Limited",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "European Apparel Ltd",
+            "Town/City": "Manchester",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "FAIRWAY GROUP LIMITED",
+            "Town/City": "Leicester",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Hasienda Limited t/as Casa De Moor",
+            "Town/City": "Stockport",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Heliox Energy Ltd",
+            "Town/City": "Hampshire",
+            "Route": "Global Business Mobility: Senior or Specialist Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Heliox Energy Ltd",
+            "Town/City": "Hampshire",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "KARCAN CUTTING TOOLS UK LTD",
             "Town/City": "London",
             "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
         },
         {
-            "Organisation Name": "ON CLOUD NINE BUSINESS LIMITED",
+            "Organisation Name": "M95 Lymington Ltd",
+            "Town/City": "Lymington",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (B rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "MAANYA RECRUITMENT LTD",
+            "Town/City": "Wembley",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "New Park Pharmacy Ltd",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "NHS Frimley ICB",
+            "Town/City": "Windsor",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Pacific and Gold Limited",
+            "Town/City": "Wakefield",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "PHC Health Care Ltd.",
+            "Town/City": "Waltham Cross",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Phoenix Global Media Network Limited",
+            "Town/City": "Hounslow",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Pride Health and Social Care Ltd",
+            "Town/City": "Lydney",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "RallyUp Ltd",
+            "Town/City": "London",
+            "Route": "Global Business Mobility: UK Expansion Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "RTM CORPORATION LTD",
+            "Town/City": "Glasgow",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "S & M RECRUITMENT LTD",
             "Town/City": "Norwich",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "removed_date": "2026-03-10"
         },
         {
-            "Organisation Name": "OPTION FASHION UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
+            "Organisation Name": "S.Anselms",
+            "Town/City": "Bakewell",
+            "Route": "Charity Worker",
+            "Type & Rating": "Temporary Worker (A rating)",
+            "removed_date": "2026-03-10"
         },
         {
-            "Organisation Name": "Optrical Limited",
-            "Town/City": "Rotherham",
+            "Organisation Name": "Sir William Borlase's Grammar School",
+            "Town/City": "Marlow",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "removed_date": "2026-03-10"
         },
         {
-            "Organisation Name": "Orderlion UK LTD",
+            "Organisation Name": "Spring Fibre Limited",
+            "Town/City": "Reading",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "St Margaret's School",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "StyleMania Ltd",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "SVC CARERS 23 LIMITED",
+            "Town/City": "Preston",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Wotton Rise Nursing Home Ltd",
+            "Town/City": "Gloucester",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "ZAK MARKETING & DISTRIBUTIONS LIMITED",
+            "Town/City": "Manchester",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "Cornerstone Care ltd",
+            "Town/City": "Aylesbury",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
+        },
+        {
+            "Organisation Name": "DONG HWA IND UK LIMITED",
             "Town/City": "London",
             "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-03-10"
         },
         {
             "Organisation Name": "Outfitters Stores UK Limited",
             "Town/City": "London",
             "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "P&I TYRES COMPANY LIMITED",
-            "Town/City": "Wolverhampton",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Palta UK Ltd",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Palta UK Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Palta UK Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: Graduate Trainee",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "PASSCA UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Pentacare Limited",
-            "Town/City": "Rochdale",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "PETROSHELL INDUSTRIES UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "PHAIDRA, LTD",
-            "Town/City": "Altrincham",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Pharm Research Associates (UK) Ltd",
-            "Town/City": "Reading",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Pharm Research Associates (UK) Ltd",
-            "Town/City": "Reading",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Port Innovative Solutions Ltd",
-            "Town/City": "Stockport",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Potente International LLP",
-            "Town/City": "Ongar",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "POWER BREAK UK LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Primrose Healthcare Solutions Limited",
-            "Town/City": "Romford",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "RAGA OIL INDUSTRY UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "RAINBOW POLYCARBONATE INDUSTRY TRADE LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "REZIN HONAR LTD",
-            "Town/City": "Ilford",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Rhodsac Community Living Ltd",
-            "Town/City": "Milton Keynes",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "RIDA TECHNICAL SERVICES UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "RTD Spirits Ltd",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "SABARATNAM KUGANANTHAN T/A JAFFNA STORES",
-            "Town/City": "Aylesbury",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Saga D&B Trading and Contracting UK Ltd",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Sari Jehan Ltd",
-            "Town/City": "Dundee",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Seldon Technologies Ltd",
-            "Town/City": "Shoreditch",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Seoul Juice LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Siegmann Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Silver Regulatory Associates LLC",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Simon International Administrative Services Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "SMOOTHCART LIMITED",
-            "Town/City": "Birmingham",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Solid Group Properties Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Specright, Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "SPEEDWAY TRADING LIMITED-14416548",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Standard Cricket Club",
-            "Town/City": "Coventry",
-            "Route": "International Sportsperson",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Susan Harter Studios Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "TADEEM GENERAL TRADING UK LTD (15239213)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Taha Plastics Trading Limited",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Tangem AG (UK) Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Tazmart Ltd",
-            "Town/City": "Taplow",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "TC-Tech IT Consulting Limited",
-            "Town/City": "Hornchurch",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "TECH2CLOUD LTD",
-            "Town/City": "Slough",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Teddar Limited",
-            "Town/City": "Rushden",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Teknokon Industry Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "TELE FISH LTD",
-            "Town/City": "Stoke-On-Trent",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Teliolabs Communication Limited",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "The Bart Ingredients Co Ltd",
-            "Town/City": "Bristol",
-            "Route": "Global Business Mobility: Graduate Trainee",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "The Bart Ingredients Co Ltd",
-            "Town/City": "Bristol",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "The Big Cheeks Limited",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "THE GRANGE CATERING LIMITED",
-            "Town/City": "Rochester",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "The Meal Castle Ltd",
-            "Town/City": "Newcastle Upon Tyne",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "The Rasul Hospitality Limited",
-            "Town/City": "Glasgow",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "The Red Flower Factory Limited",
-            "Town/City": "Hadleigh",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "The UK Dog Breeding Academy Ltd",
-            "Town/City": "Co Tyrone",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "THSOLUTIONS 786 LIMITED",
-            "Town/City": "Burton-On-Trent",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Thurmaston Dental Practice Limited",
-            "Town/City": "Leicester",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Towercraft UK :Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Traqcheck Limited",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "TT &GIZMO Limited",
-            "Town/City": "Newbury",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ume Luxembourg SA",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "UN Global Trading Ltd",
-            "Town/City": "Hounslow",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "UNIT TECHNOLOGY LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "UNITED CATER LIMITED",
-            "Town/City": "Greenford",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Universal Online Limited",
-            "Town/City": "Greater London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "VentusVentures Holding UK Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Vilja Solutions Ltd",
-            "Town/City": "Northampton",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "VITALVIEW HEALTH LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Vivendi Live Limited",
-            "Town/City": "London",
-            "Route": "Creative Worker",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "W&H Enterprises Limited",
-            "Town/City": "Glasgow",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Westgreen Care Ltd",
-            "Town/City": "Wotton Under Edge",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "WOODWILL LIMITED",
-            "Town/City": "West Midlands",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "YANABIYA GULF INTERNATIONAL UK LTD",
-            "Town/City": "Morden",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Your Trip Mate UK Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Zaataa Limited T/A Toroscasa",
-            "Town/City": "Bognor Regis",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ZAHRAT KURDUFAN GENERAL TRADING UK LTD 15213278",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Zaks IT Ltd",
-            "Town/City": "Greater London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ZENIYA UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "ZOZO U.K. LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "AIM Advanced Mobility Ltd",
-            "Town/City": "Norwich",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Atlas UAV Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "COCONE UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "DIRECTIT UK LIMITED",
-            "Town/City": "Berkhamsted",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Eredu S.Coop",
-            "Town/City": "Nottingham",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "GREEN CODE TECHNOLOGIES LIMITED",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Hypes SB UK Limited",
-            "Town/City": "Mildenhall",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "JOLIE SKIN CO. UK LTD",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Matternet UK Ltd",
-            "Town/City": "Cheltenham",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MEDICOM DISTRIBUTION LIMITED (15544816)",
-            "Town/City": "Leicestershire",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "MOGIC (UK) LIMITED",
-            "Town/City": "Beckenham",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Nevaeh IT Ltd",
-            "Town/City": "Newport Pagnell",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "OVERNIGHT OPS LIMITED",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "Phase Two UK, Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "PROJECTS BULK PIPING LIMITED",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "WATER ENGINEERING INDUSTRIAL EQUIPMENT (UK) LTD (16652955)",
-            "Town/City": "England",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "XAD TECHNOLOGIES LTD",
-            "Town/City": "Slough",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-03-09"
-        },
-        {
-            "Organisation Name": "XAD TECHNOLOGIES LTD",
-            "Town/City": "Slough",
-            "Route": "Global Business Mobility: Graduate Trainee",
-            "Type & Rating": "Temporary Worker (A rating)",
-            "removed_date": "2026-03-09"
+            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
+            "removed_date": "2026-03-10"
         }
     ]
 }
