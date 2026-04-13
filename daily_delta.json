@@ -1,721 +1,1127 @@
 {
-    "date": "2026-04-10",
+    "date": "2026-04-13",
     "added": [
         {
-            "Organisation Name": "Absolute Fitness",
-            "Town/City": "York",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Acara Management Limited",
-            "Town/City": "Richmond-Upon-Thames",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "AIYUB OMELETTE LTD",
+            "Organisation Name": "ACG Advisors Group (UK) Ltd",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Bakery Boutique Limited",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "BEST CARE JS LIMITED",
-            "Town/City": "Barking",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Bishop Milner Catholic College",
-            "Town/City": "Dudley",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Bridge Housing Solutions",
-            "Town/City": "Uxbridge",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "CARE 365 LIMITED",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Claranet Ltd",
+            "Organisation Name": "AIN ESC UK LIMITED",
             "Town/City": "London",
             "Route": "Global Business Mobility: Senior or Specialist Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Claranet Ltd",
+            "Organisation Name": "AIN ESC UK LIMITED",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "CZAR VENTURES UK LIMITED(15345211)",
+            "Organisation Name": "AKG (UK) Learning Limited",
             "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
+            "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Decision Inc. United Kingdom",
-            "Town/City": "Windsor",
+            "Organisation Name": "AKG (UK) Learning Limited",
+            "Town/City": "London",
             "Route": "Global Business Mobility: Senior or Specialist Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Decision Inc. United Kingdom",
-            "Town/City": "Windsor",
+            "Organisation Name": "Alza Accounting & Management Solutions Ltd",
+            "Town/City": "Wraysbury",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Dex Talent Ltd",
+            "Organisation Name": "Aria Development Holdings Limited",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "DINGLE PARK PRACTICE",
+            "Organisation Name": "Ariel Healthcare",
+            "Town/City": "Chard",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Aspire House Ltd",
+            "Town/City": "Harrow",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "BENROSS MARKETING LIMITED",
             "Town/City": "Liverpool",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Duna Films Ltd",
+            "Organisation Name": "Berg Kaprow Lewis LLP",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "DWI Partners UK Limited",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Fervid Healthcare Ltd",
-            "Town/City": "Stoke-On-Trent",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "George Wood & Sons (Enfield) Ltd T/A Enfield Speciality Doors",
-            "Town/City": "Enfield",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Hasienda Limited t/as Casa De Moor",
-            "Town/City": "Chorlton",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "iGrid Technology Consulting Ltd",
-            "Town/City": "Glasgow",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Intensity Chigwell Limited",
-            "Town/City": "Chigwell",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Jellyfish Group Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Jellyfish Group Ltd",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Jeremy Moore Associates Ltd",
+            "Organisation Name": "Blackfinch Financial Ltd",
             "Town/City": "Cheltenham",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Jordan Waste Management Ltd",
+            "Organisation Name": "BMA CAR CARE LTD",
+            "Town/City": "Bradford",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "BOB CARE LTD",
+            "Town/City": "Manchester",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Care Never Sleeps Limited",
+            "Town/City": "Nottingham",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Caterdesk Limited",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "JS Locum Services Ltd",
-            "Town/City": "Hartlepool",
+            "Organisation Name": "Certas Energy UK Limited",
+            "Town/City": "Warrington",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "King & King, Chartered Accountants",
-            "Town/City": "Wembley",
+            "Organisation Name": "CNM The College of Naturopathic Medicine Limited",
+            "Town/City": "East Grinstead",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "KLN Freight (UK) Limited",
-            "Town/City": "Manchester",
-            "Route": "Skilled Worker",
+            "Organisation Name": "Congresbury Cricket Club",
+            "Town/City": "Bristol",
+            "Route": "International Sportsperson",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "KLN Freight (UK) Limited",
-            "Town/City": "Manchester",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "KYDOS DIGITAL LTD",
-            "Town/City": "Manchester",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Local Christian Assembly (Vauxhall)",
+            "Organisation Name": "Cosmetic Executive Women (CEW) UK",
             "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Creation Destination UK",
+            "Town/City": "Kilmarnock",
             "Route": "Tier 2 Ministers of Religion",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Magentic Labs Limited",
+            "Organisation Name": "Dome Brands Limited",
+            "Town/City": "Worcester",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Dr Lloyd and Partners",
+            "Town/City": "Eastleigh",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "DYMAG TECHNOLOGIES LIMITED",
+            "Town/City": "Chippenham",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Eagle's Nest Ministry",
+            "Town/City": "Kent",
+            "Route": "Charity Worker",
+            "Type & Rating": "Temporary Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "ENERGYFORCE LIMITED",
+            "Town/City": "Tickton",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "EveryStory Charity",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Mahi Consultants Limited",
-            "Town/City": "Hounslow",
+            "Organisation Name": "FLEXXY EDUCATION LIMITED",
+            "Town/City": "Romford",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "MARKET SQUARE DENTAL LTD",
-            "Town/City": "Bicester",
+            "Organisation Name": "FMCG Ltd T/A Mount Cash & Carry",
+            "Town/City": "Suffolk",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Mobix Ltd",
-            "Town/City": "Middlesbrough",
+            "Organisation Name": "Fortis Hosting Limited",
+            "Town/City": "Watford",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "NINANAIRA LTD",
-            "Town/City": "Middlesex",
+            "Organisation Name": "GROVE PRODUCTS (CARAVAN ACCESSORIES) LTD",
+            "Town/City": "Hyde",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "North Finchley Specsavers Hearcare Limited",
+            "Organisation Name": "I3A SOLUTIONS LIMITED",
+            "Town/City": "Latimer, Chesham",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Imperial Sales & Letting Agents Ltd",
+            "Town/City": "Southall",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Invest Asset Management Ltd",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "NOVO HOLDINGS EQUITY UK LIMITED",
+            "Organisation Name": "JA Brooks Mechanical Services Ltd",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "JETPATH LIMITED",
+            "Town/City": "Stratford Upon Avon",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "JUXT Ltd",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "KVH Shuttering",
+            "Town/City": "Omagh",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "LAPEN INNS- BARLEY MOW LTD",
+            "Town/City": "Peterborough",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "LC INVEST GLOBALLTD",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "LINX DESIGNBUILD LIMITED",
+            "Town/City": "Erith",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Little Rock Equine Vets Ltd",
+            "Town/City": "Stoke On Trent",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "LONGSWORD BUILDING & MAINTENANCE SERVICES LTD",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "LRG CORPORATION LTD",
+            "Town/City": "Epsom",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "McHale Komatsu Limited",
+            "Town/City": "Redditch",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "MERIDIAN SPACE UK LIMITED",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Mindglow Solutions Ltd",
+            "Town/City": "Northwood",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Mirai Power Europe Limited",
             "Town/City": "London",
             "Route": "Global Business Mobility: Senior or Specialist Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "NOVO HOLDINGS EQUITY UK LIMITED",
+            "Organisation Name": "Mirai Power Europe Limited",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Nscale Operations (UK) Limited",
+            "Organisation Name": "Mirai Power Europe Limited",
             "Town/City": "London",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "Route": "Global Business Mobility: Graduate Trainee",
+            "Type & Rating": "Temporary Worker (A rating)",
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Nscale Operations (UK) Limited",
-            "Town/City": "London",
+            "Organisation Name": "Miss M Eagland & Mr D Williams",
+            "Town/City": "Littlehampton",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Optimism Supported Housing",
-            "Town/City": "Croydon",
+            "Organisation Name": "Mosaic Operative Ltd",
+            "Town/City": "Beckenham",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Pacific Care Solutions Limited",
-            "Town/City": "Ilford",
+            "Organisation Name": "Motivation Group Ltd",
+            "Town/City": "Plymouth",
+            "Route": "Creative Worker",
+            "Type & Rating": "Temporary Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Motivation Group Ltd",
+            "Town/City": "Plymouth",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Polyfoam XPS",
-            "Town/City": "Hartlepool",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "QCL Human Resources Limited",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Ris Care Ltd",
-            "Town/City": "Grays,",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Root-Power Limited",
-            "Town/City": "Salford, Manchester",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Safeguard World International Limited",
-            "Town/City": "Holmes Chapel",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "SAMA CARE LTD",
+            "Organisation Name": "Navalmar (UK) Limited",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "SCRUTOBYTE UK  LIMITED",
-            "Town/City": "Hounslow",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Smart MRI Limited",
+            "Organisation Name": "NEW YIBAN LTD",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "SPARK COMMODITIES UK LTD",
-            "Town/City": "Cheshire",
+            "Organisation Name": "Norfolk Deaf Association (NDA)",
+            "Town/City": "Norwich",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Synergy Health Managed Services Limited",
-            "Town/City": "Derby",
+            "Organisation Name": "NORTH WEST LOGISTICS AND TRANSPORT LIMITED",
+            "Town/City": "Oldham",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Tea Station Limited T/A Juices 4 Life",
+            "Organisation Name": "OGIGCONSULT LTD",
+            "Town/City": "Gloucester",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Old Friends Care ltd",
+            "Town/City": "Batchley",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "OZONE AUTO LTD",
+            "Town/City": "Coventry",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "PARADISE RESTAURANT LTD",
+            "Town/City": "Stoke-On-Trent",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Paratus Services (UK) Limited",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Pendle View Medical Centre",
+            "Town/City": "Nelson",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Pitchsd Ltd",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Pro Enviro Ltd",
+            "Town/City": "Rugby",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Reaforma Ltd",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Rozelin Ltd",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "SKWD Asia Limited",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "SSI LOGISTICS LTD",
             "Town/City": "Birmingham",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Token Studio ltd",
+            "Organisation Name": "Status Motor Group LTD",
+            "Town/City": "Barking",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Stream Platforms Ltd",
+            "Town/City": "London",
+            "Route": "Scale-up",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Stream Platforms Ltd",
+            "Town/City": "London",
+            "Route": "Global Business Mobility: Senior or Specialist Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Stream Platforms Ltd",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "VANDERPUMP & SYKES LLP",
-            "Town/City": "Enfield",
+            "Organisation Name": "SUTTON PCN s(PRIMARY CARE NETWORKS) COMMUNITY INTEREST COMPANY",
+            "Town/City": "Sutton",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "Venta Global Ltd",
-            "Town/City": "Hook",
+            "Organisation Name": "Taj Jewels",
+            "Town/City": "Southall",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "VK International Limited",
-            "Town/City": "Newark",
+            "Organisation Name": "TAS CHAUFFEUR LTD",
+            "Town/City": "Coventry",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
         },
         {
-            "Organisation Name": "ZAFRON LTD",
-            "Town/City": "Crawley",
+            "Organisation Name": "Telco IT Service LTd",
+            "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "first_seen": "2026-04-10"
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Thai Orchid & Murray Arms",
+            "Town/City": "Lockerbie",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "The Scout Association",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Thomas Swan & Co. Limited",
+            "Town/City": "Consett",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Thornleigh Camphill Communities Ltd",
+            "Town/City": "Thornbury",
+            "Route": "Charity Worker",
+            "Type & Rating": "Temporary Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Thornleigh Camphill Communities Ltd",
+            "Town/City": "Thornbury",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "UNI SPACE HOLDINGS LTD",
+            "Town/City": "England",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Van Mossel Automotive Group UK Limited",
+            "Town/City": "Poole",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Victoria's Smile Limited",
+            "Town/City": "Middlesex",
+            "Route": "Charity Worker",
+            "Type & Rating": "Temporary Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "We Care Physiotherapy ltd",
+            "Town/City": "Allington, Maidstone",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Westfield House (Care) Ltd",
+            "Town/City": "Loughborough",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Whole Ice Ltd",
+            "Town/City": "Deeside",
+            "Route": "Global Business Mobility: Service Supplier",
+            "Type & Rating": "Temporary Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Whole Ice Ltd",
+            "Town/City": "Deeside",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
+        },
+        {
+            "Organisation Name": "WINDER TAYLOR SMITH",
+            "Town/City": "Bolton",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "first_seen": "2026-04-13"
         }
     ],
     "removed": [
         {
-            "Organisation Name": "Accellacare UK Limited",
+            "Organisation Name": "AJ Engineering & Construction Services Ltd",
+            "Town/City": "Greshop Industrial Estate, Forres",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "ALBATROSS INTERNATIONAL SERVICES LTD",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Alza Accounting & Management Solutions Ltd",
+            "Town/City": "Luton",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "AMBROCIO INVESTMENT LTD",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "AS Care Solutions Ltd",
+            "Town/City": "Rochdale",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Asif Foods Limited T/A Albi Restaurant",
+            "Town/City": "Wales",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Blackfinch Financial Ltd",
+            "Town/City": "Gloucester",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Care Never Sleeps Limited",
+            "Town/City": "Norwich",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Chemical Dynamics Enterprises UK Ltd",
+            "Town/City": "London",
+            "Route": "Global Business Mobility: UK Expansion Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "DYNASTY CARE 247 LTD",
+            "Town/City": "Bedford",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "EAT-UK Ltd",
+            "Town/City": "Ipswich",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Fletchers Fish Bar",
+            "Town/City": "Pinner",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Flowmax Global Ltd",
+            "Town/City": "London",
+            "Route": "Global Business Mobility: UK Expansion Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Fortis Hosting Limited",
+            "Town/City": "Uxbridge",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "GMKG Ltd t/a Candlelight Inn",
+            "Town/City": "Bishopswood",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Good Planet LTD",
+            "Town/City": "Derby",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Halo Invest Ltd",
+            "Town/City": "Glasgow",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Helastel Ltd",
+            "Town/City": "Bristol",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "HOMELANDS CARE LLP",
+            "Town/City": "Bromley",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "HRK HAMBLE LIMITED Trading as Cardamom Indian Cuisine",
+            "Town/City": "Southampton",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "IHI EXCLUSIVE SERVICES LTD",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Imperial Sales & Lettings Agents Ltd",
+            "Town/City": "Southall",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Integrity Engineering Services Ltd",
+            "Town/City": "Ashford Kent",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "JUXT Ltd",
+            "Town/City": "Milton Keynes",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "KEA NZ (UK) Ltd",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Krotech Limited",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Ksubi UK Limited",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Leftley Rowe Corporate Finance Limited",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Lewisham Nexus Service",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "LIGHTHOUSE CAPITAL ADVISORY SERVICES LTD",
+            "Town/City": "London",
+            "Route": "Global Business Mobility: UK Expansion Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "LINX DESIGNBUILD LIMITED",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Little Futures Childminding Limited",
+            "Town/City": "Leeds",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "LRG Corporate Ltd T/A Le Raj",
+            "Town/City": "Epsom",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "MAGIC GAMES TECHNOLOGY LIMITED",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Mindglow Solutions Ltd",
+            "Town/City": "Rickmansworth",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Motivation Group Ltd",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Motivation Group Ltd",
+            "Town/City": "London",
+            "Route": "Creative Worker",
+            "Type & Rating": "Temporary Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Na Na CG Limited",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "New Life Church Middlesbrough",
+            "Town/City": "Middlesbrough",
+            "Route": "Religious Worker",
+            "Type & Rating": "Temporary Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "New Life Church Middlesbrough",
+            "Town/City": "Middlesbrough",
+            "Route": "Charity Worker",
+            "Type & Rating": "Temporary Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "OGIGCONSULT LTD",
+            "Town/City": "Hull",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Olbeac Limited",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Old Friends Care ltd",
+            "Town/City": "Redditch",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Ouzaria Limited",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "PARADISE RESTAURANT LTD",
+            "Town/City": "Leicester",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "PRINIT CONSULTING LIMITED",
+            "Town/City": "Watford",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Realansa Ltd",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "SEVEN STAR BEDS LTD",
+            "Town/City": "Dewsbury",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Simply One Stop Ltd",
+            "Town/City": "London",
+            "Route": "Global Business Mobility: Senior or Specialist Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Simply One Stop Ltd",
+            "Town/City": "London",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Skurio Ltd",
+            "Town/City": "Belfast",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Sky Vigil Care Ltd.",
+            "Town/City": "Gloucester",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "SMQA Limited",
             "Town/City": "Coventry",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
+            "removed_date": "2026-04-13"
         },
         {
-            "Organisation Name": "AS Design & Engineering Limited",
-            "Town/City": "Stalybridge",
+            "Organisation Name": "SUTTON PCNS (PRIMARY CARE NETWORKS) COMMUNITY INTEREST COMPANY",
+            "Town/City": "Sutton",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
+            "removed_date": "2026-04-13"
         },
         {
-            "Organisation Name": "Bluebird Care Rother & Hastings",
-            "Town/City": "Rye",
+            "Organisation Name": "TAS CHAUFFEUR LTD",
+            "Town/City": "Kenilworth",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
+            "removed_date": "2026-04-13"
         },
         {
-            "Organisation Name": "Centrechild House LTD",
-            "Town/City": "Rayleigh",
+            "Organisation Name": "Thames Technology Limited",
+            "Town/City": "Bracknell",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
+            "removed_date": "2026-04-13"
         },
         {
-            "Organisation Name": "Conscious Wellness Consulting Services Ltd",
+            "Organisation Name": "Thornleigh Camphill Communities Ltd",
+            "Town/City": "Thornbury",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Thornleigh Camphill Communities Ltd",
+            "Town/City": "Thornbury",
+            "Route": "Charity Worker",
+            "Type & Rating": "Temporary Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Threads Styling Limited",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
+            "removed_date": "2026-04-13"
         },
         {
-            "Organisation Name": "Divine Care Connections Ltd",
+            "Organisation Name": "Tripunk LTD",
+            "Town/City": "Leeds",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Tyrus Capital Services Ltd",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
+            "removed_date": "2026-04-13"
         },
         {
-            "Organisation Name": "Duna Films Ltd",
+            "Organisation Name": "UNI SPACE HOLDINGS LTD",
+            "Town/City": "Southall",
+            "Route": "Skilled Worker",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Wagestream Ltd",
             "Town/City": "London",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
+            "removed_date": "2026-04-13"
         },
         {
-            "Organisation Name": "Eatalian's Limited",
-            "Town/City": "Swansea",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Farewill Ltd",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Forever Care Ltd",
-            "Town/City": "Rustington",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "HydraForce Hydraulics Ltd",
-            "Town/City": "Birmingham",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "HydraForce Hydraulics Ltd",
-            "Town/City": "Birmingham",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "International Development Enterprises (iDE) UK",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Jellyfish Group Ltd",
-            "Town/City": "Reigate",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Jellyfish Group Ltd",
-            "Town/City": "Reigate",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Jordan Waste Management Ltd",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Just Mango Tree Ltd",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "King & King, Chartered Accountants",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Kiwicom UK Ltd",
+            "Organisation Name": "Wagestream Ltd",
             "Town/City": "London",
             "Route": "Global Business Mobility: Senior or Specialist Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
+            "removed_date": "2026-04-13"
         },
         {
-            "Organisation Name": "Kiwicom UK Ltd",
+            "Organisation Name": "Wagestream Ltd",
             "Town/City": "London",
+            "Route": "Scale-up",
+            "Type & Rating": "Worker (A rating)",
+            "removed_date": "2026-04-13"
+        },
+        {
+            "Organisation Name": "Wali Waris Ltd",
+            "Town/City": "Nottingham",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
+            "removed_date": "2026-04-13"
         },
         {
-            "Organisation Name": "LUMINARY CARE LIMITED",
-            "Town/City": "Loughborough",
+            "Organisation Name": "We Care Physiotherapy ltd",
+            "Town/City": "Rochester",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
+            "removed_date": "2026-04-13"
         },
         {
-            "Organisation Name": "Marketplace Direct Limited",
-            "Town/City": "London",
+            "Organisation Name": "Reaforma Ltd",
+            "Town/City": "Peterborough",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
+            "removed_date": "2026-04-13"
         },
         {
-            "Organisation Name": "Mobix Ltd",
-            "Town/City": "Sedgefield",
+            "Organisation Name": "OZONE AUTO LTD",
+            "Town/City": "Sutton Coldfield",
             "Route": "Skilled Worker",
             "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "MSA Byres Ltd",
-            "Town/City": "Inverurie",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "QCL Human Resources Limited",
-            "Town/City": "Birmingham",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Rahmath Traders Ltd",
-            "Town/City": "Ashton Under Lyne",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Ris Care Ltd",
-            "Town/City": "Grays",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "SCRUTOBYTE UK  LIMITED",
-            "Town/City": "Brentford",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Seven Day Group Limited",
-            "Town/City": "Abbeywood",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "SOCIAL CARE 4U LIMITED",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Thames Christian School",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Unique Personnel (UK) Limited",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Venta Global Ltd",
-            "Town/City": "Winchester",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "ZAFRON LTD",
-            "Town/City": "Brighton,",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Decision Inc. United Kingdom",
-            "Town/City": "Paddington",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Decision Inc. United Kingdom",
-            "Town/City": "Paddington",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Safeguard World International Limited",
-            "Town/City": "Congleton",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "CZAR VENTURES UK LIMITED(15345211)",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: UK Expansion Worker",
-            "Type & Rating": "Worker (UK Expansion Worker: Provisional )",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Claranet Ltd",
-            "Town/City": "London",
-            "Route": "Global Business Mobility: Senior or Specialist Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Claranet Ltd",
-            "Town/City": "London",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Mahi Consultants Limited",
-            "Town/City": "Isleworth",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
-        },
-        {
-            "Organisation Name": "Hasienda Limited t/as Casa De Moor",
-            "Town/City": "Stockport",
-            "Route": "Skilled Worker",
-            "Type & Rating": "Worker (A rating)",
-            "removed_date": "2026-04-10"
+            "removed_date": "2026-04-13"
         }
     ]
 }
