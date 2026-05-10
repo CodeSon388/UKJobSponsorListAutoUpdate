@@ -27,3 +27,9 @@ stats.json
 history.json
 daily_delta.json
 2026-01-15_-_Worker_and_Temporary_Worker.csv
+
+# Replay workspace — source CSVs the user feeds into replay.py.
+# Can be 10-50 MB each; we don't ship them in the repo.
+# Replay's outputs (events/, master updates) ARE committed.
+historical/
+replay_report.json
