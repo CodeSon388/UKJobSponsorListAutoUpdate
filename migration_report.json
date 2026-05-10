@@ -1,0 +1,32 @@
+{
+  "input_rows": 145959,
+  "parse_failures_count": 0,
+  "parse_failures_sample": [],
+  "output_licences_total": 144360,
+  "output_status_counts": {
+    "active": 140302,
+    "gone": 4058
+  },
+  "active_licences_rating_breakdown": {
+    "A": 140164,
+    "Provisional": 114,
+    "B": 17,
+    "Premium": 5,
+    "SME+": 2
+  },
+  "active_licences_type_breakdown": {
+    "worker": 134757,
+    "temporary worker": 5545
+  },
+  "consolidation_size_distribution": {
+    "1": 143475,
+    "2": 687,
+    "3": 13,
+    "4": 15,
+    "5": 15,
+    "6": 149,
+    "7": 6
+  },
+  "licences_with_single_raw_row": 143475,
+  "licences_consolidated": 885
+}

@@ -5,116 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="data:,">
-    <title>UK Sponsor Register Tracker</title>
+    <title>UK Sponsor Licence Churn Tracker</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     <style>
-        /* New Table Styles */
-        .data-section {
-            margin-top: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .controls {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .search-input {
-            flex: 1;
-            padding: 0.75rem;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            font-size: 1rem;
-            min-width: 200px;
-        }
-
-        .table-container {
-            background: var(--card-bg);
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        .full-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .full-table th,
-        .full-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .full-table th {
-            background-color: #f9fafb;
-            cursor: pointer;
-            user-select: none;
-            font-weight: 600;
-            color: var(--text-secondary);
-            white-space: nowrap;
-        }
-
-        .full-table th:hover {
-            background-color: #f3f4f6;
-        }
-
-        .full-table th.sort-asc::after {
-            content: " ▲";
-            font-size: 0.8em;
-        }
-
-        .full-table th.sort-desc::after {
-            content: " ▼";
-            font-size: 0.8em;
-        }
-
-        .pagination {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1.5rem;
-            background: var(--card-bg);
-            border-top: 1px solid #e5e7eb;
-        }
-
-        .btn {
-            padding: 0.5rem 1rem;
-            border: 1px solid #d1d5db;
-            background: white;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
-
-        .btn:hover {
-            background-color: #f3f4f6;
-        }
-
-        .btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        .loading-overlay {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-secondary);
-        }
-
         :root {
             --bg-color: #f3f4f6;
             --card-bg: #ffffff;
             --text-primary: #1f2937;
             --text-secondary: #6b7280;
             --accent: #3b82f6;
-            --danger: #ef4444;
             --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --gray: #6b7280;
         }
 
         body {
@@ -125,24 +29,19 @@
             padding: 2rem;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        .container { max-width: 1280px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
+        h2 { margin-top: 2.5rem; }
+        h3 { margin-top: 0; }
 
-        header {
+        .updated-text { color: var(--text-secondary); font-size: 0.9rem; }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
             margin-bottom: 2rem;
-        }
-
-        h1 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-
-        .updated-text {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
         }
 
         .grid {
@@ -155,170 +54,196 @@
         .card {
             background: var(--card-bg);
             border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 1.25rem 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
         }
 
         .metric-title {
             color: var(--text-secondary);
-            font-size: 0.875rem;
-            font-weight: 500;
+            font-size: 0.8rem;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
 
         .metric-value {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
+            margin-top: 0.5rem;
+            line-height: 1;
+        }
+
+        .metric-sub {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
             margin-top: 0.5rem;
         }
 
-        .metric-value.success {
-            color: var(--success);
-        }
-
-        .metric-value.danger {
-            color: var(--danger);
-        }
-
-        .metric-value.accent {
-            color: var(--accent);
-        }
+        .metric-value.success { color: var(--success); }
+        .metric-value.warning { color: var(--warning); }
+        .metric-value.danger  { color: var(--danger); }
+        .metric-value.accent  { color: var(--accent); }
+        .metric-value.gray    { color: var(--gray); }
 
         .charts-section {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1.5rem;
             margin-bottom: 2rem;
         }
 
-        .chart-container {
-            position: relative;
-            height: 300px;
-            width: 100%;
-        }
+        .chart-container { position: relative; height: 280px; width: 100%; }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-
-        th,
-        td {
-            text-align: left;
-            padding: 0.75rem;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        th {
-            color: var(--text-secondary);
-            font-weight: 600;
-            font-size: 0.875rem;
-        }
-
-        td {
-            font-size: 0.9rem;
-        }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { text-align: left; padding: 0.65rem; border-bottom: 1px solid #e5e7eb; }
+        th { color: var(--text-secondary); font-weight: 600; font-size: 0.825rem; }
+        td { font-size: 0.875rem; }
 
         .badge {
-            padding: 0.25rem 0.5rem;
+            padding: 0.2rem 0.55rem;
             border-radius: 9999px;
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             font-weight: 600;
+            white-space: nowrap;
         }
+        .badge-added       { background-color: #d1fae5; color: #065f46; }
+        .badge-upgraded    { background-color: #dbeafe; color: #1e40af; }
+        .badge-downgraded  { background-color: #fef3c7; color: #92400e; }
+        .badge-gone        { background-color: #fee2e2; color: #991b1b; }
 
-        .badge-new {
-            background-color: #d1fae5;
-            color: #065f46;
-        }
+        .data-section { margin-top: 3rem; margin-bottom: 3rem; }
 
-        .badge-removed {
-            background-color: #fee2e2;
-            color: #991b1b;
+        .controls { display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        .search-input {
+            flex: 1; padding: 0.75rem; border: 1px solid #d1d5db;
+            border-radius: 8px; font-size: 1rem; min-width: 200px;
         }
+        .full-table { width: 100%; border-collapse: collapse; }
+        .full-table th, .full-table td {
+            padding: 0.9rem 1rem; text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .full-table th {
+            background-color: #f9fafb; cursor: pointer; user-select: none;
+            font-weight: 600; color: var(--text-secondary); white-space: nowrap;
+        }
+        .full-table th:hover { background-color: #f3f4f6; }
+        .full-table th.sort-asc::after  { content: " ▲"; font-size: 0.8em; }
+        .full-table th.sort-desc::after { content: " ▼"; font-size: 0.8em; }
+        .pagination {
+            display: flex; justify-content: center; align-items: center;
+            gap: 0.5rem; padding: 1.25rem;
+            background: var(--card-bg); border-top: 1px solid #e5e7eb;
+        }
+        .btn {
+            padding: 0.5rem 1rem; border: 1px solid #d1d5db; background: white;
+            border-radius: 6px; cursor: pointer; font-size: 0.9rem;
+        }
+        .btn:hover { background-color: #f3f4f6; }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .loading-overlay { text-align: center; padding: 2rem; color: var(--text-secondary); }
+
+        .empty { color: var(--text-secondary); text-align: center; padding: 1.5rem; font-style: italic; }
     </style>
 </head>
 
 <body>
     <div class="container">
         <header>
-            <h1>UK Sponsor Register Tracker</h1>
-            <div
-                style="display: flex; gap: 1.5rem; color: var(--text-secondary); font-size: 0.9rem; align-items: center;">
-                <p><strong>Data Since:</strong> 2026-01-15</p>
-                <p id="last-updated">Loading...</p>
+            <h1>UK Sponsor Licence Churn Tracker</h1>
+            <div style="display: flex; gap: 1.5rem; color: var(--text-secondary); font-size: 0.9rem; align-items: center; flex-wrap: wrap;">
+                <p style="margin: 0;"><strong>Data Since:</strong> 2026-01-15</p>
+                <p id="last-updated" style="margin: 0;">Loading...</p>
+                <p id="data-date" style="margin: 0;"></p>
             </div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.75rem;">
+                Tracks four churn events per licence: <strong>新增 (added)</strong>,
+                <strong>升級 (upgraded)</strong>, <strong>降級 (downgraded)</strong>, and
+                <strong>消失 / 撤銷 (gone)</strong>. The gov.uk register provides no signal
+                to distinguish revoked from disappeared, so they're reported together as "gone".
+            </p>
         </header>
 
-        <!-- Key Metrics -->
-        <div class="grid">
+        <!-- KPI Cards -->
+        <div class="kpi-grid">
             <div class="card">
                 <div class="metric-title">Active Sponsors</div>
-                <div id="total-active" class="metric-value accent">-</div>
+                <div id="kpi-active" class="metric-value accent">-</div>
+                <div class="metric-sub">Total currently licensed</div>
             </div>
             <div class="card">
                 <div class="metric-title">Added Today</div>
-                <div id="added-today" class="metric-value success">-</div>
+                <div id="kpi-added" class="metric-value success">-</div>
+                <div class="metric-sub">新增 licences</div>
             </div>
             <div class="card">
-                <div class="metric-title">Removed Today</div>
-                <div id="removed-today" class="metric-value danger">-</div>
+                <div class="metric-title">Upgraded Today</div>
+                <div id="kpi-upgraded" class="metric-value accent">-</div>
+                <div class="metric-sub">升級 (e.g. B→A)</div>
+            </div>
+            <div class="card">
+                <div class="metric-title">Downgraded Today</div>
+                <div id="kpi-downgraded" class="metric-value warning">-</div>
+                <div class="metric-sub">降級 (e.g. A→B)</div>
+            </div>
+            <div class="card">
+                <div class="metric-title">Gone Today</div>
+                <div id="kpi-gone" class="metric-value danger">-</div>
+                <div class="metric-sub">消失 / 撤銷 combined</div>
             </div>
         </div>
 
-        <!-- Charts -->
+        <!-- Distribution Charts -->
         <div class="charts-section">
             <div class="card">
                 <h3>Top 5 Routes</h3>
-                <div class="chart-container">
-                    <canvas id="routesChart"></canvas>
-                </div>
+                <div class="chart-container"><canvas id="routesChart"></canvas></div>
             </div>
             <div class="card">
                 <h3>Top 5 Cities</h3>
-                <div class="chart-container">
-                    <canvas id="citiesChart"></canvas>
-                </div>
+                <div class="chart-container"><canvas id="citiesChart"></canvas></div>
             </div>
             <div class="card">
                 <h3>Top 5 Ratings</h3>
-                <div class="chart-container">
-                    <canvas id="ratingsChart"></canvas>
-                </div>
+                <div class="chart-container"><canvas id="ratingsChart"></canvas></div>
             </div>
         </div>
 
-        <!-- Lists -->
-        <div class="grid">
+        <!-- Recency Lists (per event type) -->
+        <h2>Recent Churn Events</h2>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));">
             <div class="card">
-                <h3>Recently Added (Last 7 Days)</h3>
-                <div style="overflow-x: auto;">
+                <h3 style="color: var(--success);">新增 Added (last 7 days)</h3>
+                <div style="overflow-x: auto; max-height: 320px; overflow-y: auto;">
                     <table id="added-table">
-                        <thead>
-                            <tr>
-                                <th>Organisation</th>
-                                <th>City</th>
-                                <th>Route</th>
-                                <th>Date</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th>Organisation</th><th>City</th><th>Route</th><th>Rating</th><th>Date</th></tr></thead>
                         <tbody></tbody>
                     </table>
                 </div>
             </div>
             <div class="card">
-                <h3>Recently Removed (Last 14 Days)</h3>
-                <div style="overflow-x: auto;">
-                    <table id="removed-table">
-                        <thead>
-                            <tr>
-                                <th>Organisation</th>
-                                <th>City</th>
-                                <th>Route</th>
-                                <th>Date</th>
-                            </tr>
-                        </thead>
+                <h3 style="color: var(--accent);">升級 Upgraded (last 14 days)</h3>
+                <div style="overflow-x: auto; max-height: 320px; overflow-y: auto;">
+                    <table id="upgraded-table">
+                        <thead><tr><th>Organisation</th><th>City</th><th>Route</th><th>From → To</th><th>Date</th></tr></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <h3 style="color: var(--warning);">降級 Downgraded (last 14 days)</h3>
+                <div style="overflow-x: auto; max-height: 320px; overflow-y: auto;">
+                    <table id="downgraded-table">
+                        <thead><tr><th>Organisation</th><th>City</th><th>Route</th><th>From → To</th><th>Date</th></tr></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <h3 style="color: var(--danger);">消失/撤銷 Gone (last 14 days)</h3>
+                <div style="overflow-x: auto; max-height: 320px; overflow-y: auto;">
+                    <table id="gone-table">
+                        <thead><tr><th>Organisation</th><th>City</th><th>Route</th><th>Last Rating</th><th>Date</th></tr></thead>
                         <tbody></tbody>
                     </table>
                 </div>
@@ -327,24 +252,26 @@
 
         <!-- History Trends -->
         <div class="data-section">
-            <h2>History Trends (Past 14 Days)</h2>
+            <h2>Churn Trend (Last 14 Days)</h2>
             <div class="grid" style="grid-template-columns: 2fr 1fr;">
                 <div class="card">
-                    <h3>Daily Added / Removed</h3>
-                    <div style="height: 300px; width: 100%;">
+                    <h3>Daily Events by Type</h3>
+                    <div style="height: 320px; width: 100%;">
                         <canvas id="historyChart"></canvas>
                     </div>
                 </div>
                 <div class="card">
-                    <h3>History Log</h3>
-                    <div style="overflow-y: auto; max-height: 300px;">
-                        <table class="full-table">
+                    <h3>Daily Log</h3>
+                    <div style="overflow-y: auto; max-height: 320px;">
+                        <table class="full-table" style="font-size: 0.8rem;">
                             <thead>
                                 <tr>
                                     <th>Date</th>
-                                    <th>Added</th>
-                                    <th>Removed</th>
-                                    <th>Total Active</th>
+                                    <th title="新增">+</th>
+                                    <th title="升級">↑</th>
+                                    <th title="降級">↓</th>
+                                    <th title="消失">×</th>
+                                    <th>Active</th>
                                 </tr>
                             </thead>
                             <tbody id="historyTableBody"></tbody>
@@ -361,18 +288,19 @@
                 <input type="text" id="searchInput" class="search-input"
                     placeholder="Search by Company, City, or Route...">
             </div>
-            <div class="table-container">
-                <div id="tableLoading" class="loading-overlay">Loading full register data (this may take a moment)...
-                </div>
+            <div class="card" style="padding: 0;">
+                <div id="tableLoading" class="loading-overlay">Loading full register data (this may take a moment)...</div>
                 <div style="overflow-x: auto;">
                     <table class="full-table" id="mainTable" style="display: none;">
                         <thead>
                             <tr>
-                                <th data-sort="Organisation Name">Organisation Name</th>
-                                <th data-sort="Town/City">Town/City</th>
-                                <th data-sort="Route">Route</th>
-                                <th data-sort="Type & Rating">Rating</th>
-                                <th data-sort="first_seen">First Seen</th>
+                                <th data-sort="organisation_name_raw">Organisation Name</th>
+                                <th data-sort="town_raw">Town/City</th>
+                                <th data-sort="county_raw">County</th>
+                                <th data-sort="route">Route</th>
+                                <th data-sort="type">Type</th>
+                                <th data-sort="current_rating">Rating</th>
+                                <th data-sort="first_seen_date">First Seen</th>
                             </tr>
                         </thead>
                         <tbody id="tableBody"></tbody>
@@ -385,12 +313,11 @@
                 </div>
             </div>
         </div>
-        <footer
-            style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e5e7eb; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; text-align: center;">
-            <p><strong>Disclaimer:</strong> This website uses data sourced from the UK Government's <a
-                    href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers#full-publication-update-history"
-                    target="_blank" style="color: var(--accent);">Register of Worker and Temporary Worker licensed
-                    sponsors</a>.
+
+        <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e5e7eb; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; text-align: center;">
+            <p><strong>Disclaimer:</strong> This website uses data sourced from the UK Government's
+                <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers#full-publication-update-history"
+                    target="_blank" style="color: var(--accent);">Register of Worker and Temporary Worker licensed sponsors</a>.
                 This tool is an independent project and is <strong>not affiliated, endorsed, or connected</strong> with
                 GOV.UK or the UK Home Office.</p>
             <p>We accept <strong>no responsibility or liability</strong> for any errors, omissions, or losses resulting
@@ -400,119 +327,190 @@
     </div>
 
     <script>
+        // ------------------------------------------------------------- Stats
         async function loadStats() {
             try {
-                const response = await fetch('stats.json');
-                const data = await response.json();
+                const r = await fetch('stats.json');
+                const data = await r.json();
 
-                // Update text metrics
                 document.getElementById('last-updated').innerHTML = `<strong>Last Updated:</strong> ${data.generated_at}`;
-                document.getElementById('total-active').textContent = data.daily_metrics.total_active_sponsors.toLocaleString();
-                document.getElementById('added-today').textContent = `+${data.daily_metrics.added_today.toLocaleString()}`;
-                document.getElementById('removed-today').textContent = `-${data.daily_metrics.removed_today.toLocaleString()}`;
+                if (data.data_date) {
+                    document.getElementById('data-date').innerHTML = `<strong>Data Date:</strong> ${data.data_date}`;
+                }
 
-                // Render Charts
-                renderChart('routesChart', data.rankings.top_routes, 'Sponsors per Route');
-                renderChart('citiesChart', data.rankings.top_cities, 'Sponsors per City');
-                renderChart('ratingsChart', data.rankings.top_ratings, 'Sponsors per Rating');
+                const m = data.daily_metrics || {};
+                setKpi('kpi-active',     m.total_active_sponsors);
+                setKpi('kpi-added',      m.added_today,      '+');
+                setKpi('kpi-upgraded',   m.upgraded_today,   '+');
+                setKpi('kpi-downgraded', m.downgraded_today, '-');
+                setKpi('kpi-gone',       m.gone_today ?? m.removed_today, '-');
 
-                // Render Tables
-                renderTable('added-table', data.recency.added_last_7_days, 'first_seen');
-                renderTable('removed-table', data.recency.removed_last_14_days, 'removed_date');
+                renderChart('routesChart',  data.rankings?.top_routes  || {}, 'Sponsors per Route');
+                renderChart('citiesChart',  data.rankings?.top_cities  || {}, 'Sponsors per City');
+                renderChart('ratingsChart', data.rankings?.top_ratings || {}, 'Sponsors per Rating');
 
-            } catch (error) {
-                console.error('Error loading stats:', error);
-                document.getElementById('last-updated').textContent = 'Error loading data. Please check console.';
+                renderEventTable('added-table',      data.recency?.added_last_7_days       || [], 'added');
+                renderEventTable('upgraded-table',   data.recency?.upgraded_last_14_days   || [], 'upgraded');
+                renderEventTable('downgraded-table', data.recency?.downgraded_last_14_days || [], 'downgraded');
+                // gone: prefer new schema; fall back to legacy `removed_last_14_days` (which is downgraded+gone).
+                renderEventTable(
+                    'gone-table',
+                    data.recency?.gone_last_14_days || data.recency?.removed_last_14_days || [],
+                    'gone'
+                );
+            } catch (e) {
+                console.error('Error loading stats:', e);
+                document.getElementById('last-updated').textContent = 'Error loading data. Check console.';
             }
         }
 
-        function renderChart(elementId, dataObj, label) {
-            const ctx = document.getElementById(elementId).getContext('2d');
+        function setKpi(id, val, prefix = '') {
+            const el = document.getElementById(id);
+            if (val === undefined || val === null) { el.textContent = '-'; return; }
+            el.textContent = (prefix && val > 0 ? prefix : '') + Number(val).toLocaleString();
+        }
+
+        function renderChart(elId, dataObj, label) {
+            const ctx = document.getElementById(elId).getContext('2d');
             new Chart(ctx, {
                 type: 'bar',
                 data: {
                     labels: Object.keys(dataObj),
                     datasets: [{
-                        label: label,
-                        data: Object.values(dataObj),
-                        backgroundColor: '#3b82f6',
-                        borderRadius: 6
+                        label, data: Object.values(dataObj),
+                        backgroundColor: '#3b82f6', borderRadius: 6
                     }]
                 },
                 options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false }
-                    },
-                    scales: {
-                        y: { beginAtZero: true }
-                    }
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: { y: { beginAtZero: true } }
                 }
             });
         }
 
-        function renderTable(tableId, dataList, dateField) {
+        function renderEventTable(tableId, items, kind) {
             const tbody = document.querySelector(`#${tableId} tbody`);
             tbody.innerHTML = '';
-
-            dataList.forEach(item => {
+            if (!items || !items.length) {
+                tbody.innerHTML = `<tr><td colspan="5" class="empty">No ${kind} events in window</td></tr>`;
+                return;
+            }
+            items.forEach(item => {
+                const name  = item['Organisation Name'] || item.organisation_name || '-';
+                const town  = item['Town/City']        || item.town              || '-';
+                const route = item['Route']            || item.route             || '-';
+                const date  = item['date'] || item['first_seen'] || item['removed_date'] || '-';
+                let middleCell = '-';
+                if (kind === 'added')    middleCell = item.to_rating || item['Type & Rating'] || '-';
+                else if (kind === 'gone') middleCell = item.from_rating || '-';
+                else { // upgraded / downgraded
+                    const from = item.from_rating || '?';
+                    const to   = item.to_rating   || '?';
+                    middleCell = `${from} → ${to}`;
+                }
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td>${item['Organisation Name']}</td>
-                    <td>${item['Town/City']}</td>
-                    <td><span class="badge badge-new">${item.Route}</span></td>
-                    <td>${item[dateField]}</td>
+                    <td>${escapeHtml(name)}</td>
+                    <td>${escapeHtml(town)}</td>
+                    <td><span class="badge badge-${kind}">${escapeHtml(route)}</span></td>
+                    <td>${escapeHtml(middleCell)}</td>
+                    <td>${escapeHtml(date)}</td>
                 `;
                 tbody.appendChild(row);
             });
+        }
 
-            if (dataList.length === 0) {
-                const row = document.createElement('tr');
-                row.innerHTML = '<td colspan="4" style="text-align:center; color: #aaa;">No Recent Changes</td>';
-                tbody.appendChild(row);
+        function escapeHtml(s) {
+            return String(s ?? '').replace(/[&<>"']/g, c => ({
+                '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+            })[c]);
+        }
+
+        // ------------------------------------------------------------- History
+        async function loadHistory() {
+            try {
+                const r = await fetch('history.json');
+                const history = await r.json();
+
+                // Table — newest first
+                const tbody = document.getElementById('historyTableBody');
+                tbody.innerHTML = '';
+                [...history].reverse().slice(0, 60).forEach(day => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${day.date}</td>
+                        <td style="color: var(--success);">${(day.added ?? 0).toLocaleString()}</td>
+                        <td style="color: var(--accent);">${(day.upgraded ?? 0).toLocaleString()}</td>
+                        <td style="color: var(--warning);">${(day.downgraded ?? 0).toLocaleString()}</td>
+                        <td style="color: var(--danger);">${(day.gone ?? day.removed ?? 0).toLocaleString()}</td>
+                        <td>${(day.total ?? 0).toLocaleString()}</td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+
+                // Chart — last 14
+                const recent = history.slice(-14);
+                const ctx = document.getElementById('historyChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: recent.map(d => d.date),
+                        datasets: [
+                            { label: 'Added',      data: recent.map(d => d.added      ?? 0), borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,0.1)', tension: 0.3, fill: false },
+                            { label: 'Upgraded',   data: recent.map(d => d.upgraded   ?? 0), borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.1)', tension: 0.3, fill: false },
+                            { label: 'Downgraded', data: recent.map(d => d.downgraded ?? 0), borderColor: '#f59e0b', backgroundColor: 'rgba(245,158,11,0.1)', tension: 0.3, fill: false },
+                            { label: 'Gone',       data: recent.map(d => d.gone ?? d.removed ?? 0), borderColor: '#ef4444', backgroundColor: 'rgba(239,68,68,0.1)', tension: 0.3, fill: false }
+                        ]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        interaction: { mode: 'index', intersect: false },
+                        scales: { y: { beginAtZero: true } }
+                    }
+                });
+            } catch (e) {
+                console.error('Error loading history:', e);
+                const c = document.getElementById('historyChart');
+                if (c?.parentNode) {
+                    c.parentNode.innerHTML = '<p class="empty">History data will appear after the next tracker run.</p>';
+                }
             }
         }
 
-        // --- Full Data Table Logic ---
+        // ------------------------------------------------------------- Full register table
         let allSponsors = [];
         let filteredSponsors = [];
         let currentPage = 1;
         const itemsPerPage = 15;
-        let currentSort = { field: 'Organisation Name', dir: 'asc' };
+        let currentSort = { field: 'organisation_name_raw', dir: 'asc' };
 
         function loadFullData() {
             Papa.parse('master_register.csv', {
-                download: true,
-                header: true,
-                skipEmptyLines: true,
-                complete: function (results) {
-                    allSponsors = results.data.filter(row => !row.removed_date);
+                download: true, header: true, skipEmptyLines: true,
+                complete: (results) => {
+                    allSponsors = results.data.filter(r => (r.status || 'active') === 'active');
                     applyFilter();
                     document.getElementById('tableLoading').style.display = 'none';
                     document.getElementById('mainTable').style.display = 'table';
                     document.getElementById('paginationControls').style.display = 'flex';
                 },
-                error: function (err) {
-                    console.error("Error parsing CSV:", err);
-                    document.getElementById('tableLoading').textContent = "Error loading data file.";
+                error: (err) => {
+                    console.error('CSV parse error:', err);
+                    document.getElementById('tableLoading').textContent = 'Error loading data file.';
                 }
             });
         }
 
-        document.getElementById('searchInput').addEventListener('input', (e) => {
-            applyFilter(e.target.value);
-        });
+        document.getElementById('searchInput').addEventListener('input', e => applyFilter(e.target.value));
 
-        function applyFilter(searchTerm = "") {
-            const term = searchTerm.toLowerCase();
-            filteredSponsors = allSponsors.filter(item => {
-                return (
-                    (item['Organisation Name'] && item['Organisation Name'].toLowerCase().includes(term)) ||
-                    (item['Town/City'] && item['Town/City'].toLowerCase().includes(term)) ||
-                    (item['Route'] && item['Route'].toLowerCase().includes(term))
-                );
-            });
+        function applyFilter(term = '') {
+            const t = term.toLowerCase();
+            filteredSponsors = allSponsors.filter(item =>
+                (item.organisation_name_raw && item.organisation_name_raw.toLowerCase().includes(t)) ||
+                (item.town_raw              && item.town_raw.toLowerCase().includes(t)) ||
+                (item.route                 && item.route.toLowerCase().includes(t))
+            );
             sortData(currentSort.field, currentSort.dir, false);
             currentPage = 1;
             renderMainTable();
@@ -533,10 +531,10 @@
                 if (th.dataset.sort === field) th.classList.add(dir === 'asc' ? 'sort-asc' : 'sort-desc');
             });
             filteredSponsors.sort((a, b) => {
-                const valA = (a[field] || "").toString().toLowerCase();
-                const valB = (b[field] || "").toString().toLowerCase();
-                if (valA < valB) return dir === 'asc' ? -1 : 1;
-                if (valA > valB) return dir === 'asc' ? 1 : -1;
+                const va = (a[field] || '').toString().toLowerCase();
+                const vb = (b[field] || '').toString().toLowerCase();
+                if (va < vb) return dir === 'asc' ? -1 : 1;
+                if (va > vb) return dir === 'asc' ?  1 : -1;
                 return 0;
             });
             if (reRender) renderMainTable();
@@ -546,96 +544,37 @@
             const tbody = document.getElementById('tableBody');
             tbody.innerHTML = '';
             const start = (currentPage - 1) * itemsPerPage;
-            const end = start + itemsPerPage;
-            filteredSponsors.slice(start, end).forEach(item => {
+            filteredSponsors.slice(start, start + itemsPerPage).forEach(item => {
                 const row = document.createElement('tr');
-                row.innerHTML = `<td>${item['Organisation Name'] || '-'}</td><td>${item['Town/City'] || '-'}</td><td>${item['Route'] || '-'}</td><td>${item['Type & Rating'] || '-'}</td><td>${item['first_seen'] || '-'}</td>`;
+                row.innerHTML = `
+                    <td>${escapeHtml(item.organisation_name_raw || '-')}</td>
+                    <td>${escapeHtml(item.town_raw || '-')}</td>
+                    <td>${escapeHtml(item.county_raw || '-')}</td>
+                    <td>${escapeHtml(item.route || '-')}</td>
+                    <td>${escapeHtml(item.type || '-')}</td>
+                    <td>${escapeHtml(item.current_rating || '-')}</td>
+                    <td>${escapeHtml(item.first_seen_date || '-')}</td>
+                `;
                 tbody.appendChild(row);
             });
-            if (filteredSponsors.length === 0) tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding: 2rem;">No matching records found</td></tr>';
+            if (!filteredSponsors.length) {
+                tbody.innerHTML = '<tr><td colspan="7" class="empty">No matching records found</td></tr>';
+            }
             const totalPages = Math.ceil(filteredSponsors.length / itemsPerPage);
             document.getElementById('pageInfo').textContent = `Page ${currentPage} of ${totalPages || 1}`;
             document.getElementById('prevBtn').disabled = currentPage === 1;
             document.getElementById('nextBtn').disabled = currentPage >= totalPages;
         }
 
-        function changePage(delta) {
-            const totalPages = Math.ceil(filteredSponsors.length / itemsPerPage);
-            const newPage = currentPage + delta;
-            if (newPage >= 1 && newPage <= totalPages) {
-                currentPage = newPage;
-                renderMainTable();
-            }
+        function changePage(d) {
+            const total = Math.ceil(filteredSponsors.length / itemsPerPage);
+            const next = currentPage + d;
+            if (next >= 1 && next <= total) { currentPage = next; renderMainTable(); }
         }
 
         loadStats();
         loadHistory();
         loadFullData();
-
-        async function loadHistory() {
-            try {
-                const response = await fetch('history.json');
-                const historyData = await response.json();
-
-                // 1. Render Table (Show newest first)
-                const tbody = document.getElementById('historyTableBody');
-                tbody.innerHTML = '';
-                // Clone and reverse for table display
-                [...historyData].reverse().forEach(day => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${day.date}</td>
-                        <td class="success">+${day.added.toLocaleString()}</td>
-                        <td class="danger">-${day.removed.toLocaleString()}</td>
-                        <td>${day.total.toLocaleString()}</td>
-                    `;
-                    tbody.appendChild(row);
-                });
-
-                // 2. Render Chart (Last 14 days)
-                const recentHistory = historyData.slice(-14);
-                const ctx = document.getElementById('historyChart').getContext('2d');
-                new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: recentHistory.map(d => d.date),
-                        datasets: [
-                            {
-                                label: 'Added',
-                                data: recentHistory.map(d => d.added),
-                                borderColor: '#10b981',
-                                backgroundColor: 'rgba(16, 185, 129, 0.1)',
-                                tension: 0.3,
-                                fill: true
-                            },
-                            {
-                                label: 'Removed',
-                                data: recentHistory.map(d => d.removed),
-                                borderColor: '#ef4444',
-                                backgroundColor: 'rgba(239, 68, 68, 0.1)',
-                                tension: 0.3,
-                                fill: true
-                            }
-                        ]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        interaction: {
-                            mode: 'index',
-                            intersect: false,
-                        },
-                        scales: {
-                            y: { beginAtZero: true }
-                        }
-                    }
-                });
-
-            } catch (error) {
-                console.error("Error loading history:", error);
-                document.querySelector('#historyChart').parentNode.innerHTML = '<p style="text-align:center; padding:2rem; color:#aaa;">History data will appear here after the next run.</p>';
-            }
-        }
     </script>
 </body>
 
