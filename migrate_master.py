@@ -72,6 +72,11 @@ NEW_COLUMNS = [
     "first_seen_date",
     "last_seen_date",
     "removed_date",
+    # Rating-history summaries (initialised empty; populated by tracker/replay
+    # as upgraded/downgraded events fire over time).
+    "rating_change_count",
+    "first_rating_change_date",
+    "last_rating_change_date",
 ]
 
 
@@ -210,6 +215,11 @@ def _consolidate(normalised: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
                 "first_seen_date": first_seen.strftime("%Y-%m-%d") if pd.notna(first_seen) else "",
                 "last_seen_date": last_seen.strftime("%Y-%m-%d") if pd.notna(last_seen) else "",
                 "removed_date": removed_date_out.strftime("%Y-%m-%d") if pd.notna(removed_date_out) else "",
+                # Rating-history summaries start at zero/empty — replay will
+                # populate them by scanning events/ once historical data lands.
+                "rating_change_count": 0,
+                "first_rating_change_date": "",
+                "last_rating_change_date": "",
             }
         )
 

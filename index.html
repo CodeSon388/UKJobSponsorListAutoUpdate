@@ -113,11 +113,20 @@
 
         .data-section { margin-top: 3rem; margin-bottom: 3rem; }
 
-        .controls { display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        .controls { display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
         .search-input {
             flex: 1; padding: 0.75rem; border: 1px solid #d1d5db;
             border-radius: 8px; font-size: 1rem; min-width: 200px;
         }
+        .filter-checkbox {
+            display: flex; align-items: center; gap: 0.5rem;
+            padding: 0.5rem 0.75rem; background: var(--card-bg);
+            border: 1px solid #d1d5db; border-radius: 8px;
+            cursor: pointer; user-select: none;
+            font-size: 0.9rem;
+        }
+        .filter-checkbox input { cursor: pointer; }
+
         .full-table { width: 100%; border-collapse: collapse; }
         .full-table th, .full-table td {
             padding: 0.9rem 1rem; text-align: left;
@@ -130,6 +139,9 @@
         .full-table th:hover { background-color: #f3f4f6; }
         .full-table th.sort-asc::after  { content: " ▲"; font-size: 0.8em; }
         .full-table th.sort-desc::after { content: " ▼"; font-size: 0.8em; }
+        .full-table tbody tr { cursor: pointer; }
+        .full-table tbody tr:hover { background-color: #f9fafb; }
+
         .pagination {
             display: flex; justify-content: center; align-items: center;
             gap: 0.5rem; padding: 1.25rem;
@@ -144,6 +156,76 @@
         .loading-overlay { text-align: center; padding: 2rem; color: var(--text-secondary); }
 
         .empty { color: var(--text-secondary); text-align: center; padding: 1.5rem; font-style: italic; }
+
+        .churn-pill {
+            display: inline-block;
+            padding: 0.15rem 0.55rem;
+            background: #eef2ff;
+            color: #4338ca;
+            border-radius: 9999px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            min-width: 1.6rem;
+            text-align: center;
+        }
+        .churn-pill.zero { background: #f3f4f6; color: var(--text-secondary); font-weight: 500; }
+
+        /* --- Modal --- */
+        .modal-backdrop {
+            position: fixed; inset: 0;
+            background: rgba(15, 23, 42, 0.55);
+            display: none;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 4rem 1rem 2rem;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        .modal-backdrop.open { display: flex; }
+        .modal {
+            background: var(--card-bg);
+            border-radius: 14px;
+            max-width: 760px;
+            width: 100%;
+            box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        .modal-header {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem;
+        }
+        .modal-header h3 {
+            margin: 0; font-size: 1.15rem;
+        }
+        .modal-header .meta {
+            margin-top: 0.4rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .modal-close {
+            background: none; border: none; cursor: pointer;
+            font-size: 1.4rem; line-height: 1; color: var(--text-secondary);
+            padding: 0.2rem 0.5rem; border-radius: 6px;
+        }
+        .modal-close:hover { background-color: #f3f4f6; color: var(--text-primary); }
+        .modal-body { padding: 1.25rem 1.5rem; }
+        .modal-body table { margin-top: 0; }
+        .modal-summary {
+            display: flex; flex-wrap: wrap; gap: 1.5rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+        .modal-summary .pair { display: flex; gap: 0.35rem; align-items: baseline; }
+        .modal-summary .label {
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .modal-summary .value { font-weight: 600; }
     </style>
 </head>
 
@@ -250,6 +332,34 @@
             </div>
         </div>
 
+        <!-- Top 10 most-churned licences (Tier C) -->
+        <h2>Most Rating-Churned Licences (All Time)</h2>
+        <div class="card">
+            <p style="color: var(--text-secondary); font-size: 0.875rem; margin-top:0;">
+                Active sponsors with the most rating changes (upgrades + downgrades) over the
+                tracked window. Click any row to see the full history.
+            </p>
+            <div style="overflow-x: auto;">
+                <table id="topChurnedTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Organisation</th>
+                            <th>City</th>
+                            <th>Route</th>
+                            <th>Current Rating</th>
+                            <th>Rating Changes</th>
+                            <th>First Change</th>
+                            <th>Last Change</th>
+                        </tr>
+                    </thead>
+                    <tbody id="topChurnedBody">
+                        <tr><td colspan="8" class="loading-overlay">Loading…</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
         <!-- History Trends -->
         <div class="data-section">
             <h2>Churn Trend (Last 14 Days)</h2>
@@ -284,9 +394,16 @@
         <!-- Full Data Table -->
         <div class="data-section">
             <h2>Full Sponsor Register</h2>
+            <p style="color: var(--text-secondary); font-size: 0.875rem; margin-top: -0.5rem;">
+                Click any row to view that licence's full rating history.
+            </p>
             <div class="controls">
                 <input type="text" id="searchInput" class="search-input"
                     placeholder="Search by Company, City, or Route...">
+                <label class="filter-checkbox">
+                    <input type="checkbox" id="onlyChangedToggle">
+                    Only show licences with rating changes
+                </label>
             </div>
             <div class="card" style="padding: 0;">
                 <div id="tableLoading" class="loading-overlay">Loading full register data (this may take a moment)...</div>
@@ -300,6 +417,7 @@
                                 <th data-sort="route">Route</th>
                                 <th data-sort="type">Type</th>
                                 <th data-sort="current_rating">Rating</th>
+                                <th data-sort="rating_change_count">Changes</th>
                                 <th data-sort="first_seen_date">First Seen</th>
                             </tr>
                         </thead>
@@ -324,6 +442,25 @@
                 from the use of this information. The data is provided "as is" and users should verify details directly
                 with the official register.</p>
         </footer>
+    </div>
+
+    <!-- Licence history modal -->
+    <div class="modal-backdrop" id="historyModal" onclick="if(event.target===this) closeHistoryModal()">
+        <div class="modal">
+            <div class="modal-header">
+                <div>
+                    <h3 id="modalTitle">Licence history</h3>
+                    <div class="meta" id="modalMeta"></div>
+                </div>
+                <button class="modal-close" onclick="closeHistoryModal()" aria-label="Close">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-summary" id="modalSummary"></div>
+                <div id="modalBodyInner">
+                    <p class="empty">Loading events…</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -352,7 +489,6 @@
                 renderEventTable('added-table',      data.recency?.added_last_7_days       || [], 'added');
                 renderEventTable('upgraded-table',   data.recency?.upgraded_last_14_days   || [], 'upgraded');
                 renderEventTable('downgraded-table', data.recency?.downgraded_last_14_days || [], 'downgraded');
-                // gone: prefer new schema; fall back to legacy `removed_last_14_days` (which is downgraded+gone).
                 renderEventTable(
                     'gone-table',
                     data.recency?.gone_last_14_days || data.recency?.removed_last_14_days || [],
@@ -404,7 +540,7 @@
                 let middleCell = '-';
                 if (kind === 'added')    middleCell = item.to_rating || item['Type & Rating'] || '-';
                 else if (kind === 'gone') middleCell = item.from_rating || '-';
-                else { // upgraded / downgraded
+                else {
                     const from = item.from_rating || '?';
                     const to   = item.to_rating   || '?';
                     middleCell = `${from} → ${to}`;
@@ -433,7 +569,6 @@
                 const r = await fetch('history.json');
                 const history = await r.json();
 
-                // Table — newest first
                 const tbody = document.getElementById('historyTableBody');
                 tbody.innerHTML = '';
                 [...history].reverse().slice(0, 60).forEach(day => {
@@ -449,7 +584,6 @@
                     tbody.appendChild(tr);
                 });
 
-                // Chart — last 14
                 const recent = history.slice(-14);
                 const ctx = document.getElementById('historyChart').getContext('2d');
                 new Chart(ctx, {
@@ -457,10 +591,10 @@
                     data: {
                         labels: recent.map(d => d.date),
                         datasets: [
-                            { label: 'Added',      data: recent.map(d => d.added      ?? 0), borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,0.1)', tension: 0.3, fill: false },
-                            { label: 'Upgraded',   data: recent.map(d => d.upgraded   ?? 0), borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.1)', tension: 0.3, fill: false },
-                            { label: 'Downgraded', data: recent.map(d => d.downgraded ?? 0), borderColor: '#f59e0b', backgroundColor: 'rgba(245,158,11,0.1)', tension: 0.3, fill: false },
-                            { label: 'Gone',       data: recent.map(d => d.gone ?? d.removed ?? 0), borderColor: '#ef4444', backgroundColor: 'rgba(239,68,68,0.1)', tension: 0.3, fill: false }
+                            { label: 'Added',      data: recent.map(d => d.added      ?? 0), borderColor: '#10b981', tension: 0.3, fill: false },
+                            { label: 'Upgraded',   data: recent.map(d => d.upgraded   ?? 0), borderColor: '#3b82f6', tension: 0.3, fill: false },
+                            { label: 'Downgraded', data: recent.map(d => d.downgraded ?? 0), borderColor: '#f59e0b', tension: 0.3, fill: false },
+                            { label: 'Gone',       data: recent.map(d => d.gone ?? d.removed ?? 0), borderColor: '#ef4444', tension: 0.3, fill: false }
                         ]
                     },
                     options: {
@@ -490,10 +624,15 @@
                 download: true, header: true, skipEmptyLines: true,
                 complete: (results) => {
                     allSponsors = results.data.filter(r => (r.status || 'active') === 'active');
+                    // Coerce rating_change_count to integer for sorting/filtering.
+                    allSponsors.forEach(r => {
+                        r.rating_change_count = parseInt(r.rating_change_count, 10) || 0;
+                    });
                     applyFilter();
                     document.getElementById('tableLoading').style.display = 'none';
                     document.getElementById('mainTable').style.display = 'table';
                     document.getElementById('paginationControls').style.display = 'flex';
+                    renderTopChurned();
                 },
                 error: (err) => {
                     console.error('CSV parse error:', err);
@@ -502,15 +641,53 @@
             });
         }
 
+        function renderTopChurned() {
+            const tbody = document.getElementById('topChurnedBody');
+            const top = allSponsors
+                .filter(r => r.rating_change_count > 0)
+                .sort((a, b) => b.rating_change_count - a.rating_change_count)
+                .slice(0, 10);
+            tbody.innerHTML = '';
+            if (!top.length) {
+                tbody.innerHTML = `
+                    <tr><td colspan="8" class="empty">
+                        No licences have rating changes yet. Once the tracker observes
+                        upgrades or downgrades over time, the top-churned list will populate.
+                    </td></tr>`;
+                return;
+            }
+            top.forEach((r, i) => {
+                const tr = document.createElement('tr');
+                tr.addEventListener('click', () => openHistoryModal(r));
+                tr.innerHTML = `
+                    <td>${i + 1}</td>
+                    <td>${escapeHtml(r.organisation_name_raw || '-')}</td>
+                    <td>${escapeHtml(r.town_raw || '-')}</td>
+                    <td>${escapeHtml(r.route || '-')}</td>
+                    <td>${escapeHtml(r.current_rating || '-')}</td>
+                    <td><span class="churn-pill">${r.rating_change_count}</span></td>
+                    <td>${escapeHtml(r.first_rating_change_date || '-')}</td>
+                    <td>${escapeHtml(r.last_rating_change_date || '-')}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
         document.getElementById('searchInput').addEventListener('input', e => applyFilter(e.target.value));
+        document.getElementById('onlyChangedToggle').addEventListener('change', () => applyFilter(document.getElementById('searchInput').value));
 
         function applyFilter(term = '') {
             const t = term.toLowerCase();
-            filteredSponsors = allSponsors.filter(item =>
-                (item.organisation_name_raw && item.organisation_name_raw.toLowerCase().includes(t)) ||
-                (item.town_raw              && item.town_raw.toLowerCase().includes(t)) ||
-                (item.route                 && item.route.toLowerCase().includes(t))
-            );
+            const onlyChanged = document.getElementById('onlyChangedToggle').checked;
+            filteredSponsors = allSponsors.filter(item => {
+                if (onlyChanged && (!item.rating_change_count || item.rating_change_count <= 0)) return false;
+                if (!t) return true;
+                return (
+                    (item.organisation_name_raw && item.organisation_name_raw.toLowerCase().includes(t)) ||
+                    (item.town_raw              && item.town_raw.toLowerCase().includes(t)) ||
+                    (item.route                 && item.route.toLowerCase().includes(t))
+                );
+            });
             sortData(currentSort.field, currentSort.dir, false);
             currentPage = 1;
             renderMainTable();
@@ -530,9 +707,15 @@
                 th.classList.remove('sort-asc', 'sort-desc');
                 if (th.dataset.sort === field) th.classList.add(dir === 'asc' ? 'sort-asc' : 'sort-desc');
             });
+            const numeric = field === 'rating_change_count';
             filteredSponsors.sort((a, b) => {
-                const va = (a[field] || '').toString().toLowerCase();
-                const vb = (b[field] || '').toString().toLowerCase();
+                let va, vb;
+                if (numeric) {
+                    va = Number(a[field]) || 0; vb = Number(b[field]) || 0;
+                } else {
+                    va = (a[field] || '').toString().toLowerCase();
+                    vb = (b[field] || '').toString().toLowerCase();
+                }
                 if (va < vb) return dir === 'asc' ? -1 : 1;
                 if (va > vb) return dir === 'asc' ?  1 : -1;
                 return 0;
@@ -546,6 +729,9 @@
             const start = (currentPage - 1) * itemsPerPage;
             filteredSponsors.slice(start, start + itemsPerPage).forEach(item => {
                 const row = document.createElement('tr');
+                row.addEventListener('click', () => openHistoryModal(item));
+                const churn = item.rating_change_count || 0;
+                const pillClass = churn > 0 ? 'churn-pill' : 'churn-pill zero';
                 row.innerHTML = `
                     <td>${escapeHtml(item.organisation_name_raw || '-')}</td>
                     <td>${escapeHtml(item.town_raw || '-')}</td>
@@ -553,12 +739,13 @@
                     <td>${escapeHtml(item.route || '-')}</td>
                     <td>${escapeHtml(item.type || '-')}</td>
                     <td>${escapeHtml(item.current_rating || '-')}</td>
+                    <td><span class="${pillClass}">${churn}</span></td>
                     <td>${escapeHtml(item.first_seen_date || '-')}</td>
                 `;
                 tbody.appendChild(row);
             });
             if (!filteredSponsors.length) {
-                tbody.innerHTML = '<tr><td colspan="7" class="empty">No matching records found</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="8" class="empty">No matching records found</td></tr>';
             }
             const totalPages = Math.ceil(filteredSponsors.length / itemsPerPage);
             document.getElementById('pageInfo').textContent = `Page ${currentPage} of ${totalPages || 1}`;
@@ -571,6 +758,114 @@
             const next = currentPage + d;
             if (next >= 1 && next <= total) { currentPage = next; renderMainTable(); }
         }
+
+        // ------------------------------------------------------------- Licence history modal
+        let licenceMonthIndex = null;          // cached on first lookup
+        const monthEventsCache = {};           // {month: events[]}
+
+        async function fetchJson(path) {
+            const r = await fetch(path);
+            if (!r.ok) throw new Error(`HTTP ${r.status} for ${path}`);
+            return r.json();
+        }
+
+        async function loadLicenceMonthIndex() {
+            if (licenceMonthIndex !== null) return licenceMonthIndex;
+            try {
+                licenceMonthIndex = await fetchJson('events/licence-month-index.json');
+            } catch {
+                licenceMonthIndex = {};   // no index yet (no events emitted)
+            }
+            return licenceMonthIndex;
+        }
+
+        async function loadMonthEvents(month) {
+            if (monthEventsCache[month]) return monthEventsCache[month];
+            try {
+                monthEventsCache[month] = await fetchJson(`events/events-${month}.json`);
+            } catch {
+                monthEventsCache[month] = [];
+            }
+            return monthEventsCache[month];
+        }
+
+        async function getLicenceHistory(licenceId) {
+            const index = await loadLicenceMonthIndex();
+            const months = index[licenceId] || [];
+            if (!months.length) return [];
+            const buckets = await Promise.all(months.map(loadMonthEvents));
+            const all = buckets.flat().filter(e => e.licence_id === licenceId);
+            all.sort((a, b) => (a.date || '').localeCompare(b.date || ''));
+            return all;
+        }
+
+        async function openHistoryModal(licence) {
+            const modal = document.getElementById('historyModal');
+            document.getElementById('modalTitle').textContent = licence.organisation_name_raw || 'Licence history';
+            document.getElementById('modalMeta').innerHTML = `
+                ${escapeHtml(licence.town_raw || '-')} ·
+                ${escapeHtml(licence.route || '-')} ·
+                Type: ${escapeHtml(licence.type || '-')} ·
+                Currently: <strong>${escapeHtml(licence.current_rating || '-')}</strong> ·
+                Status: <strong>${escapeHtml(licence.status || 'active')}</strong>
+            `;
+
+            const summary = document.getElementById('modalSummary');
+            const churn = licence.rating_change_count || 0;
+            summary.innerHTML = `
+                <div class="pair"><span class="label">First seen</span><span class="value">${escapeHtml(licence.first_seen_date || '-')}</span></div>
+                <div class="pair"><span class="label">Last seen</span><span class="value">${escapeHtml(licence.last_seen_date || '-')}</span></div>
+                <div class="pair"><span class="label">Rating changes</span><span class="value">${churn}</span></div>
+                <div class="pair"><span class="label">First change</span><span class="value">${escapeHtml(licence.first_rating_change_date || '—')}</span></div>
+                <div class="pair"><span class="label">Last change</span><span class="value">${escapeHtml(licence.last_rating_change_date || '—')}</span></div>
+            `;
+
+            const body = document.getElementById('modalBodyInner');
+            body.innerHTML = '<p class="empty">Loading events…</p>';
+            modal.classList.add('open');
+
+            const events = await getLicenceHistory(licence.licence_id);
+            if (!events.length) {
+                body.innerHTML = `
+                    <p class="empty">
+                        No churn events on file yet for this licence. Either the licence has
+                        been stable since 2026-01-15, or historical replay hasn't been run.
+                    </p>`;
+                return;
+            }
+
+            const rows = events.map(e => {
+                const label = e.event_type;
+                const middle = (e.event_type === 'upgraded' || e.event_type === 'downgraded')
+                    ? `${escapeHtml(e.from_rating || '?')} → ${escapeHtml(e.to_rating || '?')}`
+                    : (e.event_type === 'added')
+                        ? `→ ${escapeHtml(e.to_rating || '-')}`
+                        : (e.event_type === 'gone')
+                            ? `${escapeHtml(e.from_rating || '-')} → ✕`
+                            : '-';
+                return `
+                    <tr>
+                        <td>${escapeHtml(e.date || '-')}</td>
+                        <td><span class="badge badge-${label}">${label}</span></td>
+                        <td>${middle}</td>
+                    </tr>`;
+            }).join('');
+
+            body.innerHTML = `
+                <table>
+                    <thead><tr><th>Date</th><th>Event</th><th>Rating</th></tr></thead>
+                    <tbody>${rows}</tbody>
+                </table>`;
+        }
+
+        function closeHistoryModal() {
+            document.getElementById('historyModal').classList.remove('open');
+        }
+
+        // Esc key closes the modal.
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeHistoryModal();
+        });
 
         loadStats();
         loadHistory();

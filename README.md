@@ -68,26 +68,35 @@ false churn:
 ### Code
 - `tracker.py` — daily pipeline: fetch → normalise → diff → emit events → write outputs
 - `normalisation.py` — pure normalisation primitives + `parse_type_rating()` + `compute_licence_id()`
+- `licence_history.py` — rating-history summary recomputation + per-licence month index
 - `migrate_master.py` — one-shot migration from the old composite-key schema to the new one
 - `replay.py` — one-shot replay: walks a directory of historical CSVs to backfill `events/`
 
 ### State
-- `master_register.csv` — identity + current state, one row per licence (~144k rows). Schema:
+- `master_register.csv` — identity + current state + rating-history summary, one row per licence (~144k rows). Schema:
   ```
   licence_id, organisation_name_raw, organisation_name_norm,
   town_raw, town_norm, county_raw, county_norm,
   route, type, current_rating, type_rating_raw, status,
-  first_seen_date, last_seen_date, removed_date
+  first_seen_date, last_seen_date, removed_date,
+  rating_change_count, first_rating_change_date, last_rating_change_date
   ```
+  The last three columns are *cached summaries* derived from `events/`. They
+  let the dashboard sort by "most-churned licences" and surface first/last
+  rating-change dates without scanning the events log on every request.
 - `master_register.csv.bak` — pre-migration backup (kept for one release)
 
 ### Outputs
 - `events/events-YYYY-MM.json` — append-only churn log, one file per month
 - `events/events-index.json` — metadata index (months, counts, date ranges)
+- `events/licence-month-index.json` — `{licence_id: [months_with_events]}`
+  mapping used by the dashboard to fetch only relevant month files when
+  rendering a single licence's history
 - `daily_delta.json` — today's events grouped by type (with backward-compat `removed` alias)
 - `stats.json` — dashboard metrics (daily counts, totals, top-N, per-type recency lists)
 - `history.json` — per-day counts (new fields: `upgraded`, `downgraded`, `gone`; legacy `removed` alias kept)
 - `migration_report.json` — one-time migration audit (counts, consolidation breakdown)
+- `replay_report.json` — one-time replay audit (snapshots processed, events emitted per type)
 
 ### Diagnostics
 - `county_corrections.json` — silent county updates from two-phase match

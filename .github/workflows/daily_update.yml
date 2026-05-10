@@ -35,7 +35,7 @@ jobs:
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         # Core state files
         git add -f master_register.csv stats.json history.json daily_delta.json
-        # Event-log directory (created on first churn day)
+        # Event-log directory + per-licence month index (created on first churn day)
         if [ -d events ]; then git add -f events/; fi
         # Diagnostic logs (only present when there's something to log)
         for f in county_corrections.json suspected_false_churn.json parse_failures.json; do

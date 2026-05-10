@@ -47,6 +47,7 @@ from normalisation import (
     parse_type_rating,
     rating_rank,
 )
+from licence_history import update_licence_month_index_for
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
@@ -555,6 +556,59 @@ def update_master(
     return master_df
 
 
+# -------------------------------------------------------- rating-history summary
+HISTORY_COLUMNS = (
+    ("rating_change_count", "0"),
+    ("first_rating_change_date", ""),
+    ("last_rating_change_date", ""),
+)
+
+
+def ensure_history_columns(master_df: pd.DataFrame) -> pd.DataFrame:
+    """Add the three rating-history summary columns if missing (forward-compat)."""
+    for col, default in HISTORY_COLUMNS:
+        if col not in master_df.columns:
+            master_df[col] = default
+    return master_df
+
+
+def update_rating_summaries(
+    master_df: pd.DataFrame, events: list[dict], file_date: str
+) -> pd.DataFrame:
+    """
+    For each upgraded/downgraded event, bump the per-licence summary fields
+    on master:
+        rating_change_count       += 1
+        first_rating_change_date  ← file_date if currently empty
+        last_rating_change_date   ← file_date (always)
+    """
+    rating_events = [e for e in events if e["event_type"] in ("upgraded", "downgraded")]
+    if not rating_events:
+        return master_df
+
+    changed_lids = list({e["licence_id"] for e in rating_events})
+    mask = master_df["licence_id"].isin(changed_lids)
+    if not mask.any():
+        return master_df
+
+    # Increment count (cast through int to be robust to string-loaded CSV values).
+    current = pd.to_numeric(
+        master_df.loc[mask, "rating_change_count"], errors="coerce"
+    ).fillna(0).astype(int)
+    master_df.loc[mask, "rating_change_count"] = (current + 1).astype(str)
+
+    # First date — only fill if currently empty.
+    first_col = master_df.loc[mask, "first_rating_change_date"].fillna("").astype(str)
+    fill_first = mask.copy()
+    fill_first.loc[mask] = (first_col == "")
+    master_df.loc[fill_first, "first_rating_change_date"] = file_date
+
+    # Last date — always overwrite with today's date for changed licences.
+    master_df.loc[mask, "last_rating_change_date"] = file_date
+
+    return master_df
+
+
 # -------------------------------------------------------- output writers
 def _bucket_events(events: list[dict]) -> dict[str, list[dict]]:
     buckets = defaultdict(list)
@@ -851,6 +905,7 @@ def main() -> int:
                 f"{MASTER_FILE} not found. Run migrate_master.py before the first tracker run."
             )
         master_df = pd.read_csv(MASTER_FILE, dtype=str).fillna("")
+        master_df = ensure_history_columns(master_df)
         master_active = master_df[master_df["status"] == "active"]
         logging.info(f"Loaded master ({len(master_df)} licences, {len(master_active)} active)")
 
@@ -877,10 +932,16 @@ def main() -> int:
         new_master = update_master(
             master_df, today_norm, added_ids, gone_ids, present_ids, corrections, file_date
         )
+        # Bump rating-history summary columns for any upgraded/downgraded events.
+        new_master = update_rating_summaries(new_master, events, file_date)
         new_master.to_csv(MASTER_FILE, index=False)
         logging.info(f"Wrote {MASTER_FILE} ({len(new_master)} licences)")
 
         append_events(events, file_date)
+        # Incrementally update the per-licence month index so the dashboard's
+        # per-licence history view can find this licence's months without
+        # scanning every events file.
+        update_licence_month_index_for(events, EVENTS_DIR)
         generate_daily_delta(events, file_date)
         generate_stats(new_master, events, file_date)
         update_history(events, new_master, file_date)

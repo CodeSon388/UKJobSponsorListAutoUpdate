@@ -40,12 +40,18 @@ import pandas as pd
 
 from tracker import (
     EVENTS_DIR,
+    MASTER_FILE,
     _bucket_events,
     _rebuild_events_index,
     detect_events,
+    ensure_history_columns,
     normalise_today,
     two_phase_match,
     update_master,
+)
+from licence_history import (
+    build_licence_month_index,
+    recompute_rating_summary,
 )
 
 logging.basicConfig(
@@ -195,6 +201,22 @@ def replay(
     _append_events_grouped(events_by_month)
     _rebuild_events_index()
 
+    # Build the per-licence month index from the newly populated events/.
+    # The dashboard uses this to fetch only relevant month files per licence.
+    licence_month_index = build_licence_month_index(EVENTS_DIR)
+
+    # Recompute rating-history summaries on the REAL master_register.csv from
+    # the events we just emitted. (We don't touch identity/state on master —
+    # that's already current from migration. Only the three summary columns.)
+    summaries_updated = False
+    if os.path.exists(MASTER_FILE):
+        real_master = pd.read_csv(MASTER_FILE, dtype=str).fillna("")
+        real_master = ensure_history_columns(real_master)
+        real_master = recompute_rating_summary(real_master, EVENTS_DIR)
+        real_master.to_csv(MASTER_FILE, index=False)
+        summaries_updated = True
+        logging.info(f"Refreshed rating-history summaries on {MASTER_FILE}")
+
     final_active = (pseudo_master["status"] == "active").sum()
     report = {
         "directory": directory,
@@ -212,6 +234,8 @@ def replay(
         },
         "per_snapshot": per_snapshot,
         "baseline_skipped": not emit_baseline,
+        "licences_in_month_index": len(licence_month_index),
+        "master_summaries_updated": summaries_updated,
     }
     with open(REPORT_FILE, "w") as f:
         json.dump(report, f, indent=2)
