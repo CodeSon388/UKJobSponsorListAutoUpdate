@@ -58,16 +58,34 @@
             grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
         }
         .grid-2col .card { min-width: 0; }   /* let tables shrink instead of overflowing */
-        .grid-2col table { font-size: 0.825rem; }
-        .grid-2col th, .grid-2col td { padding: 0.5rem 0.55rem; }
+        .grid-2col table { font-size: 0.825rem; table-layout: fixed; width: 100%; }
+        .grid-2col th, .grid-2col td {
+            padding: 0.5rem 0.55rem;
+            word-break: break-word;
+            vertical-align: top;
+        }
         /* Truncate the org name inside the 2-col layout — full name is visible
            via the cell's title attr on hover; keeps the row width predictable. */
         .grid-2col td:first-child {
-            max-width: 200px;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
+        /* Override badge's default nowrap so long route names like
+           "global business mobility: senior or specialist worker" wrap
+           inside the route column instead of forcing horizontal scroll. */
+        .grid-2col .badge {
+            white-space: normal;
+            display: inline-block;
+            line-height: 1.3;
+        }
+        /* With table-layout: fixed, column widths come from headers.
+           Distribute room so Route has space and Date stays compact. */
+        .grid-2col table th:nth-child(1), .grid-2col table td:nth-child(1) { width: 25%; }
+        .grid-2col table th:nth-child(2), .grid-2col table td:nth-child(2) { width: 14%; }
+        .grid-2col table th:nth-child(3), .grid-2col table td:nth-child(3) { width: 28%; }
+        .grid-2col table th:nth-child(4), .grid-2col table td:nth-child(4) { width: 18%; }
+        .grid-2col table th:nth-child(5), .grid-2col table td:nth-child(5) { width: 15%; }
 
         .card {
             background: var(--card-bg);
