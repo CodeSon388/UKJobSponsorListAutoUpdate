@@ -360,6 +360,56 @@
             </div>
         </div>
 
+        <!-- Period Query -->
+        <div class="data-section">
+            <h2>Query Churn by Period</h2>
+            <p style="color: var(--text-secondary); font-size: 0.875rem; margin-top:-0.5rem;">
+                Pick a date range and which event types you want. Returns every matching
+                licence event from the full <code>events/</code> log.  Events are attributed
+                to the date of the gov.uk snapshot in which the change first appeared;
+                with monthly snapshots, that's the finest resolution available.
+            </p>
+            <div class="card" style="padding: 1rem 1.5rem;">
+                <div class="controls" style="margin-bottom: 0.75rem;">
+                    <label style="display:flex; align-items:center; gap:0.4rem; font-size:0.9rem;">
+                        From <input type="date" id="periodFrom" style="padding:0.4rem; border:1px solid #d1d5db; border-radius:6px;">
+                    </label>
+                    <label style="display:flex; align-items:center; gap:0.4rem; font-size:0.9rem;">
+                        To <input type="date" id="periodTo" style="padding:0.4rem; border:1px solid #d1d5db; border-radius:6px;">
+                    </label>
+                    <label class="filter-checkbox"><input type="checkbox" id="periodType-added" checked> Added</label>
+                    <label class="filter-checkbox"><input type="checkbox" id="periodType-upgraded" checked> Upgraded</label>
+                    <label class="filter-checkbox"><input type="checkbox" id="periodType-downgraded" checked> Downgraded</label>
+                    <label class="filter-checkbox"><input type="checkbox" id="periodType-gone" checked> Gone</label>
+                    <button class="btn" id="periodSearchBtn">Search</button>
+                    <button class="btn" id="periodCsvBtn" disabled>Download CSV</button>
+                </div>
+                <div id="periodSummary" style="font-size:0.9rem; color:var(--text-secondary); margin: 0.5rem 0;">
+                    Pick a date range and click Search.
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="full-table" id="periodTable" style="display:none;">
+                        <thead>
+                            <tr>
+                                <th data-period-sort="date">Date</th>
+                                <th data-period-sort="event_type">Type</th>
+                                <th data-period-sort="organisation_name">Organisation</th>
+                                <th data-period-sort="town">Town</th>
+                                <th data-period-sort="route">Route</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody id="periodTableBody"></tbody>
+                    </table>
+                </div>
+                <div class="pagination" id="periodPagination" style="display:none;">
+                    <button class="btn" id="periodPrevBtn">Previous</button>
+                    <span id="periodPageInfo">Page 1 of -</span>
+                    <button class="btn" id="periodNextBtn">Next</button>
+                </div>
+            </div>
+        </div>
+
         <!-- History Trends -->
         <div class="data-section">
             <h2>Churn Trend (Last 14 Days)</h2>
@@ -866,6 +916,178 @@
         document.addEventListener('keydown', e => {
             if (e.key === 'Escape') closeHistoryModal();
         });
+
+        // ------------------------------------------------------------- Period query
+        // Lazy-loads month files via events-index.json, filters, paginates, exports.
+        let periodEventsIndex = null;        // [{month, file, count, date_min, date_max}, ...]
+        let periodResults = [];              // filtered events for current query
+        let periodPage = 1;
+        const periodPageSize = 100;
+        let periodSort = { field: 'date', dir: 'desc' };
+
+        async function loadPeriodEventsIndex() {
+            if (periodEventsIndex !== null) return periodEventsIndex;
+            try {
+                periodEventsIndex = await fetchJson('events/events-index.json');
+            } catch { periodEventsIndex = []; }
+            return periodEventsIndex;
+        }
+
+        function setPeriodDefaults() {
+            const today = new Date();
+            const from = new Date(today.getFullYear(), today.getMonth() - 1, 1);
+            const fmt = d => d.toISOString().slice(0, 10);
+            document.getElementById('periodFrom').value = fmt(from);
+            document.getElementById('periodTo').value = fmt(today);
+        }
+
+        function selectedPeriodTypes() {
+            const t = new Set();
+            ['added', 'upgraded', 'downgraded', 'gone'].forEach(k => {
+                if (document.getElementById(`periodType-${k}`).checked) t.add(k);
+            });
+            return t;
+        }
+
+        async function runPeriodQuery() {
+            const from = document.getElementById('periodFrom').value;
+            const to = document.getElementById('periodTo').value;
+            const types = selectedPeriodTypes();
+            const summary = document.getElementById('periodSummary');
+            if (!from || !to) {
+                summary.textContent = 'Both From and To dates are required.';
+                return;
+            }
+            if (from > to) {
+                summary.textContent = 'From date must be on or before To date.';
+                return;
+            }
+            if (types.size === 0) {
+                summary.textContent = 'Select at least one event type.';
+                return;
+            }
+
+            summary.textContent = 'Loading…';
+            const idx = await loadPeriodEventsIndex();
+            // Pick month files whose date_max >= from AND date_min <= to.
+            const monthsToLoad = idx.filter(m =>
+                (!m.date_max || m.date_max >= from) &&
+                (!m.date_min || m.date_min <= to)
+            );
+            const buckets = await Promise.all(
+                monthsToLoad.map(m => loadMonthEvents(m.month))
+            );
+
+            periodResults = buckets.flat().filter(e =>
+                e.date >= from && e.date <= to && types.has(e.event_type)
+            );
+            // Sort newest first by default; user can re-sort by clicking headers.
+            sortPeriodResults();
+
+            // Aggregate counts
+            const counts = { added: 0, upgraded: 0, downgraded: 0, gone: 0 };
+            for (const e of periodResults) counts[e.event_type] = (counts[e.event_type] || 0) + 1;
+            const parts = Object.entries(counts)
+                .filter(([t]) => types.has(t))
+                .map(([t, c]) => `<strong>${t}</strong>: ${c.toLocaleString()}`);
+            summary.innerHTML = `Showing <strong>${periodResults.length.toLocaleString()}</strong> events between ${escapeHtml(from)} and ${escapeHtml(to)} — ${parts.join('  ·  ')}`;
+
+            periodPage = 1;
+            renderPeriodTable();
+            document.getElementById('periodCsvBtn').disabled = periodResults.length === 0;
+        }
+
+        function sortPeriodResults() {
+            const { field, dir } = periodSort;
+            periodResults.sort((a, b) => {
+                const va = (a[field] || '').toString().toLowerCase();
+                const vb = (b[field] || '').toString().toLowerCase();
+                if (va < vb) return dir === 'asc' ? -1 : 1;
+                if (va > vb) return dir === 'asc' ?  1 : -1;
+                return 0;
+            });
+        }
+
+        function renderPeriodTable() {
+            const tbody = document.getElementById('periodTableBody');
+            const table = document.getElementById('periodTable');
+            const pag = document.getElementById('periodPagination');
+            if (!periodResults.length) {
+                tbody.innerHTML = '';
+                table.style.display = 'none';
+                pag.style.display = 'none';
+                return;
+            }
+            table.style.display = 'table';
+            pag.style.display = 'flex';
+
+            const start = (periodPage - 1) * periodPageSize;
+            const page = periodResults.slice(start, start + periodPageSize);
+            tbody.innerHTML = page.map(e => {
+                let rating = '-';
+                if (e.event_type === 'added')      rating = `→ ${escapeHtml(e.to_rating || '-')}`;
+                else if (e.event_type === 'gone')  rating = `${escapeHtml(e.from_rating || '-')} → ✕`;
+                else                                rating = `${escapeHtml(e.from_rating || '?')} → ${escapeHtml(e.to_rating || '?')}`;
+                return `
+                    <tr>
+                        <td>${escapeHtml(e.date)}</td>
+                        <td><span class="badge badge-${e.event_type}">${e.event_type}</span></td>
+                        <td>${escapeHtml(e.organisation_name || '-')}</td>
+                        <td>${escapeHtml(e.town || '-')}</td>
+                        <td>${escapeHtml(e.route || '-')}</td>
+                        <td>${rating}</td>
+                    </tr>`;
+            }).join('');
+
+            const totalPages = Math.ceil(periodResults.length / periodPageSize);
+            document.getElementById('periodPageInfo').textContent = `Page ${periodPage} of ${totalPages || 1}`;
+            document.getElementById('periodPrevBtn').disabled = periodPage === 1;
+            document.getElementById('periodNextBtn').disabled = periodPage >= totalPages;
+        }
+
+        function downloadPeriodCsv() {
+            if (!periodResults.length) return;
+            const cols = ['date', 'event_type', 'organisation_name', 'town', 'county', 'route', 'type', 'from_rating', 'to_rating', 'licence_id'];
+            const escapeCsv = v => {
+                const s = String(v ?? '');
+                return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+            };
+            const lines = [cols.join(',')];
+            for (const e of periodResults) {
+                lines.push(cols.map(c => escapeCsv(e[c])).join(','));
+            }
+            const blob = new Blob([lines.join('\n')], { type: 'text/csv;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            const from = document.getElementById('periodFrom').value;
+            const to = document.getElementById('periodTo').value;
+            a.href = url;
+            a.download = `churn-events-${from}-to-${to}.csv`;
+            document.body.appendChild(a); a.click(); document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        document.getElementById('periodSearchBtn').addEventListener('click', runPeriodQuery);
+        document.getElementById('periodCsvBtn').addEventListener('click', downloadPeriodCsv);
+        document.getElementById('periodPrevBtn').addEventListener('click', () => {
+            if (periodPage > 1) { periodPage--; renderPeriodTable(); }
+        });
+        document.getElementById('periodNextBtn').addEventListener('click', () => {
+            const total = Math.ceil(periodResults.length / periodPageSize);
+            if (periodPage < total) { periodPage++; renderPeriodTable(); }
+        });
+        document.querySelectorAll('th[data-period-sort]').forEach(th => {
+            th.addEventListener('click', () => {
+                const field = th.dataset.periodSort;
+                periodSort.dir = (periodSort.field === field && periodSort.dir === 'desc') ? 'asc' : 'desc';
+                periodSort.field = field;
+                sortPeriodResults();
+                periodPage = 1;
+                renderPeriodTable();
+            });
+        });
+
+        setPeriodDefaults();
 
         loadStats();
         loadHistory();
