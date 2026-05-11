@@ -122,7 +122,8 @@ def _append_events_grouped(events_by_month: dict[str, list[dict]]) -> None:
     os.makedirs(EVENTS_DIR, exist_ok=True)
     for month, events in events_by_month.items():
         path = os.path.join(EVENTS_DIR, f"events-{month}.json")
-        events.sort(key=lambda e: (e.get("date", ""), e.get("event_type", "")))
+        # Deterministic order matching tracker.append_events.
+        events.sort(key=lambda e: (e.get("date", ""), e.get("event_type", ""), e.get("licence_id", "")))
         with open(path, "w") as f:
             json.dump(events, f, indent=2)
         logging.info(f"Wrote {path} ({len(events)} events)")

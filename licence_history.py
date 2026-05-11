@@ -143,13 +143,15 @@ def build_licence_month_index(
             if lid:
                 index[lid].add(month)
 
-    out = {lid: sorted(months) for lid, months in index.items()}
+    # Sort keys so the on-disk JSON is deterministic across runs
+    # (Python dict iteration order would otherwise vary, producing noisy diffs).
+    out = {lid: sorted(index[lid]) for lid in sorted(index.keys())}
 
     if write_to_file:
         os.makedirs(events_dir, exist_ok=True)
         path = os.path.join(events_dir, LICENCE_MONTH_INDEX_FILE)
         with open(path, "w") as f:
-            json.dump(out, f, separators=(",", ":"))  # compact
+            json.dump(out, f, separators=(",", ":"), sort_keys=True)
         logging.info(
             f"Wrote licence-month index -> {path} "
             f"({len(out)} licences with events)"
@@ -191,8 +193,10 @@ def update_licence_month_index_for(
 
     if changed:
         os.makedirs(events_dir, exist_ok=True)
+        # Re-sort keys to keep the file deterministic across runs.
+        index = {lid: sorted(set(index[lid])) for lid in sorted(index.keys())}
         with open(path, "w") as f:
-            json.dump(index, f, separators=(",", ":"))
+            json.dump(index, f, separators=(",", ":"), sort_keys=True)
 
 
 # ---------------------------------------------------------------------------

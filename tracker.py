@@ -393,7 +393,9 @@ def append_events(events: list[dict], file_date: str) -> None:
             existing.append(e)
             seen.add(key(e))
 
-    existing.sort(key=lambda e: (e.get("date", ""), e.get("event_type", "")))
+    # Deterministic sort: include licence_id as tiebreaker so the file is
+    # stable across runs (otherwise events on the same date+type can shuffle).
+    existing.sort(key=lambda e: (e.get("date", ""), e.get("event_type", ""), e.get("licence_id", "")))
     with open(month_path, "w") as f:
         json.dump(existing, f, indent=2)
     logging.info(f"Appended {len(events)} events -> {month_path} (total {len(existing)})")
