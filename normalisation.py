@@ -229,14 +229,22 @@ _TYPE_RATING_OUTER = re.compile(
 )
 
 
-def parse_type_rating(s) -> tuple[str, str]:
+def parse_type_rating(s) -> tuple[str, str, str]:
     """
-    Split "Type & Rating" into (type, rating).
+    Split "Type & Rating" into (type, rating, service).
+
+    The Home Office only operates three rating tiers (A / Provisional / B).
+    Premium and SME+ are 12-month *support services* layered on top of an A
+    rating, NOT rating tiers themselves — so they go into `service`, not
+    `rating`. This matters because rating-change events (upgrade/downgrade)
+    should only fire on real rating transitions, not on a sponsor opting in
+    or out of premium support.
 
     Returns:
-        (type, rating) where:
-            type    ∈ {"worker", "temporary worker"}
-            rating  ∈ {"Premium", "SME+", "A", "B", "Provisional"}
+        (type, rating, service) where:
+            type     ∈ {"worker", "temporary worker"}
+            rating   ∈ {"A", "Provisional", "B"}
+            service  ∈ {"Premium", "SME+", ""}  (empty string = no service)
 
     Raises:
         ValueError if the input doesn't match a known pattern. Callers should
@@ -260,21 +268,22 @@ def parse_type_rating(s) -> tuple[str, str]:
     inner = m.group(2).strip()
     inner_lower = inner.lower()
 
-    # Provisional — UK Expansion Worker scheme
+    # Provisional — UK Expansion Worker scheme (initial state for new sponsors
+    # whose Authorising Officer is outside the UK).
     if "provisional" in inner_lower:
-        return type_str, "Provisional"
+        return type_str, "Provisional", ""
 
-    # "A (Premium)" / "A (SME+)" — A-rating with a parenthesised tag
+    # "A (Premium)" / "A (SME+)" — A-rating + a support service.
     if "premium" in inner_lower:
-        return type_str, "Premium"
+        return type_str, "A", "Premium"
     if "sme+" in inner_lower or "sme +" in inner_lower:
-        return type_str, "SME+"
+        return type_str, "A", "SME+"
 
-    # "A rating" / "B rating" — bare tier
+    # Plain "A rating" / "B rating" — rating tier, no support service.
     if re.search(r"\ba\s*rating\b", inner_lower):
-        return type_str, "A"
+        return type_str, "A", ""
     if re.search(r"\bb\s*rating\b", inner_lower):
-        return type_str, "B"
+        return type_str, "B", ""
 
     raise ValueError(f"Unrecognised rating inside Type & Rating: {raw!r}")
 
@@ -283,21 +292,23 @@ def parse_type_rating(s) -> tuple[str, str]:
 # Rating rank (for upgrade/downgrade detection)
 # ---------------------------------------------------------------------------
 
-# Higher rank = better standing for hiring sponsored workers.
-# Premium  — accelerated processing, established large sponsors
-# SME+     — elevated A-tier for small/medium enterprises
-# A        — standard approved
-# B        — under remediation / action plan
-# Provisional — UK Expansion Worker scheme, off the main scale but ranked lowest
+# Higher rank = better standing.  Only three real tiers per Home Office:
+#   A           — Active sponsor, can issue Certificates of Sponsorship (CoS).
+#   Provisional — Initial state for new sponsors whose Authorising Officer
+#                 is outside the UK; can issue 1 CoS to bring the AO in.
+#                 Must be upgraded to A once the business is established.
+#   B           — Warning/Downgraded; can't issue new CoS until duties are
+#                 met.  An A-rated sponsor that fails compliance drops to B.
 #
-# If you change this ordering, all historical events keep their old labels —
-# only future events use the new ranks.
+# Premium and SME+ are NOT rating tiers — they are 12-month support services
+# that can sit on top of an A rating. parse_type_rating() returns them in a
+# separate `service` field, so they do not appear here.
+#
+# Conceptual lifecycle: Provisional -> A -> (compliance failure) -> B.
 RATING_RANK: dict[str, int] = {
-    "Premium": 4,
-    "SME+": 3,
     "A": 2,
-    "B": 1,
-    "Provisional": 0,
+    "Provisional": 1,
+    "B": 0,
 }
 
 
@@ -391,16 +402,19 @@ def _run_self_test() -> None:
     assert normalise_county("nan") == ""
 
     # --- parse_type_rating -----------------------------------------------
-    assert parse_type_rating("Worker (A rating)") == ("worker", "A")
-    assert parse_type_rating("Worker (B rating)") == ("worker", "B")
-    assert parse_type_rating("Worker (A (Premium))") == ("worker", "Premium")
-    assert parse_type_rating("Worker (A (SME+))") == ("worker", "SME+")
-    assert parse_type_rating("Temporary Worker (A rating)") == ("temporary worker", "A")
-    assert parse_type_rating("Temporary Worker (B rating)") == ("temporary worker", "B")
-    assert parse_type_rating("Temporary Worker (A (Premium))") == ("temporary worker", "Premium")
-    assert parse_type_rating("Temporary Worker (A (SME+))") == ("temporary worker", "SME+")
-    assert parse_type_rating("Worker (UK Expansion Worker: Provisional)") == ("worker", "Provisional")
-    assert parse_type_rating("Worker (UK Expansion Worker: Provisional )") == ("worker", "Provisional")  # trailing space
+    # Plain ratings (no service)
+    assert parse_type_rating("Worker (A rating)") == ("worker", "A", "")
+    assert parse_type_rating("Worker (B rating)") == ("worker", "B", "")
+    assert parse_type_rating("Temporary Worker (A rating)") == ("temporary worker", "A", "")
+    assert parse_type_rating("Temporary Worker (B rating)") == ("temporary worker", "B", "")
+    # A-rating with a support service tier
+    assert parse_type_rating("Worker (A (Premium))") == ("worker", "A", "Premium")
+    assert parse_type_rating("Worker (A (SME+))") == ("worker", "A", "SME+")
+    assert parse_type_rating("Temporary Worker (A (Premium))") == ("temporary worker", "A", "Premium")
+    assert parse_type_rating("Temporary Worker (A (SME+))") == ("temporary worker", "A", "SME+")
+    # Provisional (UK Expansion Worker scheme)
+    assert parse_type_rating("Worker (UK Expansion Worker: Provisional)") == ("worker", "Provisional", "")
+    assert parse_type_rating("Worker (UK Expansion Worker: Provisional )") == ("worker", "Provisional", "")  # trailing space
 
     try:
         parse_type_rating("Garbage input")
@@ -417,17 +431,18 @@ def _run_self_test() -> None:
         raise AssertionError("parse_type_rating should raise on None")
 
     # --- rating_rank -----------------------------------------------------
-    assert rating_rank("Premium") > rating_rank("SME+")
-    assert rating_rank("SME+") > rating_rank("A")
+    # Lifecycle: Provisional -> A -> (failure) -> B.  Only three tiers.
+    assert rating_rank("A") > rating_rank("Provisional")
+    assert rating_rank("Provisional") > rating_rank("B")
     assert rating_rank("A") > rating_rank("B")
-    assert rating_rank("B") > rating_rank("Provisional")
 
-    try:
-        rating_rank("Mystery")
-    except ValueError:
-        pass
-    else:
-        raise AssertionError("rating_rank should raise on unknown tier")
+    for unknown in ("Premium", "SME+", "Mystery"):
+        try:
+            rating_rank(unknown)
+        except ValueError:
+            pass
+        else:
+            raise AssertionError(f"rating_rank should raise on {unknown!r}")
 
     # --- compute_licence_id stability ------------------------------------
     id_a = compute_licence_id("acme ltd", "london", "", "skilled worker", "worker")
@@ -451,7 +466,7 @@ def _run_self_test() -> None:
     ]
     ids = []
     for raw_name, raw_town, raw_county, raw_route, raw_tr in raw_variants:
-        t, _r = parse_type_rating(raw_tr)
+        t, _r, _s = parse_type_rating(raw_tr)
         ids.append(compute_licence_id(
             normalise_name(raw_name),
             normalise_town(raw_town),

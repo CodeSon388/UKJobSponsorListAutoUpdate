@@ -67,6 +67,9 @@ NEW_COLUMNS = [
     "route",
     "type",
     "current_rating",
+    # Support service is independent of rating. A sponsor on Premium support
+    # still has an A rating. parse_type_rating() splits these.
+    "current_service",
     "type_rating_raw",
     "status",
     "first_seen_date",
@@ -110,7 +113,7 @@ def _normalise_rows(df: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
     for idx, row in df.iterrows():
         type_rating_raw = row.get("Type & Rating", "")
         try:
-            type_str, rating = parse_type_rating(type_rating_raw)
+            type_str, rating, service = parse_type_rating(type_rating_raw)
         except ValueError as e:
             failures.append(
                 {
@@ -145,6 +148,7 @@ def _normalise_rows(df: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
                 "route": route_n,
                 "type": type_str,
                 "current_rating": rating,
+                "current_service": service,
                 "type_rating_raw": str(type_rating_raw),
                 "first_seen_date": row.get("first_seen", ""),
                 "last_updated": row.get("last_updated", ""),
@@ -210,6 +214,7 @@ def _consolidate(normalised: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
                 "route": latest["route"],
                 "type": latest["type"],
                 "current_rating": latest["current_rating"],
+                "current_service": latest["current_service"],
                 "type_rating_raw": latest["type_rating_raw"],
                 "status": status,
                 "first_seen_date": first_seen.strftime("%Y-%m-%d") if pd.notna(first_seen) else "",

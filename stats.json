@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11 09:36:57 UTC",
+  "generated_at": "2026-05-11 09:43:54 UTC",
   "data_date": "2026-05-08",
   "daily_metrics": {
     "added_today": 0,
@@ -30,11 +30,9 @@
       "Glasgow": 1456
     },
     "top_ratings": {
-      "A": 140164,
+      "A": 140171,
       "Provisional": 114,
-      "B": 17,
-      "Premium": 5,
-      "SME+": 2
+      "B": 17
     },
     "top_types": {
       "worker": 134757,

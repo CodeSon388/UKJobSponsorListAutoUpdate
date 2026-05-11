@@ -130,7 +130,7 @@ def normalise_today(df: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
     for idx, row in df.iterrows():
         type_rating_raw = row.get("Type & Rating", "")
         try:
-            type_str, rating = parse_type_rating(type_rating_raw)
+            type_str, rating, service = parse_type_rating(type_rating_raw)
         except ValueError as e:
             failures.append(
                 {
@@ -165,6 +165,7 @@ def normalise_today(df: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
                 "route": route_n,
                 "type": type_str,
                 "current_rating": rating,
+                "current_service": service,
                 "type_rating_raw": str(type_rating_raw),
             }
         )
@@ -482,13 +483,16 @@ def update_master(
             columns=["master_lookup_lid", "today_lid"],
         )
 
-        # Pull current_rating / type_rating_raw / county fields from today, indexed by today's licence_id.
+        # Pull current_rating / current_service / type_rating_raw / county fields
+        # from today, indexed by today's licence_id.
         today_attrs = (
             today.set_index("licence_id")[
-                ["current_rating", "type_rating_raw", "county_norm", "county_raw"]
+                ["current_rating", "current_service", "type_rating_raw",
+                 "county_norm", "county_raw"]
             ]
             .rename(columns={
                 "current_rating": "_new_rating",
+                "current_service": "_new_service",
                 "type_rating_raw": "_new_tr_raw",
                 "county_norm": "_new_county_norm",
                 "county_raw": "_new_county_raw",
@@ -508,8 +512,9 @@ def update_master(
 
         present_mask = master_df["master_lookup_lid"].notna()
         master_df.loc[present_mask, "last_seen_date"] = file_date
-        # Update rating + raw string for every present licence.
+        # Update rating + service + raw string for every present licence.
         master_df.loc[present_mask, "current_rating"] = master_df.loc[present_mask, "_new_rating"]
+        master_df.loc[present_mask, "current_service"] = master_df.loc[present_mask, "_new_service"]
         master_df.loc[present_mask, "type_rating_raw"] = master_df.loc[present_mask, "_new_tr_raw"]
 
         # For loose-matched rows, adopt today's licence_id and county fields.
@@ -525,6 +530,7 @@ def update_master(
                 "master_lookup_lid",
                 "today_lid",
                 "_new_rating",
+                "_new_service",
                 "_new_tr_raw",
                 "_new_county_norm",
                 "_new_county_raw",
@@ -547,6 +553,7 @@ def update_master(
                     "route",
                     "type",
                     "current_rating",
+                    "current_service",
                     "type_rating_raw",
                 ]
             ]
@@ -566,11 +573,14 @@ HISTORY_COLUMNS = (
     ("rating_change_count", "0"),
     ("first_rating_change_date", ""),
     ("last_rating_change_date", ""),
+    # Support service column was added later than the rest of the schema;
+    # ensure it exists on older masters that pre-date the split.
+    ("current_service", ""),
 )
 
 
 def ensure_history_columns(master_df: pd.DataFrame) -> pd.DataFrame:
-    """Add the three rating-history summary columns if missing (forward-compat)."""
+    """Add forward-compat columns if missing (rating-history summaries + service)."""
     for col, default in HISTORY_COLUMNS:
         if col not in master_df.columns:
             master_df[col] = default

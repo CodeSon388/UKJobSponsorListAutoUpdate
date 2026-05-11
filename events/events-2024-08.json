@@ -31057,54 +31057,6 @@
   },
   {
     "date": "2024-08-22",
-    "event_type": "downgraded",
-    "licence_id": "139531c16bcda24f",
-    "organisation_name": "Brentford FC Limited",
-    "town": "Brentford",
-    "county": "Middx",
-    "route": "international sportsperson",
-    "type": "worker",
-    "from_rating": "Premium",
-    "to_rating": "A"
-  },
-  {
-    "date": "2024-08-22",
-    "event_type": "downgraded",
-    "licence_id": "814e19c6ead2fe5b",
-    "organisation_name": "elderly care home ltd",
-    "town": "eastbourne",
-    "county": "east sussex",
-    "route": "skilled worker",
-    "type": "worker",
-    "from_rating": "SME+",
-    "to_rating": "A"
-  },
-  {
-    "date": "2024-08-22",
-    "event_type": "downgraded",
-    "licence_id": "a8290a65d1931e09",
-    "organisation_name": "Ternary Technology Ltd",
-    "town": "Reading",
-    "county": "",
-    "route": "skilled worker",
-    "type": "worker",
-    "from_rating": "SME+",
-    "to_rating": "A"
-  },
-  {
-    "date": "2024-08-22",
-    "event_type": "downgraded",
-    "licence_id": "ea8fe63e98549e35",
-    "organisation_name": "Veiksme Tech Limited",
-    "town": "Staines",
-    "county": "",
-    "route": "skilled worker",
-    "type": "worker",
-    "from_rating": "SME+",
-    "to_rating": "A"
-  },
-  {
-    "date": "2024-08-22",
     "event_type": "gone",
     "licence_id": "00264664167e9c0c",
     "organisation_name": "MAVEN GROUP GLOBAL LTD",
@@ -40762,18 +40714,6 @@
     "type": "worker",
     "from_rating": "B",
     "to_rating": "A"
-  },
-  {
-    "date": "2024-08-22",
-    "event_type": "upgraded",
-    "licence_id": "29d79d8bc3d55756",
-    "organisation_name": "Sybarite UK Limited",
-    "town": "London",
-    "county": "",
-    "route": "skilled worker",
-    "type": "worker",
-    "from_rating": "A",
-    "to_rating": "SME+"
   },
   {
     "date": "2024-08-22",

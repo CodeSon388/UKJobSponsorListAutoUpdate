@@ -15421,42 +15421,6 @@
   },
   {
     "date": "2024-10-09",
-    "event_type": "downgraded",
-    "licence_id": "8fea0fce2f2346af",
-    "organisation_name": "Anglia Scholars Educational Consultancy Ltd",
-    "town": "Portsmouth",
-    "county": "",
-    "route": "skilled worker",
-    "type": "worker",
-    "from_rating": "SME+",
-    "to_rating": "A"
-  },
-  {
-    "date": "2024-10-09",
-    "event_type": "downgraded",
-    "licence_id": "9c8e64b642624ea1",
-    "organisation_name": "INDEPENDENCE-DEVELOPMENT LTD",
-    "town": "CHATHAM",
-    "county": "",
-    "route": "skilled worker",
-    "type": "worker",
-    "from_rating": "SME+",
-    "to_rating": "A"
-  },
-  {
-    "date": "2024-10-09",
-    "event_type": "downgraded",
-    "licence_id": "ffb18caf559bb345",
-    "organisation_name": "Lindus Health Limited",
-    "town": "London",
-    "county": "",
-    "route": "skilled worker",
-    "type": "worker",
-    "from_rating": "SME+",
-    "to_rating": "A"
-  },
-  {
-    "date": "2024-10-09",
     "event_type": "gone",
     "licence_id": "01eb93575998d359",
     "organisation_name": "Poise Group Limited",

@@ -20641,30 +20641,6 @@
   },
   {
     "date": "2024-09-19",
-    "event_type": "downgraded",
-    "licence_id": "230d112bbbd93ac4",
-    "organisation_name": "Transport for London",
-    "town": "London",
-    "county": "",
-    "route": "skilled worker",
-    "type": "worker",
-    "from_rating": "Premium",
-    "to_rating": "A"
-  },
-  {
-    "date": "2024-09-19",
-    "event_type": "downgraded",
-    "licence_id": "a5d58b21975d9b7e",
-    "organisation_name": "Transport for London",
-    "town": "London",
-    "county": "",
-    "route": "creative worker",
-    "type": "temporary worker",
-    "from_rating": "Premium",
-    "to_rating": "A"
-  },
-  {
-    "date": "2024-09-19",
     "event_type": "gone",
     "licence_id": "007f4dc637acb4df",
     "organisation_name": "Cross Media Limited",
@@ -25882,29 +25858,5 @@
     "type": "worker",
     "from_rating": "Provisional",
     "to_rating": "A"
-  },
-  {
-    "date": "2024-09-19",
-    "event_type": "upgraded",
-    "licence_id": "814e19c6ead2fe5b",
-    "organisation_name": "elderly care home ltd",
-    "town": "eastbourne",
-    "county": "east sussex",
-    "route": "skilled worker",
-    "type": "worker",
-    "from_rating": "A",
-    "to_rating": "SME+"
-  },
-  {
-    "date": "2024-09-19",
-    "event_type": "upgraded",
-    "licence_id": "ea8fe63e98549e35",
-    "organisation_name": "Veiksme Tech Limited",
-    "town": "Staines",
-    "county": "",
-    "route": "skilled worker",
-    "type": "worker",
-    "from_rating": "A",
-    "to_rating": "SME+"
   }
 ]
