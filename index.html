@@ -532,6 +532,10 @@
                     <button class="btn" id="prevBtn" onclick="changePage(-1)">Previous</button>
                     <span id="pageInfo">Page 1 of -</span>
                     <button class="btn" id="nextBtn" onclick="changePage(1)">Next</button>
+                    <span style="margin-left: 1rem; color: var(--text-secondary); font-size: 0.875rem;">Jump to</span>
+                    <input type="number" id="pageJumpInput" min="1" step="1"
+                        style="width: 80px; padding: 0.4rem 0.5rem; border: 1px solid #d1d5db; border-radius: 6px; font-size: 0.9rem;">
+                    <button class="btn" id="pageJumpBtn">Go</button>
                 </div>
             </div>
         </div>
@@ -1013,6 +1017,13 @@
             document.getElementById('pageInfo').textContent = `Page ${currentPage} of ${totalPages || 1}`;
             document.getElementById('prevBtn').disabled = currentPage === 1;
             document.getElementById('nextBtn').disabled = currentPage >= totalPages;
+            // Keep the jump-input in sync with the current page + max bound.
+            const jumpInput = document.getElementById('pageJumpInput');
+            if (jumpInput) {
+                jumpInput.max = String(totalPages || 1);
+                jumpInput.placeholder = `1 – ${totalPages || 1}`;
+                jumpInput.value = String(currentPage);
+            }
         }
 
         function changePage(d) {
@@ -1020,6 +1031,33 @@
             const next = currentPage + d;
             if (next >= 1 && next <= total) { currentPage = next; renderMainTable(); }
         }
+
+        function jumpToPage() {
+            const input = document.getElementById('pageJumpInput');
+            const totalPages = Math.ceil(filteredSponsors.length / itemsPerPage) || 1;
+            const n = parseInt(input.value, 10);
+            if (!Number.isFinite(n)) {
+                // Restore to current page on garbage input.
+                input.value = String(currentPage);
+                return;
+            }
+            // Clamp to [1, totalPages]; the page bounds are the source of truth.
+            const target = Math.max(1, Math.min(totalPages, n));
+            if (target !== currentPage) {
+                currentPage = target;
+                renderMainTable();
+            } else {
+                input.value = String(currentPage);
+            }
+        }
+
+        document.getElementById('pageJumpBtn').addEventListener('click', jumpToPage);
+        document.getElementById('pageJumpInput').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                jumpToPage();
+            }
+        });
 
         // ------------------------------------------------------------- Licence history modal
         let licenceMonthIndex = null;          // cached on first lookup
