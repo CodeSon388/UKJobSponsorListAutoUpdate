@@ -251,7 +251,12 @@
             <div class="card">
                 <div class="metric-title">Active Sponsors</div>
                 <div id="kpi-active" class="metric-value accent">-</div>
-                <div class="metric-sub">Total currently licensed</div>
+                <div class="metric-sub">Total active licences</div>
+            </div>
+            <div class="card">
+                <div class="metric-title">Total Companies</div>
+                <div id="kpi-companies" class="metric-value accent">-</div>
+                <div class="metric-sub">Unique <code>name + town + county</code></div>
             </div>
             <div class="card">
                 <div class="metric-title">Added Today</div>
@@ -412,7 +417,7 @@
 
         <!-- History Trends -->
         <div class="data-section">
-            <h2>Churn Trend (Last 14 Days)</h2>
+            <h2>Churn Trend</h2>
             <div class="grid" style="grid-template-columns: 2fr 1fr;">
                 <div class="card">
                     <h3>Daily Events by Type</h3>
@@ -639,7 +644,26 @@
                     tbody.appendChild(tr);
                 });
 
-                const recent = history.slice(-14);
+                // Trend chart: last 14 CALENDAR days anchored to the latest entry's date
+                // (typically today / yesterday since the cron runs daily). With sparse
+                // snapshot data the chart will show only the dates that actually exist
+                // in the window; with daily cron output it will show 14 daily points.
+                const latestDate = history.length
+                    ? new Date(history[history.length - 1].date)
+                    : new Date();
+                const cutoff = new Date(latestDate.getTime() - 14 * 86400000);
+                const cutoffStr = cutoff.toISOString().slice(0, 10);
+                let recent = history.filter(d => d.date >= cutoffStr);
+                // If the calendar window has fewer than 2 points (sparse historical
+                // backfill before daily cron has run), fall back to the last 14
+                // available entries so the chart still tells a story.
+                let chartTitle = 'Daily Events by Type (last 14 calendar days)';
+                if (recent.length < 2) {
+                    recent = history.slice(-14);
+                    chartTitle = 'Daily Events by Type (last 14 available snapshots)';
+                }
+                const chartTitleEl = document.querySelector('#historyChart')?.closest('.card')?.querySelector('h3');
+                if (chartTitleEl) chartTitleEl.textContent = chartTitle;
                 const ctx = document.getElementById('historyChart').getContext('2d');
                 new Chart(ctx, {
                     type: 'line',
@@ -683,6 +707,19 @@
                     allSponsors.forEach(r => {
                         r.rating_change_count = parseInt(r.rating_change_count, 10) || 0;
                     });
+                    // Compute Total Companies = distinct (name_norm, town_norm, county_norm)
+                    // among active licences. One company with multiple route/type
+                    // licences at the same address counts once.
+                    const companyKeys = new Set();
+                    allSponsors.forEach(r => {
+                        companyKeys.add(
+                            (r.organisation_name_norm || '') + '|' +
+                            (r.town_norm || '') + '|' +
+                            (r.county_norm || '')
+                        );
+                    });
+                    document.getElementById('kpi-companies').textContent = companyKeys.size.toLocaleString();
+
                     applyFilter();
                     document.getElementById('tableLoading').style.display = 'none';
                     document.getElementById('mainTable').style.display = 'table';
