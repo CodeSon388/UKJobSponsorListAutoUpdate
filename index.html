@@ -51,13 +51,22 @@
             margin-bottom: 2rem;
         }
 
-        /* Strict 2-column layout for the Recent Churn Events cards on desktop;
-           collapses to a single column on narrow viewports. */
+        /* Recent Churn Events: 2-per-row on wide desktops, but only when the
+           viewport is wide enough that each card stays >=520px (otherwise
+           5-column tables overflow). Falls back to 1-column under 1080px. */
         .grid-2col {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
         }
-        @media (max-width: 820px) {
-            .grid-2col { grid-template-columns: 1fr; }
+        .grid-2col .card { min-width: 0; }   /* let tables shrink instead of overflowing */
+        .grid-2col table { font-size: 0.825rem; }
+        .grid-2col th, .grid-2col td { padding: 0.5rem 0.55rem; }
+        /* Truncate the org name inside the 2-col layout — full name is visible
+           via the cell's title attr on hover; keeps the row width predictable. */
+        .grid-2col td:first-child {
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .card {
@@ -101,7 +110,7 @@
             margin-bottom: 2rem;
         }
 
-        .chart-container { position: relative; height: 280px; width: 100%; }
+        .chart-container { position: relative; height: 320px; width: 100%; }
 
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
         th, td { text-align: left; padding: 0.65rem; border-bottom: 1px solid #e5e7eb; }
@@ -317,7 +326,7 @@
         </h2>
         <div class="grid grid-2col" id="recencyGrid">
             <div class="card">
-                <h3 style="color: var(--success);" id="recency-added-title">Added (last 7 days)</h3>
+                <h3 style="color: var(--success);" id="recency-added-title">Added (last 14 days)</h3>
                 <div style="overflow-x: auto; max-height: 320px; overflow-y: auto;">
                     <table id="added-table">
                         <thead><tr><th>Organisation</th><th>City</th><th>Route</th><th>Rating</th><th>Date</th></tr></thead>
@@ -559,8 +568,9 @@
                 renderChart('ratingsChart', data.rankings?.top_ratings || {}, 'Sponsors per Rating');
 
                 // Stash the default-mode (14-day) lists so the toggle can revert.
+                // Prefer the new added_last_14_days field; fall back to legacy 7d.
                 recency14d = {
-                    added:      data.recency?.added_last_7_days       || [],
+                    added:      data.recency?.added_last_14_days || data.recency?.added_last_7_days || [],
                     upgraded:   data.recency?.upgraded_last_14_days   || [],
                     downgraded: data.recency?.downgraded_last_14_days || [],
                     gone:       data.recency?.gone_last_14_days || data.recency?.removed_last_14_days || [],
@@ -580,10 +590,28 @@
 
         function renderChart(elId, dataObj, label, opts = {}) {
             const ctx = document.getElementById(elId).getContext('2d');
-            // Horizontal bars by default — gives long route/rating labels enough
-            // room without truncating ("Global Business Mobility: Senior or
-            // Specialist Worker", "Tier 2 Ministers of Religion", etc.)
             const horizontal = opts.horizontal !== false;
+            // Word-wrap callback: long labels (e.g. "Global Business Mobility:
+            // Senior or Specialist Worker") get split into multiple lines so
+            // Chart.js stops truncating them.
+            const wrap = (val, maxWidth) => {
+                const label = String(val);
+                if (label.length <= maxWidth) return label;
+                const words = label.split(/\s+/);
+                const lines = [];
+                let current = '';
+                for (const w of words) {
+                    const candidate = (current ? current + ' ' : '') + w;
+                    if (candidate.length > maxWidth && current) {
+                        lines.push(current);
+                        current = w;
+                    } else {
+                        current = candidate;
+                    }
+                }
+                if (current) lines.push(current);
+                return lines;
+            };
             new Chart(ctx, {
                 type: 'bar',
                 data: {
@@ -596,9 +624,22 @@
                 options: {
                     indexAxis: horizontal ? 'y' : 'x',
                     responsive: true, maintainAspectRatio: false,
-                    plugins: { legend: { display: false } },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { callbacks: { title: ctx => Object.keys(dataObj).map(displayRating)[ctx[0].dataIndex] } }
+                    },
                     scales: horizontal
-                        ? { x: { beginAtZero: true }, y: { ticks: { autoSkip: false } } }
+                        ? {
+                            x: { beginAtZero: true },
+                            y: {
+                                ticks: {
+                                    autoSkip: false,
+                                    callback: function(value) {
+                                        return wrap(this.getLabelForValue(value), 22);
+                                    }
+                                }
+                            }
+                        }
                         : { y: { beginAtZero: true } }
                 }
             });
@@ -634,7 +675,7 @@
                 }
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td>${escapeHtml(name)}</td>
+                    <td title="${escapeHtml(name)}">${escapeHtml(name)}</td>
                     <td>${escapeHtml(town)}</td>
                     <td><span class="badge badge-${kind}">${escapeHtml(route)}</span></td>
                     <td>${escapeHtml(middleCell)}</td>
@@ -663,7 +704,7 @@
 
             if (recencyMode === '14d') {
                 if (!recency14d) return;
-                document.getElementById('recency-added-title').textContent      = 'Added (last 7 days)';
+                document.getElementById('recency-added-title').textContent      = 'Added (last 14 days)';
                 document.getElementById('recency-upgraded-title').textContent   = 'Upgraded (last 14 days)';
                 document.getElementById('recency-downgraded-title').textContent = 'Downgraded (last 14 days)';
                 document.getElementById('recency-gone-title').textContent       = 'Gone (last 14 days)';

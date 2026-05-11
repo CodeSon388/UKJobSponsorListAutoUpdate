@@ -657,11 +657,12 @@ def generate_stats(master_df: pd.DataFrame, events: list[dict], file_date: str) 
     dwn_count = len(buckets.get("downgraded", []))
     gone_count = len(buckets.get("gone", []))
 
-    # Recency: read events index + recent months
+    # Recency: read events index + recent months. All event types use the
+    # same 14-day window so the dashboard's four cards are comparable.
     recent_events = _load_recent_events(file_date, days=14)
-    recent_added_7 = [
+    recent_added_14 = [
         e for e in recent_events
-        if e["event_type"] == "added" and _within_days(e["date"], file_date, 7)
+        if e["event_type"] == "added" and _within_days(e["date"], file_date, 14)
     ][:1000]
     recent_removed_14 = [  # legacy: downgraded + gone over 14 days
         e for e in recent_events
@@ -712,7 +713,9 @@ def generate_stats(master_df: pd.DataFrame, events: list[dict], file_date: str) 
             "top_types": active["type"].value_counts().to_dict() if not active.empty else {},
         },
         "recency": {
-            "added_last_7_days": _trim(recent_added_7),
+            # New 14-day field; legacy alias kept for one release.
+            "added_last_14_days": _trim(recent_added_14),
+            "added_last_7_days": _trim(recent_added_14),  # legacy alias (same data)
             "removed_last_14_days": _trim(recent_removed_14),
             "upgraded_last_14_days": _trim(recent_upgraded_14),
             "downgraded_last_14_days": _trim(recent_downgraded_14),

@@ -208,13 +208,42 @@ def replay(
     # The dashboard uses this to fetch only relevant month files per licence.
     licence_month_index = build_licence_month_index(EVENTS_DIR)
 
-    # Recompute rating-history summaries on the REAL master_register.csv from
-    # the events we just emitted. (We don't touch identity/state on master —
-    # that's already current from migration. Only the three summary columns.)
+    # Push first_seen_date and last_seen_date from the pseudo-master onto the
+    # REAL master_register.csv.  Migration set first_seen_date to the bulk-
+    # import date for everyone (2026-01-15), which is wrong once we have
+    # older snapshots — a licence the replay observed back in 2024-08 should
+    # show first_seen = 2024-08-XX, not 2026-01-15.
     summaries_updated = False
     if os.path.exists(MASTER_FILE):
         real_master = pd.read_csv(MASTER_FILE, dtype=str).fillna("")
         real_master = ensure_history_columns(real_master)
+
+        if not pseudo_master.empty:
+            # pseudo_master can contain duplicate licence_ids if the same
+            # licence went `gone` and later came back (we append a fresh
+            # active row rather than resurrecting). Aggregate per licence_id:
+            #   first_seen_date = earliest observed
+            #   last_seen_date  = latest observed
+            ps_agg = (
+                pseudo_master[["licence_id", "first_seen_date", "last_seen_date"]]
+                .copy()
+            )
+            # Cast to string for consistent min/max; empty strings sort last.
+            for c in ("first_seen_date", "last_seen_date"):
+                ps_agg[c] = ps_agg[c].apply(
+                    lambda x: x.strftime("%Y-%m-%d") if hasattr(x, "strftime")
+                    else (str(x) if pd.notna(x) and str(x) != "" else "")
+                )
+            ps = ps_agg.groupby("licence_id").agg(
+                first_seen_date=("first_seen_date", lambda s: min(d for d in s if d) if any(d for d in s) else ""),
+                last_seen_date=("last_seen_date", lambda s: max(d for d in s if d) if any(d for d in s) else ""),
+            )
+            for col in ("first_seen_date", "last_seen_date"):
+                mapped = real_master["licence_id"].map(ps[col])
+                non_empty = mapped.notna() & (mapped != "")
+                real_master.loc[non_empty, col] = mapped[non_empty]
+            logging.info("Pushed first_seen_date / last_seen_date from pseudo-master to real master")
+
         real_master = recompute_rating_summary(real_master, EVENTS_DIR)
         real_master.to_csv(MASTER_FILE, index=False)
         summaries_updated = True
