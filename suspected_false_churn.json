@@ -1,11 +1,11 @@
 [
   {
-    "name_distance": 3,
+    "name_distance": 0,
     "gone": {
       "date": "2026-05-08",
       "event_type": "gone",
-      "licence_id": "04c4f8035565cb57",
-      "organisation_name": "Zoul Ltd",
+      "licence_id": "54257d328befc473",
+      "organisation_name": "Stink Limited",
       "town": "London",
       "county": "",
       "route": "skilled worker",
@@ -16,10 +16,10 @@
     "added": {
       "date": "2026-05-08",
       "event_type": "added",
-      "licence_id": "a60fed2acac0b36e",
-      "organisation_name": "Count LTD",
+      "licence_id": "cf8a7e0890bbb546",
+      "organisation_name": "Stink Limited",
       "town": "London",
-      "county": "",
+      "county": "Unsure",
       "route": "skilled worker",
       "type": "worker",
       "from_rating": null,
@@ -27,258 +27,15 @@
     }
   },
   {
-    "name_distance": 3,
+    "name_distance": 0,
     "gone": {
       "date": "2026-05-08",
       "event_type": "gone",
-      "licence_id": "082cf3e1c3a00d0d",
-      "organisation_name": "WIVRO LTD",
+      "licence_id": "e344f8a80c6565b3",
+      "organisation_name": "Stink Limited",
       "town": "London",
       "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "7f2ec27b5b813130",
-      "organisation_name": "Minoro Ltd",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "2e91bf7fe67d31d7",
-      "organisation_name": "Native Pro LTD",
-      "town": "London",
-      "county": "United Kingdom",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "8ad5be64193706e6",
-      "organisation_name": "Native AI Ltd",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 1,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "3246263e71685a71",
-      "organisation_name": "Tryg Fosikring A/S",
-      "town": "London",
-      "county": "",
-      "route": "global business mobility: senior or specialist worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "0ffdf3095b7d71b2",
-      "organisation_name": "Tryg Forsikring A/S",
-      "town": "London",
-      "county": "",
-      "route": "global business mobility: senior or specialist worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "39e34d68e13e0e26",
-      "organisation_name": "EYYA LTD",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "7d13cc2f350a3737",
-      "organisation_name": "Eequ Ltd",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 2,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "3a7e9de7eca0f16e",
-      "organisation_name": "ALSE LIMITED",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "674410a624ff326f",
-      "organisation_name": "Aave Limited",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "3f86eafdf6e62e87",
-      "organisation_name": "Secret Group Limited",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "94453d59b957d7ec",
-      "organisation_name": "Decant Group Limited",
-      "town": "London",
-      "county": "lon",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "402a4df2b78f73d5",
-      "organisation_name": "Talia Limited",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "c979bd87199ee7ab",
-      "organisation_name": "LIVA Limited",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "4f108fb9d72a5a43",
-      "organisation_name": "MSI Group Ltd",
-      "town": "London",
-      "county": "London",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "9374eab0bff36a65",
-      "organisation_name": "Sa3 Group Ltd",
-      "town": "London",
-      "county": "London",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "74e2f82b22378453",
-      "organisation_name": "MPN Technologies Limited",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "42ee0c1b71d9ee0f",
-      "organisation_name": "2SD Technologies Limited",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 1,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "7ce67711702653c0",
-      "organisation_name": "Celebrate Church Bradforf",
-      "town": "Bradford",
-      "county": "Bradford",
-      "route": "religious worker",
+      "route": "creative worker",
       "type": "temporary worker",
       "from_rating": "A",
       "to_rating": null
@@ -286,25 +43,25 @@
     "added": {
       "date": "2026-05-08",
       "event_type": "added",
-      "licence_id": "e83787f16d5b88c8",
-      "organisation_name": "Celebrate Church Bradford",
-      "town": "Bradford",
-      "county": "Bradford",
-      "route": "religious worker",
+      "licence_id": "4707be66c374646e",
+      "organisation_name": "Stink Limited",
+      "town": "London",
+      "county": "Unsure",
+      "route": "creative worker",
       "type": "temporary worker",
       "from_rating": null,
       "to_rating": "A"
     }
   },
   {
-    "name_distance": 3,
+    "name_distance": 0,
     "gone": {
       "date": "2026-05-08",
       "event_type": "gone",
-      "licence_id": "7dc81a24ef9c3087",
-      "organisation_name": "BERGAM LIMITED",
+      "licence_id": "f0fba3a1fe8c0fbe",
+      "organisation_name": "LONDON SCHOOL OF BUSINESS & COMPUTING LTD",
       "town": "London",
-      "county": "England",
+      "county": "",
       "route": "skilled worker",
       "type": "worker",
       "from_rating": "A",
@@ -313,10 +70,10 @@
     "added": {
       "date": "2026-05-08",
       "event_type": "added",
-      "licence_id": "305cc9dd78e3a06a",
-      "organisation_name": "Jetsam Limited",
+      "licence_id": "e6da7888d84c30e7",
+      "organisation_name": "LONDON SCHOOL OF BUSINESS & COMPUTING LTD",
       "town": "London",
-      "county": "",
+      "county": "Havering",
       "route": "skilled worker",
       "type": "worker",
       "from_rating": null,
@@ -324,14 +81,14 @@
     }
   },
   {
-    "name_distance": 1,
+    "name_distance": 0,
     "gone": {
       "date": "2026-05-08",
       "event_type": "gone",
-      "licence_id": "7e96e0d6dbc70d76",
-      "organisation_name": "Imperial Sales & Lettings Agents Ltd",
-      "town": "Southall",
-      "county": "",
+      "licence_id": "f8864b8b26427768",
+      "organisation_name": "COSMO ACADEMIC LTD",
+      "town": "Portsmouth",
+      "county": "HAMPSHIRE",
       "route": "skilled worker",
       "type": "worker",
       "from_rating": "A",
@@ -340,576 +97,9 @@
     "added": {
       "date": "2026-05-08",
       "event_type": "added",
-      "licence_id": "880eea620511e2fe",
-      "organisation_name": "Imperial Sales & Letting Agents Ltd",
-      "town": "Southall",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "8e1b918e540fe0fa",
-      "organisation_name": "SIG Technologies Limited",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "42ee0c1b71d9ee0f",
-      "organisation_name": "2SD Technologies Limited",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "9baf1d681cb834de",
-      "organisation_name": "KUIQ LTD",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "0bee88a3e133cbbc",
-      "organisation_name": "OLIZ LTD",
-      "town": "London",
-      "county": "England",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "9baf1d681cb834de",
-      "organisation_name": "KUIQ LTD",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "26550409e0dc0243",
-      "organisation_name": "JUXT Ltd",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "9baf1d681cb834de",
-      "organisation_name": "KUIQ LTD",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "6af912898997a330",
-      "organisation_name": "VVII LTD",
-      "town": "London",
-      "county": "London",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "a0cc57b3348d4a30",
-      "organisation_name": "SARTEM LIMITED",
-      "town": "LONDON",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "003a3478f0d796eb",
-      "organisation_name": "CARTREE LIMITED",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "a0cc57b3348d4a30",
-      "organisation_name": "SARTEM LIMITED",
-      "town": "LONDON",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "b2c50996a6eb449b",
-      "organisation_name": "SORTIE LIMITED",
-      "town": "LONDON",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "a2f7d4280b947377",
-      "organisation_name": "RAFT Limited",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "674410a624ff326f",
-      "organisation_name": "Aave Limited",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "ae5c7da8ba29f53d",
-      "organisation_name": "Klef Ltd",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "0bee88a3e133cbbc",
-      "organisation_name": "OLIZ LTD",
-      "town": "London",
-      "county": "England",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "afdfcc81b76c8a10",
-      "organisation_name": "Hbss Limited",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "a02b3f6c0a953582",
-      "organisation_name": "HENSA LIMITED",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 2,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "b1fe6b7a2d3c0e77",
-      "organisation_name": "SUTTON PCNS (PRIMARY CARE NETWORKS) COMMUNITY INTEREST COMPANY",
-      "town": "Sutton",
-      "county": "Surrey",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "148c4aaf990746ee",
-      "organisation_name": "SUTTON PCN s(PRIMARY CARE NETWORKS) COMMUNITY INTEREST COMPANY",
-      "town": "Sutton",
-      "county": "Surrey",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "c01703c139154fba",
-      "organisation_name": "POTERIS LTD",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "f879c26dc452d937",
-      "organisation_name": "Poteris CIC",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 2,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "c1d375054e1978f9",
-      "organisation_name": "YOGIZ LTD",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "0bee88a3e133cbbc",
-      "organisation_name": "OLIZ LTD",
-      "town": "London",
-      "county": "England",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "c1d375054e1978f9",
-      "organisation_name": "YOGIZ LTD",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "ebbca1896379d357",
-      "organisation_name": "Dorix Ltd",
-      "town": "London",
-      "county": "London",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 1,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "c55f23731d4d7fe3",
-      "organisation_name": "Tryg Fosikring A/S",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "be55c2a950646097",
-      "organisation_name": "Tryg Forsikring A/S",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 1,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "cea996ec9c4216e5",
-      "organisation_name": "Farborough Food & Wine Limited",
-      "town": "Stoke-On-Trent",
-      "county": "Burslem",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "7240de405ce28c6f",
-      "organisation_name": "Farnborough Food & Wine Limited",
-      "town": "Stoke-On-Trent",
-      "county": "Burslem",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "d263f60d8eb5267a",
-      "organisation_name": "DORRI LTD",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "0eaad729cf848f47",
-      "organisation_name": "DWORKS LTD",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 2,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "d263f60d8eb5267a",
-      "organisation_name": "DORRI LTD",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "ebbca1896379d357",
-      "organisation_name": "Dorix Ltd",
-      "town": "London",
-      "county": "London",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 1,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "da41369ccdb48283",
-      "organisation_name": "Enhanc3D Genomics Limited",
-      "town": "Cambridge",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "c8d522ca69c454e5",
-      "organisation_name": "Enhanced Genomics Limited",
-      "town": "Cambridge",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 1,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "e2cdfcb6b5525a35",
-      "organisation_name": "Ali Groveries Ltd",
-      "town": "Glasgow",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "33b709c570df8e20",
-      "organisation_name": "Ali Groceries Ltd",
-      "town": "Glasgow",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "f2d79f424e921932",
-      "organisation_name": "REBELUNICORNGROUPLTD",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "dd1c2e70d5330894",
-      "organisation_name": "REBEL UNICORN GROUP LTD",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-05-08",
-      "event_type": "gone",
-      "licence_id": "f2f67d3760b3e500",
-      "organisation_name": "Car Sea Ltd",
-      "town": "London",
-      "county": "Essex",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-08",
-      "event_type": "added",
-      "licence_id": "5caf7e8e942a049f",
-      "organisation_name": "ARU Spa Ltd",
-      "town": "London",
+      "licence_id": "e853ed00d87fd7a4",
+      "organisation_name": "COSMO ACADEMIC LTD",
+      "town": "Portsmouth",
       "county": "",
       "route": "skilled worker",
       "type": "worker",

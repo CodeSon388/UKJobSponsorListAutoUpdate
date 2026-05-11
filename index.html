@@ -342,6 +342,11 @@
                 Currently showing last 14 days
             </span>
         </h2>
+        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: -0.5rem;">
+            Licence-level detail is most complete for <strong>2026-03-06 onwards</strong>
+            (daily cron data). Earlier periods show counts only in the Daily Log
+            and trend chart below.
+        </p>
         <div class="grid grid-2col" id="recencyGrid">
             <div class="card">
                 <h3 style="color: var(--success);" id="recency-added-title">Added (last 14 days)</h3>
@@ -470,7 +475,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <h3>Daily Log</h3>
+                    <h3>Daily Log (last 14 days)</h3>
                     <div style="overflow-y: auto; max-height: 320px;">
                         <table class="full-table" style="font-size: 0.8rem;">
                             <thead>
@@ -802,9 +807,17 @@
                     document.getElementById('data-since').textContent = history[0].date;
                 }
 
+                // Compute the 14-day calendar window once and share it with the chart below.
+                const latestDate = history.length
+                    ? new Date(history[history.length - 1].date)
+                    : new Date();
+                const cutoff = new Date(latestDate.getTime() - 14 * 86400000);
+                const cutoffStr = cutoff.toISOString().slice(0, 10);
+
+                // Daily Log restricted to the same 14-day calendar window as the trend chart.
                 const tbody = document.getElementById('historyTableBody');
                 tbody.innerHTML = '';
-                [...history].reverse().slice(0, 60).forEach(day => {
+                history.filter(d => d.date >= cutoffStr).slice().reverse().forEach(day => {
                     const tr = document.createElement('tr');
                     tr.innerHTML = `
                         <td>${day.date}</td>
@@ -817,26 +830,10 @@
                     tbody.appendChild(tr);
                 });
 
-                // Trend chart: last 14 CALENDAR days anchored to the latest entry's date
-                // (typically today / yesterday since the cron runs daily). With sparse
-                // snapshot data the chart will show only the dates that actually exist
-                // in the window; with daily cron output it will show 14 daily points.
-                const latestDate = history.length
-                    ? new Date(history[history.length - 1].date)
-                    : new Date();
-                const cutoff = new Date(latestDate.getTime() - 14 * 86400000);
-                const cutoffStr = cutoff.toISOString().slice(0, 10);
-                let recent = history.filter(d => d.date >= cutoffStr);
-                // If the calendar window has fewer than 2 points (sparse historical
-                // backfill before daily cron has run), fall back to the last 14
-                // available entries so the chart still tells a story.
-                let chartTitle = 'Daily Events by Type (last 14 calendar days)';
-                if (recent.length < 2) {
-                    recent = history.slice(-14);
-                    chartTitle = 'Daily Events by Type (last 14 available snapshots)';
-                }
+                // Trend chart: reuse the same 14-day cutoff computed above.
+                const recent = history.filter(d => d.date >= cutoffStr);
                 const chartTitleEl = document.querySelector('#historyChart')?.closest('.card')?.querySelector('h3');
-                if (chartTitleEl) chartTitleEl.textContent = chartTitle;
+                if (chartTitleEl) chartTitleEl.textContent = 'Daily Events by Type (last 14 days)';
                 const ctx = document.getElementById('historyChart').getContext('2d');
                 new Chart(ctx, {
                     type: 'line',
