@@ -6,7 +6,7 @@
     "downgraded": 0,
     "gone": 803,
     "removed": 803,
-    "total": 118848
+    "total": 118065
   },
   {
     "date": "2024-09-19",
@@ -15,7 +15,7 @@
     "downgraded": 0,
     "gone": 433,
     "removed": 433,
-    "total": 120135
+    "total": 119352
   },
   {
     "date": "2024-10-09",
@@ -24,7 +24,7 @@
     "downgraded": 0,
     "gone": 304,
     "removed": 304,
-    "total": 121116
+    "total": 120333
   },
   {
     "date": "2024-11-13",
@@ -33,7 +33,7 @@
     "downgraded": 0,
     "gone": 582,
     "removed": 582,
-    "total": 122942
+    "total": 122159
   },
   {
     "date": "2024-12-24",
@@ -42,7 +42,7 @@
     "downgraded": 0,
     "gone": 690,
     "removed": 690,
-    "total": 124859
+    "total": 124076
   },
   {
     "date": "2025-01-31",
@@ -51,7 +51,7 @@
     "downgraded": 1,
     "gone": 504,
     "removed": 505,
-    "total": 126438
+    "total": 125655
   },
   {
     "date": "2025-02-28",
@@ -60,7 +60,7 @@
     "downgraded": 0,
     "gone": 408,
     "removed": 408,
-    "total": 127598
+    "total": 126815
   },
   {
     "date": "2025-03-20",
@@ -69,7 +69,7 @@
     "downgraded": 0,
     "gone": 302,
     "removed": 302,
-    "total": 128526
+    "total": 127743
   },
   {
     "date": "2025-04-17",
@@ -78,7 +78,7 @@
     "downgraded": 0,
     "gone": 621,
     "removed": 621,
-    "total": 129820
+    "total": 129037
   },
   {
     "date": "2025-05-14",
@@ -87,7 +87,7 @@
     "downgraded": 0,
     "gone": 581,
     "removed": 581,
-    "total": 130951
+    "total": 130168
   },
   {
     "date": "2025-06-18",
@@ -96,7 +96,7 @@
     "downgraded": 0,
     "gone": 845,
     "removed": 845,
-    "total": 132424
+    "total": 131641
   },
   {
     "date": "2025-07-10",
@@ -105,7 +105,7 @@
     "downgraded": 0,
     "gone": 486,
     "removed": 486,
-    "total": 133485
+    "total": 132702
   },
   {
     "date": "2025-08-08",
@@ -114,7 +114,7 @@
     "downgraded": 0,
     "gone": 606,
     "removed": 606,
-    "total": 134969
+    "total": 134186
   },
   {
     "date": "2025-09-05",
@@ -123,7 +123,7 @@
     "downgraded": 0,
     "gone": 632,
     "removed": 632,
-    "total": 136170
+    "total": 135387
   },
   {
     "date": "2025-10-29",
@@ -132,7 +132,7 @@
     "downgraded": 0,
     "gone": 1612,
     "removed": 1612,
-    "total": 137341
+    "total": 136558
   },
   {
     "date": "2025-11-13",
@@ -141,7 +141,7 @@
     "downgraded": 0,
     "gone": 596,
     "removed": 596,
-    "total": 137731
+    "total": 136948
   },
   {
     "date": "2025-12-08",
@@ -150,7 +150,7 @@
     "downgraded": 0,
     "gone": 596,
     "removed": 596,
-    "total": 138464
+    "total": 137681
   },
   {
     "date": "2026-01-15",
@@ -159,7 +159,7 @@
     "downgraded": 0,
     "gone": 929,
     "removed": 929,
-    "total": 139248
+    "total": 138465
   },
   {
     "date": "2026-01-16",
@@ -168,7 +168,7 @@
     "downgraded": 0,
     "gone": 44,
     "removed": 44,
-    "total": 139570
+    "total": 138483
   },
   {
     "date": "2026-01-29",
@@ -177,7 +177,7 @@
     "downgraded": 0,
     "gone": 453,
     "removed": 453,
-    "total": 139512
+    "total": 138747
   },
   {
     "date": "2026-02-27",
@@ -186,7 +186,7 @@
     "downgraded": 0,
     "gone": 972,
     "removed": 972,
-    "total": 140023
+    "total": 139258
   },
   {
     "date": "2026-03-06",
@@ -195,7 +195,7 @@
     "downgraded": 1,
     "gone": 1762,
     "removed": 1763,
-    "total": 140304
+    "total": 139992
   },
   {
     "date": "2026-03-09",
@@ -204,7 +204,7 @@
     "downgraded": 0,
     "gone": 286,
     "removed": 286,
-    "total": 140302
+    "total": 139990
   },
   {
     "date": "2026-03-10",
@@ -213,7 +213,7 @@
     "downgraded": 0,
     "gone": 57,
     "removed": 57,
-    "total": 140295
+    "total": 139983
   },
   {
     "date": "2026-03-11",
@@ -222,7 +222,7 @@
     "downgraded": 0,
     "gone": 58,
     "removed": 58,
-    "total": 140295
+    "total": 139983
   },
   {
     "date": "2026-03-12",
@@ -231,7 +231,7 @@
     "downgraded": 0,
     "gone": 249,
     "removed": 249,
-    "total": 140301
+    "total": 139989
   },
   {
     "date": "2026-03-13",
@@ -240,7 +240,7 @@
     "downgraded": 0,
     "gone": 247,
     "removed": 247,
-    "total": 140280
+    "total": 139968
   },
   {
     "date": "2026-03-16",
@@ -249,7 +249,7 @@
     "downgraded": 0,
     "gone": 94,
     "removed": 94,
-    "total": 140265
+    "total": 139953
   },
   {
     "date": "2026-03-17",
@@ -258,7 +258,7 @@
     "downgraded": 0,
     "gone": 52,
     "removed": 52,
-    "total": 140266
+    "total": 139954
   },
   {
     "date": "2026-03-18",
@@ -267,7 +267,7 @@
     "downgraded": 0,
     "gone": 49,
     "removed": 49,
-    "total": 140280
+    "total": 139968
   },
   {
     "date": "2026-03-19",
@@ -276,7 +276,7 @@
     "downgraded": 0,
     "gone": 44,
     "removed": 44,
-    "total": 140295
+    "total": 139983
   },
   {
     "date": "2026-03-20",
@@ -285,7 +285,7 @@
     "downgraded": 0,
     "gone": 31,
     "removed": 31,
-    "total": 140290
+    "total": 139978
   },
   {
     "date": "2026-03-23",
@@ -294,7 +294,7 @@
     "downgraded": 0,
     "gone": 48,
     "removed": 48,
-    "total": 140302
+    "total": 139990
   },
   {
     "date": "2026-03-24",
@@ -303,7 +303,7 @@
     "downgraded": 0,
     "gone": 54,
     "removed": 54,
-    "total": 140306
+    "total": 139994
   },
   {
     "date": "2026-03-25",
@@ -312,7 +312,7 @@
     "downgraded": 0,
     "gone": 61,
     "removed": 61,
-    "total": 140295
+    "total": 139983
   },
   {
     "date": "2026-03-26",
@@ -321,7 +321,7 @@
     "downgraded": 0,
     "gone": 50,
     "removed": 50,
-    "total": 140310
+    "total": 139998
   },
   {
     "date": "2026-03-27",
@@ -330,7 +330,7 @@
     "downgraded": 0,
     "gone": 57,
     "removed": 57,
-    "total": 140312
+    "total": 140000
   },
   {
     "date": "2026-03-30",
@@ -339,7 +339,7 @@
     "downgraded": 0,
     "gone": 112,
     "removed": 112,
-    "total": 140301
+    "total": 139989
   },
   {
     "date": "2026-03-31",
@@ -348,7 +348,7 @@
     "downgraded": 0,
     "gone": 40,
     "removed": 40,
-    "total": 140304
+    "total": 139992
   },
   {
     "date": "2026-04-01",
@@ -357,7 +357,7 @@
     "downgraded": 0,
     "gone": 45,
     "removed": 45,
-    "total": 140328
+    "total": 140016
   },
   {
     "date": "2026-04-02",
@@ -366,7 +366,7 @@
     "downgraded": 0,
     "gone": 64,
     "removed": 64,
-    "total": 140331
+    "total": 140019
   },
   {
     "date": "2026-04-07",
@@ -375,7 +375,7 @@
     "downgraded": 0,
     "gone": 135,
     "removed": 135,
-    "total": 140325
+    "total": 140013
   },
   {
     "date": "2026-04-08",
@@ -384,7 +384,7 @@
     "downgraded": 0,
     "gone": 36,
     "removed": 36,
-    "total": 140343
+    "total": 140031
   },
   {
     "date": "2026-04-09",
@@ -393,7 +393,7 @@
     "downgraded": 0,
     "gone": 48,
     "removed": 48,
-    "total": 140347
+    "total": 140035
   },
   {
     "date": "2026-04-10",
@@ -402,7 +402,7 @@
     "downgraded": 0,
     "gone": 42,
     "removed": 42,
-    "total": 140365
+    "total": 140053
   },
   {
     "date": "2026-04-13",
@@ -411,7 +411,7 @@
     "downgraded": 0,
     "gone": 69,
     "removed": 69,
-    "total": 140387
+    "total": 140075
   },
   {
     "date": "2026-04-14",
@@ -420,7 +420,7 @@
     "downgraded": 0,
     "gone": 41,
     "removed": 41,
-    "total": 140418
+    "total": 140106
   },
   {
     "date": "2026-04-15",
@@ -429,7 +429,7 @@
     "downgraded": 0,
     "gone": 46,
     "removed": 46,
-    "total": 140426
+    "total": 140114
   },
   {
     "date": "2026-04-16",
@@ -438,7 +438,7 @@
     "downgraded": 0,
     "gone": 46,
     "removed": 46,
-    "total": 140439
+    "total": 140127
   },
   {
     "date": "2026-04-17",
@@ -447,7 +447,7 @@
     "downgraded": 0,
     "gone": 51,
     "removed": 51,
-    "total": 140459
+    "total": 140147
   },
   {
     "date": "2026-04-20",
@@ -456,7 +456,7 @@
     "downgraded": 0,
     "gone": 116,
     "removed": 116,
-    "total": 140457
+    "total": 140145
   },
   {
     "date": "2026-04-21",
@@ -465,7 +465,7 @@
     "downgraded": 0,
     "gone": 71,
     "removed": 71,
-    "total": 140448
+    "total": 140136
   },
   {
     "date": "2026-04-22",
@@ -474,7 +474,7 @@
     "downgraded": 0,
     "gone": 63,
     "removed": 63,
-    "total": 140458
+    "total": 140146
   },
   {
     "date": "2026-04-23",
@@ -483,7 +483,7 @@
     "downgraded": 0,
     "gone": 59,
     "removed": 59,
-    "total": 140465
+    "total": 140153
   },
   {
     "date": "2026-04-24",
@@ -492,7 +492,7 @@
     "downgraded": 0,
     "gone": 85,
     "removed": 85,
-    "total": 140461
+    "total": 140149
   },
   {
     "date": "2026-04-27",
@@ -501,7 +501,7 @@
     "downgraded": 0,
     "gone": 267,
     "removed": 267,
-    "total": 140482
+    "total": 140170
   },
   {
     "date": "2026-04-28",
@@ -510,7 +510,7 @@
     "downgraded": 0,
     "gone": 221,
     "removed": 221,
-    "total": 140505
+    "total": 140193
   },
   {
     "date": "2026-04-29",
@@ -519,7 +519,7 @@
     "downgraded": 0,
     "gone": 60,
     "removed": 60,
-    "total": 140510
+    "total": 140198
   },
   {
     "date": "2026-04-30",
@@ -528,7 +528,7 @@
     "downgraded": 0,
     "gone": 66,
     "removed": 66,
-    "total": 140506
+    "total": 140194
   },
   {
     "date": "2026-05-01",
@@ -537,7 +537,7 @@
     "downgraded": 0,
     "gone": 49,
     "removed": 49,
-    "total": 140517
+    "total": 140205
   },
   {
     "date": "2026-05-05",
@@ -546,7 +546,7 @@
     "downgraded": 0,
     "gone": 128,
     "removed": 128,
-    "total": 140558
+    "total": 140246
   },
   {
     "date": "2026-05-06",
@@ -555,7 +555,7 @@
     "downgraded": 0,
     "gone": 44,
     "removed": 44,
-    "total": 140582
+    "total": 140270
   },
   {
     "date": "2026-05-07",
@@ -564,7 +564,7 @@
     "downgraded": 0,
     "gone": 51,
     "removed": 51,
-    "total": 140595
+    "total": 140283
   },
   {
     "date": "2026-05-08",
@@ -573,6 +573,6 @@
     "downgraded": 0,
     "gone": 47,
     "removed": 47,
-    "total": 140614
+    "total": 140302
   }
 ]

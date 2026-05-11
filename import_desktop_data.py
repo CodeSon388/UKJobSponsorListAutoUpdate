@@ -382,17 +382,19 @@ def run() -> dict:
 
     current_active = int((master_df["status"] == "active").sum())
     history = rebuild_history_from_events(EVENTS_DIR, current_total_active=current_active)
-    # Overlay Desktop history's pre-anchor daily counts so total field reflects
-    # Desktop's known per-date totals (not back-projected approximations).
+    # Overlay Desktop history's daily added/gone counts (those are real cron
+    # observations of churn). Deliberately DO NOT overlay Desktop's `total`
+    # field — gov.uk's row count is 312 higher than our master because
+    # migration collapsed 312 rating-formatting duplicates into single
+    # licence_ids. Using Desktop's total would make the Daily Log "Active"
+    # column disagree with the "Active Sponsors" KPI (which reads master).
     history_by_date = {h["date"]: h for h in history}
     for d in desktop_history:
         if d["date"] in history_by_date:
-            # Keep our upgraded/downgraded counts; use Desktop's added/gone/total.
             entry = history_by_date[d["date"]]
             entry["added"] = d.get("added", entry.get("added", 0))
             entry["gone"] = d.get("removed", entry.get("gone", 0))
             entry["removed"] = entry["downgraded"] + entry["gone"]
-            entry["total"] = d.get("total", entry.get("total"))
         else:
             history_by_date[d["date"]] = {
                 "date": d["date"],
@@ -401,9 +403,18 @@ def run() -> dict:
                 "downgraded": 0,
                 "gone": d.get("removed", 0),
                 "removed": d.get("removed", 0),
-                "total": d.get("total"),
+                "total": None,  # filled in by back-projection below
             }
     merged_history = sorted(history_by_date.values(), key=lambda r: r["date"])
+
+    # Re-back-project `total` for every entry from current_active so the whole
+    # timeline is internally consistent with master_register.csv.
+    # total_at(D) = total_at(D+1) - added[D+1] + gone[D+1]
+    running = current_active
+    for r in reversed(merged_history):
+        r["total"] = running
+        running = running - int(r.get("added", 0) or 0) + int(r.get("gone", 0) or 0)
+
     _write_json(HISTORY_FILE, merged_history)
     logging.info(f"Wrote {HISTORY_FILE} ({len(merged_history)} entries)")
 
