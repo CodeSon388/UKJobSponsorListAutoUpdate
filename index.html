@@ -234,15 +234,15 @@
         <header>
             <h1>UK Sponsor Licence Churn Tracker</h1>
             <div style="display: flex; gap: 1.5rem; color: var(--text-secondary); font-size: 0.9rem; align-items: center; flex-wrap: wrap;">
-                <p style="margin: 0;"><strong>Data Since:</strong> 2026-01-15</p>
+                <p style="margin: 0;"><strong>Data Since:</strong> <span id="data-since">…</span></p>
                 <p id="last-updated" style="margin: 0;">Loading...</p>
                 <p id="data-date" style="margin: 0;"></p>
             </div>
             <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.75rem;">
-                Tracks four churn events per licence: <strong>新增 (added)</strong>,
-                <strong>升級 (upgraded)</strong>, <strong>降級 (downgraded)</strong>, and
-                <strong>消失 / 撤銷 (gone)</strong>. The gov.uk register provides no signal
-                to distinguish revoked from disappeared, so they're reported together as "gone".
+                Tracks four churn events per licence: <strong>Added</strong>,
+                <strong>Upgraded</strong>, <strong>Downgraded</strong>, and
+                <strong>Gone</strong>. The gov.uk register provides no signal to
+                distinguish revoked from disappeared, so they're reported together as "Gone".
             </p>
         </header>
 
@@ -256,22 +256,22 @@
             <div class="card">
                 <div class="metric-title">Added Today</div>
                 <div id="kpi-added" class="metric-value success">-</div>
-                <div class="metric-sub">新增 licences</div>
+                <div class="metric-sub">New licences</div>
             </div>
             <div class="card">
                 <div class="metric-title">Upgraded Today</div>
                 <div id="kpi-upgraded" class="metric-value accent">-</div>
-                <div class="metric-sub">升級 (e.g. B→A)</div>
+                <div class="metric-sub">Rating tier raised (e.g. B → A)</div>
             </div>
             <div class="card">
                 <div class="metric-title">Downgraded Today</div>
                 <div id="kpi-downgraded" class="metric-value warning">-</div>
-                <div class="metric-sub">降級 (e.g. A→B)</div>
+                <div class="metric-sub">Rating tier lowered (e.g. A → B)</div>
             </div>
             <div class="card">
                 <div class="metric-title">Gone Today</div>
                 <div id="kpi-gone" class="metric-value danger">-</div>
-                <div class="metric-sub">消失 / 撤銷 combined</div>
+                <div class="metric-sub">Revoked or disappeared (combined)</div>
             </div>
         </div>
 
@@ -295,7 +295,7 @@
         <h2>Recent Churn Events</h2>
         <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));">
             <div class="card">
-                <h3 style="color: var(--success);">新增 Added (last 7 days)</h3>
+                <h3 style="color: var(--success);">Added (last 7 days)</h3>
                 <div style="overflow-x: auto; max-height: 320px; overflow-y: auto;">
                     <table id="added-table">
                         <thead><tr><th>Organisation</th><th>City</th><th>Route</th><th>Rating</th><th>Date</th></tr></thead>
@@ -304,7 +304,7 @@
                 </div>
             </div>
             <div class="card">
-                <h3 style="color: var(--accent);">升級 Upgraded (last 14 days)</h3>
+                <h3 style="color: var(--accent);">Upgraded (last 14 days)</h3>
                 <div style="overflow-x: auto; max-height: 320px; overflow-y: auto;">
                     <table id="upgraded-table">
                         <thead><tr><th>Organisation</th><th>City</th><th>Route</th><th>From → To</th><th>Date</th></tr></thead>
@@ -313,7 +313,7 @@
                 </div>
             </div>
             <div class="card">
-                <h3 style="color: var(--warning);">降級 Downgraded (last 14 days)</h3>
+                <h3 style="color: var(--warning);">Downgraded (last 14 days)</h3>
                 <div style="overflow-x: auto; max-height: 320px; overflow-y: auto;">
                     <table id="downgraded-table">
                         <thead><tr><th>Organisation</th><th>City</th><th>Route</th><th>From → To</th><th>Date</th></tr></thead>
@@ -322,7 +322,7 @@
                 </div>
             </div>
             <div class="card">
-                <h3 style="color: var(--danger);">消失/撤銷 Gone (last 14 days)</h3>
+                <h3 style="color: var(--danger);">Gone (last 14 days)</h3>
                 <div style="overflow-x: auto; max-height: 320px; overflow-y: auto;">
                     <table id="gone-table">
                         <thead><tr><th>Organisation</th><th>City</th><th>Route</th><th>Last Rating</th><th>Date</th></tr></thead>
@@ -427,10 +427,10 @@
                             <thead>
                                 <tr>
                                     <th>Date</th>
-                                    <th title="新增">+</th>
-                                    <th title="升級">↑</th>
-                                    <th title="降級">↓</th>
-                                    <th title="消失">×</th>
+                                    <th title="Added">+</th>
+                                    <th title="Upgraded">↑</th>
+                                    <th title="Downgraded">↓</th>
+                                    <th title="Gone">×</th>
                                     <th>Active</th>
                                 </tr>
                             </thead>
@@ -618,6 +618,11 @@
             try {
                 const r = await fetch('history.json');
                 const history = await r.json();
+
+                // Dynamic "Data Since" — earliest date present in the rebuilt history.
+                if (history.length) {
+                    document.getElementById('data-since').textContent = history[0].date;
+                }
 
                 const tbody = document.getElementById('historyTableBody');
                 tbody.innerHTML = '';
@@ -878,8 +883,9 @@
             if (!events.length) {
                 body.innerHTML = `
                     <p class="empty">
-                        No churn events on file yet for this licence. Either the licence has
-                        been stable since 2026-01-15, or historical replay hasn't been run.
+                        No churn events on file for this licence. Either it has been stable
+                        across every snapshot in the tracked window, or no historical replay
+                        has been run yet.
                     </p>`;
                 return;
             }
