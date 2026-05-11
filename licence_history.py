@@ -204,6 +204,68 @@ def update_licence_month_index_for(
 # ---------------------------------------------------------------------------
 
 
+def rebuild_history_from_events(
+    events_dir: str = EVENTS_DIR_DEFAULT,
+    current_total_active: int | None = None,
+) -> list[dict]:
+    """
+    Reconstruct history.json from the events/ log.
+
+    For each distinct date in events/, count per-type churn. Produces one
+    entry per date with shape:
+
+        {date, added, upgraded, downgraded, gone, removed (legacy), total}
+
+    The `total` field is back-projected from `current_total_active` (the
+    present count of active licences in master_register.csv): walking
+    backwards, total_at_date(D) = total_after_date(D) - added_on(D) + gone_on(D).
+    If `current_total_active` is None, `total` is omitted.
+
+    Returns the list of entries, sorted by date. Caller writes it out.
+    """
+    VALID_TYPES = {"added", "upgraded", "downgraded", "gone"}
+    by_date: dict[str, dict[str, int]] = defaultdict(
+        lambda: {"added": 0, "upgraded": 0, "downgraded": 0, "gone": 0}
+    )
+    for _month, path in _iter_event_files(events_dir):
+        for event in _load_events_file(path):
+            date = event.get("date")
+            etype = event.get("event_type")
+            if not date or etype not in VALID_TYPES:
+                continue
+            by_date[date][etype] += 1
+
+    rows = sorted(
+        (
+            {
+                "date": date,
+                "added": counts["added"],
+                "upgraded": counts["upgraded"],
+                "downgraded": counts["downgraded"],
+                "gone": counts["gone"],
+                "removed": counts["downgraded"] + counts["gone"],
+            }
+            for date, counts in by_date.items()
+        ),
+        key=lambda r: r["date"],
+    )
+
+    if current_total_active is not None and rows:
+        # Walk backwards from current_total_active.
+        # Last entry corresponds to the latest snapshot date.
+        # total_at_date(D) = total_after_D's churn - added(D) + gone(D)
+        # i.e. total_just_BEFORE D = current - added(D) + gone(D)
+        # We store total AT D (post-diff) = current_total
+        # So the LAST entry gets the current total directly; each previous
+        # entry rewinds by its own (added - gone) delta.
+        running_total = current_total_active
+        for r in reversed(rows):
+            r["total"] = running_total
+            running_total = running_total - r["added"] + r["gone"]
+
+    return rows
+
+
 def get_licence_events(
     licence_id: str,
     events_dir: str = EVENTS_DIR_DEFAULT,

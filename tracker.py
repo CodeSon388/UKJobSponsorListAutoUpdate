@@ -47,7 +47,10 @@ from normalisation import (
     parse_type_rating,
     rating_rank,
 )
-from licence_history import update_licence_month_index_for
+from licence_history import (
+    rebuild_history_from_events,
+    update_licence_month_index_for,
+)
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
@@ -712,42 +715,40 @@ def generate_stats(master_df: pd.DataFrame, events: list[dict], file_date: str) 
 
 
 def update_history(events: list[dict], master_df: pd.DataFrame, file_date: str) -> None:
-    buckets = _bucket_events(events)
-    added_count = len(buckets.get("added", []))
-    upg_count = len(buckets.get("upgraded", []))
-    dwn_count = len(buckets.get("downgraded", []))
-    gone_count = len(buckets.get("gone", []))
+    """
+    Regenerate history.json from events/ on every run.
+
+    Rebuilding (rather than append-and-update) means history.json is a pure
+    function of events/ + current_total_active. This is the right behaviour
+    after replay (events from past dates exist), and it's also safe for the
+    daily case: if file_date already has events in events/, those are what
+    get counted — not whatever today's diff happened to produce.
+
+    `events` and `file_date` are accepted for compatibility with the call
+    site but not strictly needed — events have already been appended to
+    events/ by the time we get here.
+    """
     total_active = int((master_df["status"] == "active").sum())
+    history = rebuild_history_from_events(EVENTS_DIR, current_total_active=total_active)
 
-    history: list[dict] = []
-    if os.path.exists(HISTORY_FILE):
-        try:
-            with open(HISTORY_FILE) as f:
-                history = json.load(f)
-        except json.JSONDecodeError:
-            history = []
-    if not isinstance(history, list):
-        history = []
-
-    new_entry = {
-        "date": file_date,
-        "added": added_count,
-        "upgraded": upg_count,
-        "downgraded": dwn_count,
-        "gone": gone_count,
-        "removed": dwn_count + gone_count,  # legacy alias
-        "total": total_active,
-    }
-    existing = next((h for h in history if h.get("date") == file_date), None)
-    if existing:
-        existing.update(new_entry)
-    else:
-        history.append(new_entry)
-    history.sort(key=lambda h: h.get("date", ""))
+    # Edge case: if file_date isn't in events/ yet (e.g. zero-event day with
+    # nothing appended), make sure today still appears so the dashboard shows
+    # an entry for "today" with the current total.
+    if file_date and not any(h.get("date") == file_date for h in history):
+        history.append({
+            "date": file_date,
+            "added": 0,
+            "upgraded": 0,
+            "downgraded": 0,
+            "gone": 0,
+            "removed": 0,
+            "total": total_active,
+        })
+        history.sort(key=lambda h: h.get("date", ""))
 
     with open(HISTORY_FILE, "w") as f:
         json.dump(history, f, indent=2)
-    logging.info(f"Wrote {HISTORY_FILE}")
+    logging.info(f"Wrote {HISTORY_FILE} ({len(history)} entries)")
 
 
 def _within_days(date_str: str, ref_date: str, days: int) -> bool:

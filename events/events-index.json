@@ -1,8 +1,141 @@
 [
   {
+    "month": "2024-08",
+    "file": "events-2024-08.json",
+    "count": 3414,
+    "date_min": "2024-08-22",
+    "date_max": "2024-08-22"
+  },
+  {
+    "month": "2024-09",
+    "file": "events-2024-09.json",
+    "count": 2159,
+    "date_min": "2024-09-19",
+    "date_max": "2024-09-19"
+  },
+  {
+    "month": "2024-10",
+    "file": "events-2024-10.json",
+    "count": 1594,
+    "date_min": "2024-10-09",
+    "date_max": "2024-10-09"
+  },
+  {
+    "month": "2024-11",
+    "file": "events-2024-11.json",
+    "count": 3046,
+    "date_min": "2024-11-13",
+    "date_max": "2024-11-13"
+  },
+  {
+    "month": "2024-12",
+    "file": "events-2024-12.json",
+    "count": 3335,
+    "date_min": "2024-12-24",
+    "date_max": "2024-12-24"
+  },
+  {
+    "month": "2025-01",
+    "file": "events-2025-01.json",
+    "count": 2615,
+    "date_min": "2025-01-31",
+    "date_max": "2025-01-31"
+  },
+  {
+    "month": "2025-02",
+    "file": "events-2025-02.json",
+    "count": 2005,
+    "date_min": "2025-02-28",
+    "date_max": "2025-02-28"
+  },
+  {
+    "month": "2025-03",
+    "file": "events-2025-03.json",
+    "count": 1541,
+    "date_min": "2025-03-20",
+    "date_max": "2025-03-20"
+  },
+  {
+    "month": "2025-04",
+    "file": "events-2025-04.json",
+    "count": 2559,
+    "date_min": "2025-04-17",
+    "date_max": "2025-04-17"
+  },
+  {
+    "month": "2025-05",
+    "file": "events-2025-05.json",
+    "count": 2320,
+    "date_min": "2025-05-14",
+    "date_max": "2025-05-14"
+  },
+  {
+    "month": "2025-06",
+    "file": "events-2025-06.json",
+    "count": 3222,
+    "date_min": "2025-06-18",
+    "date_max": "2025-06-18"
+  },
+  {
+    "month": "2025-07",
+    "file": "events-2025-07.json",
+    "count": 2042,
+    "date_min": "2025-07-10",
+    "date_max": "2025-07-10"
+  },
+  {
+    "month": "2025-08",
+    "file": "events-2025-08.json",
+    "count": 2709,
+    "date_min": "2025-08-08",
+    "date_max": "2025-08-08"
+  },
+  {
+    "month": "2025-09",
+    "file": "events-2025-09.json",
+    "count": 2477,
+    "date_min": "2025-09-05",
+    "date_max": "2025-09-05"
+  },
+  {
+    "month": "2025-10",
+    "file": "events-2025-10.json",
+    "count": 4434,
+    "date_min": "2025-10-29",
+    "date_max": "2025-10-29"
+  },
+  {
+    "month": "2025-11",
+    "file": "events-2025-11.json",
+    "count": 1611,
+    "date_min": "2025-11-13",
+    "date_max": "2025-11-13"
+  },
+  {
+    "month": "2025-12",
+    "file": "events-2025-12.json",
+    "count": 1939,
+    "date_min": "2025-12-08",
+    "date_max": "2025-12-08"
+  },
+  {
+    "month": "2026-01",
+    "file": "events-2026-01.json",
+    "count": 3816,
+    "date_min": "2026-01-15",
+    "date_max": "2026-01-29"
+  },
+  {
+    "month": "2026-02",
+    "file": "events-2026-02.json",
+    "count": 2459,
+    "date_min": "2026-02-27",
+    "date_max": "2026-02-27"
+  },
+  {
     "month": "2026-05",
     "file": "events-2026-05.json",
-    "count": 8741,
+    "count": 5425,
     "date_min": "2026-05-08",
     "date_max": "2026-05-08"
   }

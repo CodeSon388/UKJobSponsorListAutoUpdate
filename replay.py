@@ -40,6 +40,7 @@ import pandas as pd
 
 from tracker import (
     EVENTS_DIR,
+    HISTORY_FILE,
     MASTER_FILE,
     _bucket_events,
     _rebuild_events_index,
@@ -51,6 +52,7 @@ from tracker import (
 )
 from licence_history import (
     build_licence_month_index,
+    rebuild_history_from_events,
     recompute_rating_summary,
 )
 
@@ -217,6 +219,15 @@ def replay(
         real_master.to_csv(MASTER_FILE, index=False)
         summaries_updated = True
         logging.info(f"Refreshed rating-history summaries on {MASTER_FILE}")
+
+        # Rebuild history.json from events/ so the dashboard's trend chart
+        # shows the full replay window — with totals back-projected from
+        # the current count of active licences.
+        current_active = int((real_master["status"] == "active").sum())
+        history = rebuild_history_from_events(EVENTS_DIR, current_total_active=current_active)
+        with open(HISTORY_FILE, "w") as f:
+            json.dump(history, f, indent=2)
+        logging.info(f"Rebuilt {HISTORY_FILE} ({len(history)} per-date entries)")
 
     final_active = (pseudo_master["status"] == "active").sum()
     report = {
