@@ -292,31 +292,58 @@ def parse_type_rating(s) -> tuple[str, str, str]:
 # Rating rank (for upgrade/downgrade detection)
 # ---------------------------------------------------------------------------
 
-# Higher rank = better standing.  Only three real tiers per Home Office:
+# UK Home Office sponsor licence rating lifecycle — only three real tiers:
+#
 #   A           — Active sponsor, can issue Certificates of Sponsorship (CoS).
-#   Provisional — Initial state for new sponsors whose Authorising Officer
-#                 is outside the UK; can issue 1 CoS to bring the AO in.
-#                 Must be upgraded to A once the business is established.
-#   B           — Warning/Downgraded; can't issue new CoS until duties are
-#                 met.  An A-rated sponsor that fails compliance drops to B.
+#   Provisional — Initial state for new sponsors under the UK Expansion Worker
+#                 scheme (Authorising Officer outside the UK). Allows ONE CoS
+#                 to bring the AO over and start operations. Must be upgraded
+#                 to A once the business is established.
+#   B           — Warning state. An A-rated sponsor that fails compliance
+#                 drops to B; cannot issue new CoS until duties are met.
 #
 # Premium and SME+ are NOT rating tiers — they are 12-month support services
-# that can sit on top of an A rating. parse_type_rating() returns them in a
+# layered on top of an A rating. parse_type_rating() returns them in a
 # separate `service` field, so they do not appear here.
 #
-# Conceptual lifecycle: Provisional -> A -> (compliance failure) -> B.
-RATING_RANK: dict[str, int] = {
-    "A": 2,
-    "Provisional": 1,
-    "B": 0,
+# Valid transitions (anything else is an anomaly):
+#   Provisional -> A   (UKEW graduates to standard A rating)
+#   A           -> B   (compliance failure)
+#   B           -> A   (compliance restored)
+#
+# Provisional is an initial state, NOT a penalty. You can't drop to Provisional
+# from A or B, and you can't downgrade FROM Provisional. Anything outside the
+# three valid arcs above is logged as an anomaly and not emitted as a regular
+# upgrade/downgrade event.
+
+VALID_UPGRADES: set[tuple[str, str]] = {
+    ("Provisional", "A"),
+    ("B", "A"),
 }
 
+VALID_DOWNGRADES: set[tuple[str, str]] = {
+    ("A", "B"),
+}
 
-def rating_rank(rating: str) -> int:
-    """Return numeric rank for a rating. Raises on unknown ratings."""
-    if rating not in RATING_RANK:
-        raise ValueError(f"Unknown rating tier: {rating!r}")
-    return RATING_RANK[rating]
+KNOWN_RATINGS: set[str] = {"A", "Provisional", "B"}
+
+
+def classify_transition(from_rating: str, to_rating: str) -> str | None:
+    """
+    Return 'upgraded' / 'downgraded' / None for a rating change.
+
+    None means the transition is not a legitimate Home Office state change
+    (e.g. A -> Provisional, B -> Provisional). Callers should treat None
+    as an anomaly to log, not as a regular event.
+    """
+    if from_rating == to_rating:
+        return None
+    pair = (from_rating, to_rating)
+    if pair in VALID_UPGRADES:
+        return "upgraded"
+    if pair in VALID_DOWNGRADES:
+        return "downgraded"
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -430,19 +457,25 @@ def _run_self_test() -> None:
     else:
         raise AssertionError("parse_type_rating should raise on None")
 
-    # --- rating_rank -----------------------------------------------------
-    # Lifecycle: Provisional -> A -> (failure) -> B.  Only three tiers.
-    assert rating_rank("A") > rating_rank("Provisional")
-    assert rating_rank("Provisional") > rating_rank("B")
-    assert rating_rank("A") > rating_rank("B")
-
-    for unknown in ("Premium", "SME+", "Mystery"):
-        try:
-            rating_rank(unknown)
-        except ValueError:
-            pass
-        else:
-            raise AssertionError(f"rating_rank should raise on {unknown!r}")
+    # --- classify_transition --------------------------------------------
+    # Valid transitions only.
+    assert classify_transition("Provisional", "A") == "upgraded"
+    assert classify_transition("B", "A") == "upgraded"
+    assert classify_transition("A", "B") == "downgraded"
+    # Same rating -> no event.
+    assert classify_transition("A", "A") is None
+    assert classify_transition("B", "B") is None
+    assert classify_transition("Provisional", "Provisional") is None
+    # Invalid transitions return None (anomalies, not events).
+    # Provisional is initial-only — you can't drop to it from A/B,
+    # and you can't downgrade FROM Provisional.
+    assert classify_transition("A", "Provisional") is None
+    assert classify_transition("B", "Provisional") is None
+    assert classify_transition("Provisional", "B") is None
+    # Unknown rating tokens return None (defensive).
+    assert classify_transition("Premium", "A") is None
+    assert classify_transition("A", "SME+") is None
+    assert classify_transition("Mystery", "Other") is None
 
     # --- compute_licence_id stability ------------------------------------
     id_a = compute_licence_id("acme ltd", "london", "", "skilled worker", "worker")

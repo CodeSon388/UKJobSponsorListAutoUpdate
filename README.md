@@ -32,9 +32,30 @@ that a rating change is detected as a *change*, not as a remove+add pair:
 
 `Type & Rating` is parsed into:
 - `type` ∈ {`worker`, `temporary worker`} — part of identity (the licence's nature)
-- `rating` ∈ {`Premium`, `SME+`, `A`, `B`, `Provisional`} — mutable
+- `rating` ∈ {`A`, `Provisional`, `B`} — mutable
+- `service` ∈ {`Premium`, `SME+`, ``} — mutable, separate from rating
 
-Rating rank order (higher = better): `Premium=4 > SME+=3 > A=2 > B=1 > Provisional=0`.
+**Rating lifecycle** (per UK Home Office rules):
+- `Provisional` — Initial state for UK Expansion Worker scheme sponsors
+  (Authorising Officer outside the UK). One CoS allowed to bring the AO over.
+  Must be upgraded to A once the business is established.
+- `A` — Active sponsor, can issue Certificates of Sponsorship.
+- `B` — Warning. An A-rated sponsor that fails compliance drops to B; can't
+  issue new CoS until duties are met.
+
+**Valid transitions only**:
+- `Provisional → A` (upgraded — UKEW graduation)
+- `A → B` (downgraded — compliance failure)
+- `B → A` (upgraded — compliance restored)
+
+Provisional is initial-only — you can't drop to it from A/B, and you can't
+downgrade *from* Provisional. Anything outside these three arcs is logged
+to `rating_anomalies.json` and not emitted as a regular event.
+
+`Premium` and `SME+` are NOT rating tiers — they are 12-month *support
+services* layered on top of an A rating. They're stored in the separate
+`current_service` field and changes between them don't trigger rating
+events.
 
 ---
 
@@ -101,6 +122,7 @@ false churn:
 ### Diagnostics
 - `county_corrections.json` — silent county updates from two-phase match
 - `parse_failures.json` — rows whose `Type & Rating` couldn't be parsed (run continues; row excluded)
+- `rating_anomalies.json` — rating transitions that aren't in the valid set (e.g. `A → Provisional`). Logged for review, not emitted as upgrade/downgrade events.
 - `suspected_false_churn.json` — daily diagnostic: Levenshtein-near add/gone pairs within ±3 days, same `(town, route, type)`. Review periodically and seed new aliases into `normalisation.COUNTY_ALIASES` etc.
 
 ---

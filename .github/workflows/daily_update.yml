@@ -38,7 +38,7 @@ jobs:
         # Event-log directory + per-licence month index (created on first churn day)
         if [ -d events ]; then git add -f events/; fi
         # Diagnostic logs (only present when there's something to log)
-        for f in county_corrections.json suspected_false_churn.json parse_failures.json; do
+        for f in county_corrections.json suspected_false_churn.json parse_failures.json rating_anomalies.json; do
           if [ -f "$f" ]; then git add -f "$f"; fi
         done
         # Only commit if there are changes

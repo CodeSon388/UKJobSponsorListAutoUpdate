@@ -38,6 +38,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from normalisation import (
+    classify_transition,
     compute_licence_id,
     compute_loose_id,
     normalise_county,
@@ -45,7 +46,6 @@ from normalisation import (
     normalise_route,
     normalise_town,
     parse_type_rating,
-    rating_rank,
 )
 from licence_history import (
     rebuild_history_from_events,
@@ -68,6 +68,7 @@ COUNTY_CORRECTIONS_FILE = "county_corrections.json"
 PARSE_FAILURES_FILE = "parse_failures.json"
 FALSE_CHURN_FILE = "suspected_false_churn.json"
 
+RATING_ANOMALIES_FILE = "rating_anomalies.json"
 REQUEST_TIMEOUT_SECONDS = 30
 LEVENSHTEIN_THRESHOLD = 3  # max edit distance for false-churn pairing
 FALSE_CHURN_DAY_WINDOW = 3  # days
@@ -333,8 +334,17 @@ def detect_events(
                 )
             )
 
-    # upgraded / downgraded — for licences present in both sides
+    # upgraded / downgraded — for licences present in both sides.
+    # Per Home Office, only three transitions are legitimate:
+    #   Provisional -> A   (UKEW graduation)
+    #   A           -> B   (compliance failure)
+    #   B           -> A   (compliance restored)
+    # Any other rating change (e.g. A -> Provisional, B -> Provisional,
+    # Provisional -> B) cannot occur under the rules; if observed in the
+    # data, it's logged to rating_anomalies.json instead of being emitted
+    # as a normal event.
     correction_map = {c["new_licence_id"]: c["old_licence_id"] for c in corrections}
+    anomalies: list[dict] = []
     if master_by_lid is not None:
         for today_lid in present_ids:
             if today_lid not in today_by_lid.index:
@@ -344,28 +354,69 @@ def detect_events(
                 continue
             new_row = today_by_lid.loc[today_lid]
             old_row = master_by_lid.loc[master_lookup_lid]
-            new_rating = new_row["current_rating"]
-            old_rating = old_row["current_rating"]
+            new_rating = str(new_row["current_rating"])
+            old_rating = str(old_row["current_rating"])
             if new_rating == old_rating:
                 continue
-            try:
-                if rating_rank(new_rating) > rating_rank(old_rating):
-                    etype = "upgraded"
-                elif rating_rank(new_rating) < rating_rank(old_rating):
-                    etype = "downgraded"
-                else:
-                    continue
-            except ValueError as e:
-                logging.warning(f"Skipping rating compare for {today_lid}: {e}")
+            etype = classify_transition(old_rating, new_rating)
+            if etype is None:
+                anomalies.append(
+                    {
+                        "date": file_date,
+                        "licence_id": today_lid,
+                        "organisation_name": str(new_row.get("organisation_name_raw", "")),
+                        "town": str(new_row.get("town_raw", "")),
+                        "route": str(new_row.get("route", "")),
+                        "type": str(new_row.get("type", "")),
+                        "from_rating": old_rating,
+                        "to_rating": new_rating,
+                        "reason": "transition not in {Provisional->A, A->B, B->A}",
+                    }
+                )
                 continue
             events.append(
                 _event_record(
                     file_date, etype, new_row, old_row,
-                    from_rating=str(old_rating), to_rating=str(new_rating),
+                    from_rating=old_rating, to_rating=new_rating,
                 )
             )
 
+    if anomalies:
+        _log_rating_anomalies(anomalies)
+
     return events
+
+
+def _log_rating_anomalies(anomalies: list[dict]) -> None:
+    """Append rating-transition anomalies to rating_anomalies.json."""
+    existing: list[dict] = []
+    if os.path.exists(RATING_ANOMALIES_FILE):
+        try:
+            with open(RATING_ANOMALIES_FILE) as f:
+                loaded = json.load(f)
+            if isinstance(loaded, list):
+                existing = loaded
+            elif isinstance(loaded, dict):
+                existing = loaded.get("anomalies", [])
+        except (OSError, json.JSONDecodeError):
+            existing = []
+    existing.extend(anomalies)
+    # Dedupe on (date, licence_id, from_rating, to_rating)
+    seen = set()
+    deduped = []
+    for a in existing:
+        key = (a.get("date"), a.get("licence_id"), a.get("from_rating"), a.get("to_rating"))
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(a)
+    deduped.sort(key=lambda a: (a.get("date", ""), a.get("licence_id", "")))
+    with open(RATING_ANOMALIES_FILE, "w") as f:
+        json.dump(deduped, f, indent=2)
+    logging.warning(
+        f"Logged {len(anomalies)} new rating anomalies -> {RATING_ANOMALIES_FILE} "
+        f"(total {len(deduped)})"
+    )
 
 
 # ----------------------------------------------------- partitioned events log
