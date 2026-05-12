@@ -334,15 +334,22 @@ def detect_events(
                 )
             )
 
-    # upgraded / downgraded — for licences present in both sides.
-    # Per Home Office, only three transitions are legitimate:
+    # Rating changes (upgraded / downgraded) + service changes — for licences
+    # present in both sides.
+    #
+    # Per Home Office, only three RATING transitions are legitimate:
     #   Provisional -> A   (UKEW graduation)
     #   A           -> B   (compliance failure)
     #   B           -> A   (compliance restored)
-    # Any other rating change (e.g. A -> Provisional, B -> Provisional,
-    # Provisional -> B) cannot occur under the rules; if observed in the
-    # data, it's logged to rating_anomalies.json instead of being emitted
-    # as a normal event.
+    # Any other rating change cannot occur under the rules; if observed in the
+    # data, it's logged to rating_anomalies.json instead of being emitted as a
+    # normal event.
+    #
+    # SERVICE changes (Premium / SME+ <-> "") are tracked as their own
+    # `service_changed` event type — not a rating upgrade/downgrade. UKVI
+    # terminated the Premium Customer Service program on 2025-11-11; from that
+    # date onwards we expect mostly Premium/SME+ -> "" transitions as legacy
+    # agreements expire.
     correction_map = {c["new_licence_id"]: c["old_licence_id"] for c in corrections}
     anomalies: list[dict] = []
     if master_by_lid is not None:
@@ -356,30 +363,43 @@ def detect_events(
             old_row = master_by_lid.loc[master_lookup_lid]
             new_rating = str(new_row["current_rating"])
             old_rating = str(old_row["current_rating"])
-            if new_rating == old_rating:
-                continue
-            etype = classify_transition(old_rating, new_rating)
-            if etype is None:
-                anomalies.append(
-                    {
-                        "date": file_date,
-                        "licence_id": today_lid,
-                        "organisation_name": str(new_row.get("organisation_name_raw", "")),
-                        "town": str(new_row.get("town_raw", "")),
-                        "route": str(new_row.get("route", "")),
-                        "type": str(new_row.get("type", "")),
-                        "from_rating": old_rating,
-                        "to_rating": new_rating,
-                        "reason": "transition not in {Provisional->A, A->B, B->A}",
-                    }
-                )
-                continue
-            events.append(
-                _event_record(
-                    file_date, etype, new_row, old_row,
+            new_service = str(new_row.get("current_service", "") or "")
+            old_service = str(old_row.get("current_service", "") or "")
+
+            # 1) Rating transition (or anomaly)
+            if new_rating != old_rating:
+                etype = classify_transition(old_rating, new_rating)
+                if etype is None:
+                    anomalies.append(
+                        {
+                            "date": file_date,
+                            "licence_id": today_lid,
+                            "organisation_name": str(new_row.get("organisation_name_raw", "")),
+                            "town": str(new_row.get("town_raw", "")),
+                            "route": str(new_row.get("route", "")),
+                            "type": str(new_row.get("type", "")),
+                            "from_rating": old_rating,
+                            "to_rating": new_rating,
+                            "reason": "transition not in {Provisional->A, A->B, B->A}",
+                        }
+                    )
+                else:
+                    events.append(
+                        _event_record(
+                            file_date, etype, new_row, old_row,
+                            from_rating=old_rating, to_rating=new_rating,
+                        )
+                    )
+
+            # 2) Service change (Premium / SME+ <-> "") — emit a separate event.
+            if new_service != old_service:
+                event = _event_record(
+                    file_date, "service_changed", new_row, old_row,
                     from_rating=old_rating, to_rating=new_rating,
                 )
-            )
+                event["from_service"] = old_service
+                event["to_service"] = new_service
+                events.append(event)
 
     if anomalies:
         _log_rating_anomalies(anomalies)
@@ -691,6 +711,10 @@ def generate_daily_delta(events: list[dict], file_date: str) -> None:
         "upgraded": buckets.get("upgraded", []),
         "downgraded": buckets.get("downgraded", []),
         "gone": buckets.get("gone", []),
+        # Customer-service tier transitions (Premium / SME+ <-> ""). UKVI
+        # terminated the Premium program 2025-11-11, so post-cutoff these
+        # are almost all expiries (Premium -> "").
+        "service_changed": buckets.get("service_changed", []),
         # Backward-compat alias for legacy consumers:
         "removed": buckets.get("downgraded", []) + buckets.get("gone", []),
     }
@@ -707,6 +731,7 @@ def generate_stats(master_df: pd.DataFrame, events: list[dict], file_date: str) 
     upg_count = len(buckets.get("upgraded", []))
     dwn_count = len(buckets.get("downgraded", []))
     gone_count = len(buckets.get("gone", []))
+    svc_count = len(buckets.get("service_changed", []))
 
     # Recency: read events index + recent months. All event types use the
     # same 14-day window so the dashboard's four cards are comparable.
@@ -726,6 +751,8 @@ def generate_stats(master_df: pd.DataFrame, events: list[dict], file_date: str) 
                           and _within_days(e["date"], file_date, 14)]
     recent_gone_14 = [e for e in recent_events if e["event_type"] == "gone"
                       and _within_days(e["date"], file_date, 14)]
+    recent_service_14 = [e for e in recent_events if e["event_type"] == "service_changed"
+                         and _within_days(e["date"], file_date, 14)]
 
     def _trim(rec_list: list[dict]) -> list[dict]:
         return [
@@ -748,6 +775,7 @@ def generate_stats(master_df: pd.DataFrame, events: list[dict], file_date: str) 
             "upgraded_today": upg_count,
             "downgraded_today": dwn_count,
             "gone_today": gone_count,
+            "service_changed_today": svc_count,
             # Legacy alias (kept one release):
             "removed_today": dwn_count + gone_count,
             "total_active_sponsors": int(len(active)),
@@ -771,6 +799,7 @@ def generate_stats(master_df: pd.DataFrame, events: list[dict], file_date: str) 
             "upgraded_last_14_days": _trim(recent_upgraded_14),
             "downgraded_last_14_days": _trim(recent_downgraded_14),
             "gone_last_14_days": _trim(recent_gone_14),
+            "service_changed_last_14_days": _trim(recent_service_14),
         },
     }
     with open(STATS_FILE, "w") as f:
@@ -793,6 +822,7 @@ def update_history(events: list[dict], master_df: pd.DataFrame, file_date: str) 
     upg_count = len(buckets.get("upgraded", []))
     dwn_count = len(buckets.get("downgraded", []))
     gone_count = len(buckets.get("gone", []))
+    svc_count = len(buckets.get("service_changed", []))
     total_active = int((master_df["status"] == "active").sum())
 
     history: list[dict] = []
@@ -811,6 +841,7 @@ def update_history(events: list[dict], master_df: pd.DataFrame, file_date: str) 
         "upgraded": upg_count,
         "downgraded": dwn_count,
         "gone": gone_count,
+        "service_changed": svc_count,
         "removed": dwn_count + gone_count,
         "total": total_active,
     }
@@ -819,12 +850,13 @@ def update_history(events: list[dict], master_df: pd.DataFrame, file_date: str) 
         # If today's run found no churn AND the existing entry already records
         # non-zero counts (e.g. Desktop overlay, or an earlier same-day cron),
         # keep the existing data. Otherwise overwrite with today's numbers.
-        new_total = added_count + upg_count + dwn_count + gone_count
+        new_total = added_count + upg_count + dwn_count + gone_count + svc_count
         existing_total = (
             existing.get("added", 0)
             + existing.get("upgraded", 0)
             + existing.get("downgraded", 0)
             + existing.get("gone", 0)
+            + existing.get("service_changed", 0)
         )
         if new_total > 0 or existing_total == 0:
             existing.update(today_entry)

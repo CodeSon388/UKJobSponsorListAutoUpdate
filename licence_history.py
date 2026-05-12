@@ -223,9 +223,9 @@ def rebuild_history_from_events(
 
     Returns the list of entries, sorted by date. Caller writes it out.
     """
-    VALID_TYPES = {"added", "upgraded", "downgraded", "gone"}
+    VALID_TYPES = {"added", "upgraded", "downgraded", "gone", "service_changed"}
     by_date: dict[str, dict[str, int]] = defaultdict(
-        lambda: {"added": 0, "upgraded": 0, "downgraded": 0, "gone": 0}
+        lambda: {"added": 0, "upgraded": 0, "downgraded": 0, "gone": 0, "service_changed": 0}
     )
     for _month, path in _iter_event_files(events_dir):
         for event in _load_events_file(path):
@@ -243,6 +243,7 @@ def rebuild_history_from_events(
                 "upgraded": counts["upgraded"],
                 "downgraded": counts["downgraded"],
                 "gone": counts["gone"],
+                "service_changed": counts["service_changed"],
                 "removed": counts["downgraded"] + counts["gone"],
             }
             for date, counts in by_date.items()

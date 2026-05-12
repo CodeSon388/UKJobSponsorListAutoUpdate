@@ -142,10 +142,11 @@
             font-weight: 600;
             white-space: nowrap;
         }
-        .badge-added       { background-color: #d1fae5; color: #065f46; }
-        .badge-upgraded    { background-color: #dbeafe; color: #1e40af; }
-        .badge-downgraded  { background-color: #fef3c7; color: #92400e; }
-        .badge-gone        { background-color: #fee2e2; color: #991b1b; }
+        .badge-added           { background-color: #d1fae5; color: #065f46; }
+        .badge-upgraded        { background-color: #dbeafe; color: #1e40af; }
+        .badge-downgraded      { background-color: #fef3c7; color: #92400e; }
+        .badge-gone            { background-color: #fee2e2; color: #991b1b; }
+        .badge-service_changed { background-color: #e5e7eb; color: #374151; }
 
         .data-section { margin-top: 3rem; margin-bottom: 3rem; }
 
@@ -435,6 +436,7 @@
                     <label class="filter-checkbox"><input type="checkbox" id="periodType-upgraded" checked> Upgraded</label>
                     <label class="filter-checkbox"><input type="checkbox" id="periodType-downgraded" checked> Downgraded</label>
                     <label class="filter-checkbox"><input type="checkbox" id="periodType-gone" checked> Gone</label>
+                    <label class="filter-checkbox" title="Premium / SME+ tier changes — service expiries, not rating downgrades"><input type="checkbox" id="periodType-service_changed"> Service Changed</label>
                     <button class="btn" id="periodSearchBtn">Search</button>
                     <button class="btn" id="periodCsvBtn" disabled>Download CSV</button>
                 </div>
@@ -1137,13 +1139,18 @@
 
             const rows = events.map(e => {
                 const label = e.event_type;
-                const middle = (e.event_type === 'upgraded' || e.event_type === 'downgraded')
-                    ? `${escapeHtml(displayRating(e.from_rating || '?'))} → ${escapeHtml(displayRating(e.to_rating || '?'))}`
-                    : (e.event_type === 'added')
-                        ? `→ ${escapeHtml(displayRating(e.to_rating || '-'))}`
-                        : (e.event_type === 'gone')
-                            ? `${escapeHtml(displayRating(e.from_rating || '-'))} → ✕`
-                            : '-';
+                let middle = '-';
+                if (e.event_type === 'upgraded' || e.event_type === 'downgraded') {
+                    middle = `${escapeHtml(displayRating(e.from_rating || '?'))} → ${escapeHtml(displayRating(e.to_rating || '?'))}`;
+                } else if (e.event_type === 'added') {
+                    middle = `→ ${escapeHtml(displayRating(e.to_rating || '-'))}`;
+                } else if (e.event_type === 'gone') {
+                    middle = `${escapeHtml(displayRating(e.from_rating || '-'))} → ✕`;
+                } else if (e.event_type === 'service_changed') {
+                    const from = e.from_service ? escapeHtml(e.from_service) : '<em style="color:#9ca3af">none</em>';
+                    const to   = e.to_service   ? escapeHtml(e.to_service)   : '<em style="color:#9ca3af">none</em>';
+                    middle = `Service: ${from} → ${to}`;
+                }
                 return `
                     <tr>
                         <td>${escapeHtml(e.date || '-')}</td>
@@ -1194,7 +1201,7 @@
 
         function selectedPeriodTypes() {
             const t = new Set();
-            ['added', 'upgraded', 'downgraded', 'gone'].forEach(k => {
+            ['added', 'upgraded', 'downgraded', 'gone', 'service_changed'].forEach(k => {
                 if (document.getElementById(`periodType-${k}`).checked) t.add(k);
             });
             return t;
@@ -1278,6 +1285,11 @@
                 let rating = '-';
                 if (e.event_type === 'added')      rating = `→ ${escapeHtml(displayRating(e.to_rating || '-'))}`;
                 else if (e.event_type === 'gone')  rating = `${escapeHtml(displayRating(e.from_rating || '-'))} → ✕`;
+                else if (e.event_type === 'service_changed') {
+                    const from = e.from_service ? escapeHtml(e.from_service) : '<em style="color:#9ca3af">none</em>';
+                    const to   = e.to_service   ? escapeHtml(e.to_service)   : '<em style="color:#9ca3af">none</em>';
+                    rating = `${from} → ${to}`;
+                }
                 else                                rating = `${escapeHtml(displayRating(e.from_rating || '?'))} → ${escapeHtml(displayRating(e.to_rating || '?'))}`;
                 return `
                     <tr>

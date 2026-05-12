@@ -5,6 +5,7 @@
     "upgraded": 18,
     "downgraded": 0,
     "gone": 803,
+    "service_changed": 5,
     "removed": 803,
     "total": 118065
   },
@@ -14,6 +15,7 @@
     "upgraded": 2,
     "downgraded": 0,
     "gone": 433,
+    "service_changed": 4,
     "removed": 433,
     "total": 119352
   },
@@ -23,6 +25,7 @@
     "upgraded": 2,
     "downgraded": 0,
     "gone": 304,
+    "service_changed": 3,
     "removed": 304,
     "total": 120333
   },
@@ -32,6 +35,7 @@
     "upgraded": 45,
     "downgraded": 0,
     "gone": 582,
+    "service_changed": 11,
     "removed": 582,
     "total": 122159
   },
@@ -41,6 +45,7 @@
     "upgraded": 17,
     "downgraded": 0,
     "gone": 690,
+    "service_changed": 21,
     "removed": 690,
     "total": 124076
   },
@@ -50,6 +55,7 @@
     "upgraded": 4,
     "downgraded": 1,
     "gone": 504,
+    "service_changed": 23,
     "removed": 505,
     "total": 125655
   },
@@ -59,6 +65,7 @@
     "upgraded": 4,
     "downgraded": 0,
     "gone": 408,
+    "service_changed": 25,
     "removed": 408,
     "total": 126815
   },
@@ -68,6 +75,7 @@
     "upgraded": 3,
     "downgraded": 0,
     "gone": 302,
+    "service_changed": 6,
     "removed": 302,
     "total": 127743
   },
@@ -77,6 +85,7 @@
     "upgraded": 2,
     "downgraded": 0,
     "gone": 621,
+    "service_changed": 21,
     "removed": 621,
     "total": 129037
   },
@@ -86,6 +95,7 @@
     "upgraded": 2,
     "downgraded": 0,
     "gone": 581,
+    "service_changed": 25,
     "removed": 581,
     "total": 130168
   },
@@ -95,6 +105,7 @@
     "upgraded": 37,
     "downgraded": 0,
     "gone": 845,
+    "service_changed": 22,
     "removed": 845,
     "total": 131641
   },
@@ -104,6 +115,7 @@
     "upgraded": 2,
     "downgraded": 0,
     "gone": 486,
+    "service_changed": 7,
     "removed": 486,
     "total": 132702
   },
@@ -113,6 +125,7 @@
     "upgraded": 1,
     "downgraded": 0,
     "gone": 606,
+    "service_changed": 12,
     "removed": 606,
     "total": 134186
   },
@@ -122,6 +135,7 @@
     "upgraded": 5,
     "downgraded": 0,
     "gone": 632,
+    "service_changed": 7,
     "removed": 632,
     "total": 135387
   },
@@ -131,6 +145,7 @@
     "upgraded": 16,
     "downgraded": 0,
     "gone": 1612,
+    "service_changed": 23,
     "removed": 1612,
     "total": 136558
   },
@@ -140,6 +155,7 @@
     "upgraded": 25,
     "downgraded": 0,
     "gone": 596,
+    "service_changed": 4,
     "removed": 596,
     "total": 136948
   },
@@ -149,6 +165,7 @@
     "upgraded": 7,
     "downgraded": 0,
     "gone": 596,
+    "service_changed": 7,
     "removed": 596,
     "total": 137681
   },
@@ -158,6 +175,7 @@
     "upgraded": 2,
     "downgraded": 0,
     "gone": 929,
+    "service_changed": 0,
     "removed": 929,
     "total": 138465
   },
@@ -176,6 +194,7 @@
     "upgraded": 2,
     "downgraded": 0,
     "gone": 453,
+    "service_changed": 0,
     "removed": 453,
     "total": 138747
   },
@@ -185,6 +204,7 @@
     "upgraded": 4,
     "downgraded": 0,
     "gone": 972,
+    "service_changed": 0,
     "removed": 972,
     "total": 139258
   },
@@ -194,6 +214,7 @@
     "upgraded": 12,
     "downgraded": 1,
     "gone": 1762,
+    "service_changed": 0,
     "removed": 1763,
     "total": 139992
   },
@@ -203,6 +224,7 @@
     "upgraded": 2,
     "downgraded": 0,
     "gone": 286,
+    "service_changed": 0,
     "removed": 286,
     "total": 139990
   },
@@ -212,6 +234,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 57,
+    "service_changed": 0,
     "removed": 57,
     "total": 139983
   },
@@ -221,6 +244,7 @@
     "upgraded": 1,
     "downgraded": 0,
     "gone": 58,
+    "service_changed": 0,
     "removed": 58,
     "total": 139983
   },
@@ -230,6 +254,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 249,
+    "service_changed": 0,
     "removed": 249,
     "total": 139989
   },
@@ -239,6 +264,7 @@
     "upgraded": 2,
     "downgraded": 0,
     "gone": 247,
+    "service_changed": 0,
     "removed": 247,
     "total": 139968
   },
@@ -248,6 +274,7 @@
     "upgraded": 2,
     "downgraded": 0,
     "gone": 94,
+    "service_changed": 0,
     "removed": 94,
     "total": 139953
   },
@@ -257,6 +284,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 52,
+    "service_changed": 0,
     "removed": 52,
     "total": 139954
   },
@@ -266,6 +294,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 49,
+    "service_changed": 0,
     "removed": 49,
     "total": 139968
   },
@@ -275,6 +304,7 @@
     "upgraded": 1,
     "downgraded": 0,
     "gone": 44,
+    "service_changed": 0,
     "removed": 44,
     "total": 139983
   },
@@ -284,6 +314,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 31,
+    "service_changed": 0,
     "removed": 31,
     "total": 139978
   },
@@ -293,6 +324,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 48,
+    "service_changed": 0,
     "removed": 48,
     "total": 139990
   },
@@ -302,6 +334,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 54,
+    "service_changed": 0,
     "removed": 54,
     "total": 139994
   },
@@ -311,6 +344,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 61,
+    "service_changed": 0,
     "removed": 61,
     "total": 139983
   },
@@ -320,6 +354,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 50,
+    "service_changed": 0,
     "removed": 50,
     "total": 139998
   },
@@ -329,6 +364,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 57,
+    "service_changed": 0,
     "removed": 57,
     "total": 140000
   },
@@ -338,6 +374,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 112,
+    "service_changed": 0,
     "removed": 112,
     "total": 139989
   },
@@ -347,6 +384,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 40,
+    "service_changed": 0,
     "removed": 40,
     "total": 139992
   },
@@ -356,6 +394,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 45,
+    "service_changed": 0,
     "removed": 45,
     "total": 140016
   },
@@ -365,6 +404,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 64,
+    "service_changed": 0,
     "removed": 64,
     "total": 140019
   },
@@ -374,6 +414,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 135,
+    "service_changed": 0,
     "removed": 135,
     "total": 140013
   },
@@ -383,6 +424,7 @@
     "upgraded": 1,
     "downgraded": 0,
     "gone": 36,
+    "service_changed": 0,
     "removed": 36,
     "total": 140031
   },
@@ -392,6 +434,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 48,
+    "service_changed": 0,
     "removed": 48,
     "total": 140035
   },
@@ -401,6 +444,7 @@
     "upgraded": 1,
     "downgraded": 0,
     "gone": 42,
+    "service_changed": 0,
     "removed": 42,
     "total": 140053
   },
@@ -410,6 +454,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 69,
+    "service_changed": 0,
     "removed": 69,
     "total": 140075
   },
@@ -419,6 +464,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 41,
+    "service_changed": 0,
     "removed": 41,
     "total": 140106
   },
@@ -428,6 +474,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 46,
+    "service_changed": 0,
     "removed": 46,
     "total": 140114
   },
@@ -437,6 +484,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 46,
+    "service_changed": 0,
     "removed": 46,
     "total": 140127
   },
@@ -446,6 +494,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 51,
+    "service_changed": 0,
     "removed": 51,
     "total": 140147
   },
@@ -455,6 +504,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 116,
+    "service_changed": 0,
     "removed": 116,
     "total": 140145
   },
@@ -464,6 +514,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 71,
+    "service_changed": 0,
     "removed": 71,
     "total": 140136
   },
@@ -473,6 +524,7 @@
     "upgraded": 1,
     "downgraded": 0,
     "gone": 63,
+    "service_changed": 0,
     "removed": 63,
     "total": 140146
   },
@@ -482,6 +534,7 @@
     "upgraded": 1,
     "downgraded": 0,
     "gone": 59,
+    "service_changed": 0,
     "removed": 59,
     "total": 140153
   },
@@ -491,6 +544,7 @@
     "upgraded": 1,
     "downgraded": 0,
     "gone": 85,
+    "service_changed": 0,
     "removed": 85,
     "total": 140149
   },
@@ -500,6 +554,7 @@
     "upgraded": 1,
     "downgraded": 0,
     "gone": 267,
+    "service_changed": 0,
     "removed": 267,
     "total": 140170
   },
@@ -509,6 +564,7 @@
     "upgraded": 1,
     "downgraded": 0,
     "gone": 221,
+    "service_changed": 0,
     "removed": 221,
     "total": 140193
   },
@@ -518,6 +574,7 @@
     "upgraded": 1,
     "downgraded": 0,
     "gone": 60,
+    "service_changed": 0,
     "removed": 60,
     "total": 140198
   },
@@ -527,6 +584,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 66,
+    "service_changed": 0,
     "removed": 66,
     "total": 140194
   },
@@ -536,6 +594,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 49,
+    "service_changed": 0,
     "removed": 49,
     "total": 140205
   },
@@ -545,6 +604,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 128,
+    "service_changed": 0,
     "removed": 128,
     "total": 140246
   },
@@ -554,6 +614,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 44,
+    "service_changed": 0,
     "removed": 44,
     "total": 140270
   },
@@ -563,6 +624,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 51,
+    "service_changed": 0,
     "removed": 51,
     "total": 140283
   },
@@ -572,6 +634,7 @@
     "upgraded": 0,
     "downgraded": 0,
     "gone": 47,
+    "service_changed": 0,
     "removed": 47,
     "total": 140302
   }

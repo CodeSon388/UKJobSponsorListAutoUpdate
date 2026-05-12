@@ -4,12 +4,13 @@ A fully automated tool that tracks the **UK Government's Register of Licensed
 Sponsors** and produces a daily licence-churn 軌跡 (trajectory) covering four
 event types per licence:
 
-| Event | 中文 | When it fires |
-|---|---|---|
-| `added` | 新增 | A licence_id appears for the first time — completely new org, or an existing org getting a new route or type |
-| `upgraded` | 升級 | Same licence_id, rating tier increased (e.g. B → A, A → Premium) |
-| `downgraded` | 降級 | Same licence_id, rating tier decreased (e.g. A → B) |
-| `gone` | 消失 / 撤銷 | Licence_id no longer in today's CSV. **撤銷 (revoked) and 消失 (disappeared) cannot be split** — the gov.uk register provides no signal to distinguish them, so they're reported as one bucket. |
+| Event | When it fires |
+|---|---|
+| `added` | A licence_id appears for the first time — completely new org, or an existing org getting a new route or type |
+| `upgraded` | Same licence_id, valid rating-tier increase (Provisional → A, or B → A) |
+| `downgraded` | Same licence_id, rating-tier decrease (A → B). The only legitimate downgrade — see lifecycle below. |
+| `gone` | Licence_id no longer in today's CSV. Revoked and silently-disappeared cannot be split — the register provides no signal to distinguish them, so both produce `gone`. |
+| `service_changed` | Customer-service tier change (Premium / SME+ ↔ ""). Not a rating change — the licence stays A-rated. |
 
 🚀 **Live Dashboard:** the static dashboard renders directly from the committed
 `stats.json` / `history.json` / `master_register.csv` files. Enable GitHub Pages
@@ -52,10 +53,19 @@ Provisional is initial-only — you can't drop to it from A/B, and you can't
 downgrade *from* Provisional. Anything outside these three arcs is logged
 to `rating_anomalies.json` and not emitted as a regular event.
 
-`Premium` and `SME+` are NOT rating tiers — they are 12-month *support
-services* layered on top of an A rating. They're stored in the separate
-`current_service` field and changes between them don't trigger rating
-events.
+`Premium` and `SME+` are NOT rating tiers — they are paid 12-month
+*support services* that sit on top of an A rating. Stored in the separate
+`current_service` field.
+
+**UKVI terminated the Premium Customer Service program on 2025-11-11.**
+Going forward:
+- `A → Premium` and `A → SME+` are no longer possible.
+- `Premium → ""` and `SME+ → ""` are the typical transitions (legacy
+  agreements expire and the account drops back to plain A).
+
+These transitions are tracked as a fifth event type, **`service_changed`**,
+distinct from rating up/downgrades. The licence stays A-rated and fully
+able to sponsor; only the customer-service tier is lost.
 
 ---
 
