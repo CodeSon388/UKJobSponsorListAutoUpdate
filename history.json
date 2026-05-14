@@ -637,5 +637,15 @@
     "service_changed": 0,
     "removed": 47,
     "total": 140302
+  },
+  {
+    "date": "2026-05-14",
+    "added": 333,
+    "upgraded": 8,
+    "downgraded": 0,
+    "gone": 203,
+    "service_changed": 0,
+    "removed": 203,
+    "total": 140432
   }
 ]

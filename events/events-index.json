@@ -133,10 +133,24 @@
     "date_max": "2026-02-27"
   },
   {
+    "month": "2026-03",
+    "file": "events-2026-03.json",
+    "count": 3446,
+    "date_min": "2026-03-06",
+    "date_max": "2026-03-31"
+  },
+  {
+    "month": "2026-04",
+    "file": "events-2026-04.json",
+    "count": 1578,
+    "date_min": "2026-04-01",
+    "date_max": "2026-04-30"
+  },
+  {
     "month": "2026-05",
     "file": "events-2026-05.json",
-    "count": 5425,
-    "date_min": "2026-05-08",
-    "date_max": "2026-05-08"
+    "count": 958,
+    "date_min": "2026-05-01",
+    "date_max": "2026-05-14"
   }
 ]

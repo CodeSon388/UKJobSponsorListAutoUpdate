@@ -1,0 +1,90 @@
+[
+  {
+    "date": "2026-05-14",
+    "loose_id": "336cc1a99ff07a81",
+    "old_licence_id": "e23d6d082d50a14a",
+    "new_licence_id": "d2d84b0638cd58ba",
+    "old_county_norm": "london",
+    "new_county_norm": ""
+  },
+  {
+    "date": "2026-05-14",
+    "loose_id": "f39c12732ff2ab4d",
+    "old_licence_id": "86b1923b39683cad",
+    "new_licence_id": "4920cd8bf1b5defd",
+    "old_county_norm": "",
+    "new_county_norm": "london"
+  },
+  {
+    "date": "2026-05-14",
+    "loose_id": "996785f67b1c00aa",
+    "old_licence_id": "8a8dc699c70d1253",
+    "new_licence_id": "d9c57b967b158fbc",
+    "old_county_norm": "",
+    "new_county_norm": "surbiton, surrey"
+  },
+  {
+    "date": "2026-05-14",
+    "loose_id": "ebcd19c6589fee72",
+    "old_licence_id": "f65dd3a92235504a",
+    "new_licence_id": "378d9cd4c8e157d3",
+    "old_county_norm": "",
+    "new_county_norm": "leicestershire"
+  },
+  {
+    "date": "2026-05-14",
+    "loose_id": "eaced692da8ca8bc",
+    "old_licence_id": "d56b21997a793f2b",
+    "new_licence_id": "c5842dcfa26b57e8",
+    "old_county_norm": "-- select a state --",
+    "new_county_norm": ""
+  },
+  {
+    "date": "2026-05-14",
+    "loose_id": "1730fcd4feb27691",
+    "old_licence_id": "26ac37803bb57669",
+    "new_licence_id": "5f4f091e1d5683a2",
+    "old_county_norm": "-- select a state --",
+    "new_county_norm": ""
+  },
+  {
+    "date": "2026-05-14",
+    "loose_id": "172c4f425169fe7e",
+    "old_licence_id": "c05595ec39ddae2a",
+    "new_licence_id": "3fe0f2623421372d",
+    "old_county_norm": "london",
+    "new_county_norm": ""
+  },
+  {
+    "date": "2026-05-14",
+    "loose_id": "2fc5d40b854d6b6c",
+    "old_licence_id": "5136d3864ea62a67",
+    "new_licence_id": "66374cd39530974d",
+    "old_county_norm": "middlesex",
+    "new_county_norm": "london"
+  },
+  {
+    "date": "2026-05-14",
+    "loose_id": "497777408f906bc0",
+    "old_licence_id": "871cc37436bb7238",
+    "new_licence_id": "ab18aded0d26e3c7",
+    "old_county_norm": "london",
+    "new_county_norm": "chancery house"
+  },
+  {
+    "date": "2026-05-14",
+    "loose_id": "e00157aa465a74ed",
+    "old_licence_id": "e19eb9ac2901de6c",
+    "new_licence_id": "1cebb7eebeeb00cb",
+    "old_county_norm": "hamphire",
+    "new_county_norm": "hampshire"
+  },
+  {
+    "date": "2026-05-14",
+    "loose_id": "494938f8b2d0e6a4",
+    "old_licence_id": "2787a346d1418613",
+    "new_licence_id": "87f55108a1ecd290",
+    "old_county_norm": "",
+    "new_county_norm": "hertfordshire"
+  }
+]
