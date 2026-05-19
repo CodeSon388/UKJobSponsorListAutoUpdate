@@ -86,5 +86,77 @@
     "new_licence_id": "87f55108a1ecd290",
     "old_county_norm": "",
     "new_county_norm": "hertfordshire"
+  },
+  {
+    "date": "2026-05-19",
+    "loose_id": "f335ea08de6fbaef",
+    "old_licence_id": "e41044f16087e188",
+    "new_licence_id": "5ec337a1a6a9aadf",
+    "old_county_norm": "",
+    "new_county_norm": "west yorkshire"
+  },
+  {
+    "date": "2026-05-19",
+    "loose_id": "4677e1dcee6e4e0e",
+    "old_licence_id": "3c7ea93f235359a5",
+    "new_licence_id": "93ba955f74b21fcd",
+    "old_county_norm": "",
+    "new_county_norm": "berkshire"
+  },
+  {
+    "date": "2026-05-19",
+    "loose_id": "7ab86e203c72812d",
+    "old_licence_id": "e74c580be8809213",
+    "new_licence_id": "d493d2d733b64276",
+    "old_county_norm": "london",
+    "new_county_norm": ""
+  },
+  {
+    "date": "2026-05-19",
+    "loose_id": "52f4f89cca9e5c86",
+    "old_licence_id": "cce4b715956757a3",
+    "new_licence_id": "3862bf473f980999",
+    "old_county_norm": "",
+    "new_county_norm": "south lanarkshire"
+  },
+  {
+    "date": "2026-05-19",
+    "loose_id": "63768ca8a4e8f9c2",
+    "old_licence_id": "9c95e40aab9bee7c",
+    "new_licence_id": "9ed42b28a7b0479f",
+    "old_county_norm": "",
+    "new_county_norm": "london"
+  },
+  {
+    "date": "2026-05-19",
+    "loose_id": "74823ae7481e52c7",
+    "old_licence_id": "1f137309f7d4af66",
+    "new_licence_id": "6a35da21c939589f",
+    "old_county_norm": "london",
+    "new_county_norm": ""
+  },
+  {
+    "date": "2026-05-19",
+    "loose_id": "5afeb7fc93f2a6e5",
+    "old_licence_id": "bf29af0ba94ceb3b",
+    "new_licence_id": "6cdb9c00416ef0aa",
+    "old_county_norm": "london",
+    "new_county_norm": ""
+  },
+  {
+    "date": "2026-05-19",
+    "loose_id": "138f8966c548190c",
+    "old_licence_id": "75fcac5b1b8a03d2",
+    "new_licence_id": "fb1feeebc2a673e4",
+    "old_county_norm": "small heath",
+    "new_county_norm": ""
+  },
+  {
+    "date": "2026-05-19",
+    "loose_id": "c2cdbff39cfdab46",
+    "old_licence_id": "911067124cfaf4a3",
+    "new_licence_id": "dc71797cdb347444",
+    "old_county_norm": "",
+    "new_county_norm": "berkshire"
   }
 ]
