@@ -158,5 +158,21 @@
     "new_licence_id": "dc71797cdb347444",
     "old_county_norm": "",
     "new_county_norm": "berkshire"
+  },
+  {
+    "date": "2026-05-21",
+    "loose_id": "dc45461255375388",
+    "old_licence_id": "6c54e8b4c7a30225",
+    "new_licence_id": "93ca6112f65ba7c0",
+    "old_county_norm": "london, city of",
+    "new_county_norm": ""
+  },
+  {
+    "date": "2026-05-21",
+    "loose_id": "ef56f0c29a18d1ca",
+    "old_licence_id": "b0072afd1cce918c",
+    "new_licence_id": "a68d42eba7b48467",
+    "old_county_norm": "",
+    "new_county_norm": "london"
   }
 ]
