@@ -174,5 +174,21 @@
     "new_licence_id": "a68d42eba7b48467",
     "old_county_norm": "",
     "new_county_norm": "london"
+  },
+  {
+    "date": "2026-05-22",
+    "loose_id": "c948ffeb5e9890f0",
+    "old_licence_id": "c18a31780e95c81e",
+    "new_licence_id": "260982c2f9b0916d",
+    "old_county_norm": "",
+    "new_county_norm": "west midlands"
+  },
+  {
+    "date": "2026-05-22",
+    "loose_id": "acfa72a82bd46ff7",
+    "old_licence_id": "df30670c6f320696",
+    "new_licence_id": "d19a46104b146356",
+    "old_county_norm": "",
+    "new_county_norm": "crawley"
   }
 ]
