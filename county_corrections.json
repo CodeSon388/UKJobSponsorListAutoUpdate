@@ -190,5 +190,93 @@
     "new_licence_id": "d19a46104b146356",
     "old_county_norm": "",
     "new_county_norm": "crawley"
+  },
+  {
+    "date": "2026-05-26",
+    "loose_id": "f5a3fbf3ebc6d9cf",
+    "old_licence_id": "6b10c4a798704299",
+    "new_licence_id": "975c7b4983fa509a",
+    "old_county_norm": "",
+    "new_county_norm": "london"
+  },
+  {
+    "date": "2026-05-26",
+    "loose_id": "693363ffe0030d56",
+    "old_licence_id": "2b01e27ba1bb4a0f",
+    "new_licence_id": "bd9894381d3c2cc6",
+    "old_county_norm": "",
+    "new_county_norm": "warwickshire"
+  },
+  {
+    "date": "2026-05-26",
+    "loose_id": "ec63a2e6354307e1",
+    "old_licence_id": "bb826b319ebb6f3d",
+    "new_licence_id": "9a19370338686b6a",
+    "old_county_norm": "",
+    "new_county_norm": "leyton"
+  },
+  {
+    "date": "2026-05-26",
+    "loose_id": "e3307e79f2257b09",
+    "old_licence_id": "94cf1a1fc91731cd",
+    "new_licence_id": "bf7f4b57eae94849",
+    "old_county_norm": "county (optional)",
+    "new_county_norm": ""
+  },
+  {
+    "date": "2026-05-26",
+    "loose_id": "6826358fc0b2ddfd",
+    "old_licence_id": "e4b6b4a7b46fdbdb",
+    "new_licence_id": "1387dba17a02a1ee",
+    "old_county_norm": "",
+    "new_county_norm": "select"
+  },
+  {
+    "date": "2026-05-26",
+    "loose_id": "0fcf5f16c9feda8e",
+    "old_licence_id": "93c25bc51c637ef4",
+    "new_licence_id": "c9e1c97fd149e5d3",
+    "old_county_norm": "",
+    "new_county_norm": "london"
+  },
+  {
+    "date": "2026-05-26",
+    "loose_id": "0b1bda050431c3d3",
+    "old_licence_id": "db9da9aed54632ab",
+    "new_licence_id": "098ba1b7235b07ca",
+    "old_county_norm": "",
+    "new_county_norm": "essex"
+  },
+  {
+    "date": "2026-05-26",
+    "loose_id": "04d4055c6e0c06dc",
+    "old_licence_id": "714c8bb4ab9a74f9",
+    "new_licence_id": "4c6adab4cc33f510",
+    "old_county_norm": "--- hampshire ---",
+    "new_county_norm": "hampshire"
+  },
+  {
+    "date": "2026-05-26",
+    "loose_id": "aa27004aec248657",
+    "old_licence_id": "ae3eb0aa013a26a3",
+    "new_licence_id": "938217699afa7f24",
+    "old_county_norm": "--- hampshire ---",
+    "new_county_norm": "hampshire"
+  },
+  {
+    "date": "2026-05-26",
+    "loose_id": "39bb5fc0c94724cc",
+    "old_licence_id": "7932880f01edc3f8",
+    "new_licence_id": "d04b5a2f219070ba",
+    "old_county_norm": "iderby",
+    "new_county_norm": ""
+  },
+  {
+    "date": "2026-05-26",
+    "loose_id": "ffcec6977a3b0ddb",
+    "old_licence_id": "091f28ac6682e648",
+    "new_licence_id": "05496cc2ca1108e1",
+    "old_county_norm": "",
+    "new_county_norm": "lanarkshire"
   }
 ]
