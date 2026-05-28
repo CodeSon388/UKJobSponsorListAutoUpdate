@@ -278,5 +278,21 @@
     "new_licence_id": "05496cc2ca1108e1",
     "old_county_norm": "",
     "new_county_norm": "lanarkshire"
+  },
+  {
+    "date": "2026-05-28",
+    "loose_id": "6847348c2b35c17e",
+    "old_licence_id": "9833085f4a3823d9",
+    "new_licence_id": "5baf2986302d2c58",
+    "old_county_norm": "",
+    "new_county_norm": "county down"
+  },
+  {
+    "date": "2026-05-28",
+    "loose_id": "1953bf868bf50315",
+    "old_licence_id": "90b3d87ff5399f23",
+    "new_licence_id": "391d99f72cc53ed7",
+    "old_county_norm": "",
+    "new_county_norm": "romford"
   }
 ]

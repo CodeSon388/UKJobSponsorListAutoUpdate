@@ -25,5 +25,32 @@
       "from_rating": null,
       "to_rating": "A"
     }
+  },
+  {
+    "name_distance": 3,
+    "gone": {
+      "date": "2026-05-28",
+      "event_type": "gone",
+      "licence_id": "1d4e03f9b1644f47",
+      "organisation_name": "Green Facades Limited",
+      "town": "London",
+      "county": "London",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": "A",
+      "to_rating": null
+    },
+    "added": {
+      "date": "2026-05-28",
+      "event_type": "added",
+      "licence_id": "4268409eaf862163",
+      "organisation_name": "BREL Facades Limited",
+      "town": "London",
+      "county": "London",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": null,
+      "to_rating": "A"
+    }
   }
 ]
