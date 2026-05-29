@@ -294,5 +294,13 @@
     "new_licence_id": "391d99f72cc53ed7",
     "old_county_norm": "",
     "new_county_norm": "romford"
+  },
+  {
+    "date": "2026-05-29",
+    "loose_id": "2fc5d40b854d6b6c",
+    "old_licence_id": "66374cd39530974d",
+    "new_licence_id": "5136d3864ea62a67",
+    "old_county_norm": "london",
+    "new_county_norm": "middlesex"
   }
 ]
