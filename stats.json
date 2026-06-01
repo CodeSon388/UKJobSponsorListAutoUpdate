@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-01 11:29:50 UTC",
+  "generated_at": "2026-06-01 17:35:41 UTC",
   "data_date": "2026-06-01",
   "daily_metrics": {
-    "added_today": 100,
-    "upgraded_today": 1,
+    "added_today": 0,
+    "upgraded_today": 0,
     "downgraded_today": 0,
-    "gone_today": 55,
+    "gone_today": 0,
     "service_changed_today": 0,
-    "removed_today": 55,
+    "removed_today": 0,
     "total_active_sponsors": 140768
   },
   "categorical_totals": {
