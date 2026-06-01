@@ -52,5 +52,32 @@
       "from_rating": null,
       "to_rating": "A"
     }
+  },
+  {
+    "name_distance": 1,
+    "gone": {
+      "date": "2026-06-01",
+      "event_type": "gone",
+      "licence_id": "9a544cdf4349ce93",
+      "organisation_name": "Finn Homecare Ltd",
+      "town": "Wantage",
+      "county": "Oxfordshire",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": "A",
+      "to_rating": null
+    },
+    "added": {
+      "date": "2026-06-01",
+      "event_type": "added",
+      "licence_id": "dc8a981509136e23",
+      "organisation_name": "FiNN Home Care Ltd",
+      "town": "Wantage",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": null,
+      "to_rating": "A"
+    }
   }
 ]

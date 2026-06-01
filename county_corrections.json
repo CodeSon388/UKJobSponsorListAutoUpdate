@@ -302,5 +302,45 @@
     "new_licence_id": "5136d3864ea62a67",
     "old_county_norm": "london",
     "new_county_norm": "middlesex"
+  },
+  {
+    "date": "2026-06-01",
+    "loose_id": "e16f37a70d4cd8a0",
+    "old_licence_id": "8e5e257c12e51478",
+    "new_licence_id": "58b8d959d1754018",
+    "old_county_norm": "london",
+    "new_county_norm": ""
+  },
+  {
+    "date": "2026-06-01",
+    "loose_id": "3dd363eb96e440f0",
+    "old_licence_id": "16951d031990e2dc",
+    "new_licence_id": "7adf0ed2fff7761e",
+    "old_county_norm": "",
+    "new_county_norm": "west midlands"
+  },
+  {
+    "date": "2026-06-01",
+    "loose_id": "518064f56cd6d015",
+    "old_licence_id": "85858dc2fe47cfa4",
+    "new_licence_id": "26e0fce8e8623b95",
+    "old_county_norm": "camden",
+    "new_county_norm": ""
+  },
+  {
+    "date": "2026-06-01",
+    "loose_id": "0204a77185b7765e",
+    "old_licence_id": "700e4b5e824ff1e6",
+    "new_licence_id": "4a9279498362a870",
+    "old_county_norm": "",
+    "new_county_norm": "bedfordshire"
+  },
+  {
+    "date": "2026-06-01",
+    "loose_id": "5e92ffc8e2afe076",
+    "old_licence_id": "f996fdb9c75c19c0",
+    "new_licence_id": "f2e33018162d8359",
+    "old_county_norm": "slough",
+    "new_county_norm": ""
   }
 ]
