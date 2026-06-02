@@ -342,5 +342,13 @@
     "new_licence_id": "f2e33018162d8359",
     "old_county_norm": "slough",
     "new_county_norm": ""
+  },
+  {
+    "date": "2026-06-02",
+    "loose_id": "674b4fb8f77dca4b",
+    "old_licence_id": "0994cb8a524cfac3",
+    "new_licence_id": "a629fbbfa63d7c8f",
+    "old_county_norm": "wiltshire",
+    "new_county_norm": ""
   }
 ]

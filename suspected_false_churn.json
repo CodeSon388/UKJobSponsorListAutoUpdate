@@ -27,33 +27,6 @@
     }
   },
   {
-    "name_distance": 2,
-    "gone": {
-      "date": "2026-05-26",
-      "event_type": "gone",
-      "licence_id": "1f02b01c82a9851f",
-      "organisation_name": "Narmico Consulting Services ltd",
-      "town": "Kings Hill",
-      "county": "Kent",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-05-26",
-      "event_type": "added",
-      "licence_id": "3aa0003565b7d079",
-      "organisation_name": "Narmico Consulting Servics ltd.",
-      "town": "Kings Hill",
-      "county": "Chatham",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
     "name_distance": 3,
     "gone": {
       "date": "2026-05-28",
