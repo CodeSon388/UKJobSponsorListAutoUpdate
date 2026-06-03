@@ -156,8 +156,8 @@
   {
     "month": "2026-06",
     "file": "events-2026-06.json",
-    "count": 230,
+    "count": 320,
     "date_min": "2026-06-01",
-    "date_max": "2026-06-02"
+    "date_max": "2026-06-03"
   }
 ]

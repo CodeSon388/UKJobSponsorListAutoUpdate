@@ -350,5 +350,13 @@
     "new_licence_id": "a629fbbfa63d7c8f",
     "old_county_norm": "wiltshire",
     "new_county_norm": ""
+  },
+  {
+    "date": "2026-06-03",
+    "loose_id": "21f7a42f53d2386e",
+    "old_licence_id": "070c209cc5b44d89",
+    "new_licence_id": "0acd27afc0e0b958",
+    "old_county_norm": "",
+    "new_county_norm": "essex"
   }
 ]
