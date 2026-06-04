@@ -358,5 +358,29 @@
     "new_licence_id": "0acd27afc0e0b958",
     "old_county_norm": "",
     "new_county_norm": "essex"
+  },
+  {
+    "date": "2026-06-04",
+    "loose_id": "ba4782206a1c92a2",
+    "old_licence_id": "272515ca1a8cc7c4",
+    "new_licence_id": "45a5664a7b2d2c95",
+    "old_county_norm": "digbeth",
+    "new_county_norm": "west midlands"
+  },
+  {
+    "date": "2026-06-04",
+    "loose_id": "073148a27be64015",
+    "old_licence_id": "13da7e706cf28db5",
+    "new_licence_id": "0aeec5aa9e9609a0",
+    "old_county_norm": "digbeth",
+    "new_county_norm": "west midlands"
+  },
+  {
+    "date": "2026-06-04",
+    "loose_id": "a0edb7f7c796a905",
+    "old_licence_id": "9aa7a24101acaa04",
+    "new_licence_id": "c07a15a7cd5abbd4",
+    "old_county_norm": "digbeth",
+    "new_county_norm": "west midlands"
   }
 ]
