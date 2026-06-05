@@ -382,5 +382,21 @@
     "new_licence_id": "c07a15a7cd5abbd4",
     "old_county_norm": "digbeth",
     "new_county_norm": "west midlands"
+  },
+  {
+    "date": "2026-06-05",
+    "loose_id": "cd8323ac15d8beae",
+    "old_licence_id": "07ea9df8a73ee4e7",
+    "new_licence_id": "ab982d4e8ee93ac9",
+    "old_county_norm": "",
+    "new_county_norm": "london"
+  },
+  {
+    "date": "2026-06-05",
+    "loose_id": "95fc2a0f4542c443",
+    "old_licence_id": "f096b47e408e1521",
+    "new_licence_id": "6f78c673dd9801ab",
+    "old_county_norm": "",
+    "new_county_norm": "london"
   }
 ]

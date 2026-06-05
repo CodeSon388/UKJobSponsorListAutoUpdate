@@ -79,5 +79,248 @@
       "from_rating": null,
       "to_rating": "A"
     }
+  },
+  {
+    "name_distance": 3,
+    "gone": {
+      "date": "2026-06-05",
+      "event_type": "gone",
+      "licence_id": "2258bdf236e4aaca",
+      "organisation_name": "Yoti Ltd",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": "A",
+      "to_rating": null
+    },
+    "added": {
+      "date": "2026-06-05",
+      "event_type": "added",
+      "licence_id": "d263f60d8eb5267a",
+      "organisation_name": "DORRI LTD",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": null,
+      "to_rating": "A"
+    }
+  },
+  {
+    "name_distance": 2,
+    "gone": {
+      "date": "2026-06-05",
+      "event_type": "gone",
+      "licence_id": "46bfa78c2fa977d0",
+      "organisation_name": "YSA Logistics Ltd",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": "A",
+      "to_rating": null
+    },
+    "added": {
+      "date": "2026-06-04",
+      "event_type": "added",
+      "licence_id": "3b795895dc21daa2",
+      "organisation_name": "BEA LOGISTICS LTD",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": null,
+      "to_rating": "A"
+    }
+  },
+  {
+    "name_distance": 3,
+    "gone": {
+      "date": "2026-06-05",
+      "event_type": "gone",
+      "licence_id": "5acc2df1d5ed52fb",
+      "organisation_name": "Yavrio Ltd",
+      "town": "London",
+      "county": "London",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": "A",
+      "to_rating": null
+    },
+    "added": {
+      "date": "2026-06-04",
+      "event_type": "added",
+      "licence_id": "dd5304c547199bc9",
+      "organisation_name": "Orvio Ltd",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": null,
+      "to_rating": "A"
+    }
+  },
+  {
+    "name_distance": 3,
+    "gone": {
+      "date": "2026-06-05",
+      "event_type": "gone",
+      "licence_id": "6af912898997a330",
+      "organisation_name": "VVII LTD",
+      "town": "London",
+      "county": "London",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": "A",
+      "to_rating": null
+    },
+    "added": {
+      "date": "2026-06-04",
+      "event_type": "added",
+      "licence_id": "dd5304c547199bc9",
+      "organisation_name": "Orvio Ltd",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": null,
+      "to_rating": "A"
+    }
+  },
+  {
+    "name_distance": 3,
+    "gone": {
+      "date": "2026-06-05",
+      "event_type": "gone",
+      "licence_id": "a1c91b6c683ae6ae",
+      "organisation_name": "Worklio Ltd",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": "A",
+      "to_rating": null
+    },
+    "added": {
+      "date": "2026-06-04",
+      "event_type": "added",
+      "licence_id": "dd5304c547199bc9",
+      "organisation_name": "Orvio Ltd",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": null,
+      "to_rating": "A"
+    }
+  },
+  {
+    "name_distance": 3,
+    "gone": {
+      "date": "2026-06-05",
+      "event_type": "gone",
+      "licence_id": "a4527212bd9fc649",
+      "organisation_name": "Zeotap UK Limited",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": "A",
+      "to_rating": null
+    },
+    "added": {
+      "date": "2026-06-05",
+      "event_type": "added",
+      "licence_id": "15ff8d6b29d98ea0",
+      "organisation_name": "EMKAP UK Limited",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": null,
+      "to_rating": "A"
+    }
+  },
+  {
+    "name_distance": 3,
+    "gone": {
+      "date": "2026-06-05",
+      "event_type": "gone",
+      "licence_id": "d51f8eb06c65bc73",
+      "organisation_name": "Tyviso Ltd",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": "A",
+      "to_rating": null
+    },
+    "added": {
+      "date": "2026-06-04",
+      "event_type": "added",
+      "licence_id": "dd5304c547199bc9",
+      "organisation_name": "Orvio Ltd",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": null,
+      "to_rating": "A"
+    }
+  },
+  {
+    "name_distance": 3,
+    "gone": {
+      "date": "2026-06-05",
+      "event_type": "gone",
+      "licence_id": "e45cb089023c5257",
+      "organisation_name": "Zeotap UK Limited",
+      "town": "London",
+      "county": "",
+      "route": "global business mobility: senior or specialist worker",
+      "type": "worker",
+      "from_rating": "A",
+      "to_rating": null
+    },
+    "added": {
+      "date": "2026-06-05",
+      "event_type": "added",
+      "licence_id": "a19c603e57c75cae",
+      "organisation_name": "EMKAP UK Limited",
+      "town": "London",
+      "county": "",
+      "route": "global business mobility: senior or specialist worker",
+      "type": "worker",
+      "from_rating": null,
+      "to_rating": "A"
+    }
+  },
+  {
+    "name_distance": 3,
+    "gone": {
+      "date": "2026-06-05",
+      "event_type": "gone",
+      "licence_id": "f4e6994040813453",
+      "organisation_name": "ZII LOGISTICS LTD",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": "A",
+      "to_rating": null
+    },
+    "added": {
+      "date": "2026-06-04",
+      "event_type": "added",
+      "licence_id": "3b795895dc21daa2",
+      "organisation_name": "BEA LOGISTICS LTD",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": null,
+      "to_rating": "A"
+    }
   }
 ]
