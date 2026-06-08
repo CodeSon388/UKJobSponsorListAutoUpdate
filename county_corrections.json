@@ -398,5 +398,21 @@
     "new_licence_id": "6f78c673dd9801ab",
     "old_county_norm": "",
     "new_county_norm": "london"
+  },
+  {
+    "date": "2026-06-08",
+    "loose_id": "58d13afeeb5e0831",
+    "old_licence_id": "53b4cac50cedac2f",
+    "new_licence_id": "9f4623f4347cfb2a",
+    "old_county_norm": "",
+    "new_county_norm": "-- please choose --"
+  },
+  {
+    "date": "2026-06-08",
+    "loose_id": "56a454bcb655157b",
+    "old_licence_id": "cf48fd316b7aab65",
+    "new_licence_id": "5f75df3d92e4fd2b",
+    "old_county_norm": "london",
+    "new_county_norm": ""
   }
 ]
