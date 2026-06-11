@@ -414,5 +414,45 @@
     "new_licence_id": "5f75df3d92e4fd2b",
     "old_county_norm": "london",
     "new_county_norm": ""
+  },
+  {
+    "date": "2026-06-11",
+    "loose_id": "cde0b6ee8c1ee56b",
+    "old_licence_id": "ea5aeaab9a2c602c",
+    "new_licence_id": "1cc1d13cae7a0380",
+    "old_county_norm": "---------",
+    "new_county_norm": ""
+  },
+  {
+    "date": "2026-06-11",
+    "loose_id": "8a6183962437ff28",
+    "old_licence_id": "7797d079ac2c67c8",
+    "new_licence_id": "e7e6af038cf2bbcd",
+    "old_county_norm": "",
+    "new_county_norm": "county down"
+  },
+  {
+    "date": "2026-06-11",
+    "loose_id": "6c7576323edd75a5",
+    "old_licence_id": "a60b2f76ac28bbe6",
+    "new_licence_id": "d9a37bcd047787cc",
+    "old_county_norm": "london",
+    "new_county_norm": ""
+  },
+  {
+    "date": "2026-06-11",
+    "loose_id": "4da052d895fc460d",
+    "old_licence_id": "a9ec430b73f06eac",
+    "new_licence_id": "14cdabcfeb453d8c",
+    "old_county_norm": "london",
+    "new_county_norm": ""
+  },
+  {
+    "date": "2026-06-11",
+    "loose_id": "190f4932e625ffcd",
+    "old_licence_id": "2a73141b2119d99a",
+    "new_licence_id": "9cd96e6de40e7544",
+    "old_county_norm": "london",
+    "new_county_norm": ""
   }
 ]

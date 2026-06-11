@@ -2,33 +2,6 @@
   {
     "name_distance": 3,
     "gone": {
-      "date": "2026-06-04",
-      "event_type": "gone",
-      "licence_id": "5e606b3534ff112e",
-      "organisation_name": "Arusey Forecourts Ltd",
-      "town": "Warrington",
-      "county": "Cheshire",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-06-04",
-      "event_type": "added",
-      "licence_id": "ceeacd882f5c9bc6",
-      "organisation_name": "Aruvi Forecourts Ltd",
-      "town": "Warrington",
-      "county": "Cheshire",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
       "date": "2026-06-05",
       "event_type": "gone",
       "licence_id": "002590d6d2e76a7a",
@@ -11826,33 +11799,6 @@
     }
   },
   {
-    "name_distance": 2,
-    "gone": {
-      "date": "2026-06-05",
-      "event_type": "gone",
-      "licence_id": "46bfa78c2fa977d0",
-      "organisation_name": "YSA Logistics Ltd",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-06-04",
-      "event_type": "added",
-      "licence_id": "3b795895dc21daa2",
-      "organisation_name": "BEA LOGISTICS LTD",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
     "name_distance": 3,
     "gone": {
       "date": "2026-06-05",
@@ -17932,33 +17878,6 @@
     "gone": {
       "date": "2026-06-05",
       "event_type": "gone",
-      "licence_id": "5acc2df1d5ed52fb",
-      "organisation_name": "Yavrio Ltd",
-      "town": "London",
-      "county": "London",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-06-04",
-      "event_type": "added",
-      "licence_id": "dd5304c547199bc9",
-      "organisation_name": "Orvio Ltd",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-06-05",
-      "event_type": "gone",
       "licence_id": "5b33693ceccd7296",
       "organisation_name": "VM Cloud Limited",
       "town": "London",
@@ -21051,33 +20970,6 @@
       "event_type": "added",
       "licence_id": "69014bf6735e8de8",
       "organisation_name": "URENCO LIMITED",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-06-05",
-      "event_type": "gone",
-      "licence_id": "6af912898997a330",
-      "organisation_name": "VVII LTD",
-      "town": "London",
-      "county": "London",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-06-04",
-      "event_type": "added",
-      "licence_id": "dd5304c547199bc9",
-      "organisation_name": "Orvio Ltd",
       "town": "London",
       "county": "",
       "route": "skilled worker",
@@ -29233,33 +29125,6 @@
       "licence_id": "45531b4183708b3f",
       "organisation_name": "Welford Bidco 7 Limited",
       "town": "Leicester",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-06-05",
-      "event_type": "gone",
-      "licence_id": "a1c91b6c683ae6ae",
-      "organisation_name": "Worklio Ltd",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-06-04",
-      "event_type": "added",
-      "licence_id": "dd5304c547199bc9",
-      "organisation_name": "Orvio Ltd",
-      "town": "London",
       "county": "",
       "route": "skilled worker",
       "type": "worker",
@@ -40423,33 +40288,6 @@
     "gone": {
       "date": "2026-06-05",
       "event_type": "gone",
-      "licence_id": "d51f8eb06c65bc73",
-      "organisation_name": "Tyviso Ltd",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-06-04",
-      "event_type": "added",
-      "licence_id": "dd5304c547199bc9",
-      "organisation_name": "Orvio Ltd",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-06-05",
-      "event_type": "gone",
       "licence_id": "d61e96caec79f623",
       "organisation_name": "Wejo Ltd",
       "town": "Manchester",
@@ -45985,33 +45823,6 @@
     "gone": {
       "date": "2026-06-05",
       "event_type": "gone",
-      "licence_id": "f4e6994040813453",
-      "organisation_name": "ZII LOGISTICS LTD",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": "A",
-      "to_rating": null
-    },
-    "added": {
-      "date": "2026-06-04",
-      "event_type": "added",
-      "licence_id": "3b795895dc21daa2",
-      "organisation_name": "BEA LOGISTICS LTD",
-      "town": "London",
-      "county": "",
-      "route": "skilled worker",
-      "type": "worker",
-      "from_rating": null,
-      "to_rating": "A"
-    }
-  },
-  {
-    "name_distance": 3,
-    "gone": {
-      "date": "2026-06-05",
-      "event_type": "gone",
       "licence_id": "f5136586846815de",
       "organisation_name": "WF Management Ltd",
       "town": "London",
@@ -48863,6 +48674,114 @@
       "organisation_name": "Z&Z Restaurant Ltd",
       "town": "London",
       "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": null,
+      "to_rating": "A"
+    }
+  },
+  {
+    "name_distance": 3,
+    "gone": {
+      "date": "2026-06-11",
+      "event_type": "gone",
+      "licence_id": "596ea1ece167ec6f",
+      "organisation_name": "Fuji London ltd",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": "A",
+      "to_rating": null
+    },
+    "added": {
+      "date": "2026-06-08",
+      "event_type": "added",
+      "licence_id": "30ec0a7964bf0fad",
+      "organisation_name": "UKAI LONDON LTD",
+      "town": "LONDON",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": null,
+      "to_rating": "A"
+    }
+  },
+  {
+    "name_distance": 3,
+    "gone": {
+      "date": "2026-06-11",
+      "event_type": "gone",
+      "licence_id": "596ea1ece167ec6f",
+      "organisation_name": "Fuji London ltd",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": "A",
+      "to_rating": null
+    },
+    "added": {
+      "date": "2026-06-08",
+      "event_type": "added",
+      "licence_id": "4f4fe0d5f8aebfd1",
+      "organisation_name": "X.AI LONDON LTD",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": null,
+      "to_rating": "A"
+    }
+  },
+  {
+    "name_distance": 3,
+    "gone": {
+      "date": "2026-06-11",
+      "event_type": "gone",
+      "licence_id": "e05aa75d8d1abd9b",
+      "organisation_name": "Ortae Ltd",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": "A",
+      "to_rating": null
+    },
+    "added": {
+      "date": "2026-06-08",
+      "event_type": "added",
+      "licence_id": "42340b4fefa915fa",
+      "organisation_name": "Witbe Ltd",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": null,
+      "to_rating": "A"
+    }
+  },
+  {
+    "name_distance": 3,
+    "gone": {
+      "date": "2026-06-11",
+      "event_type": "gone",
+      "licence_id": "e05aa75d8d1abd9b",
+      "organisation_name": "Ortae Ltd",
+      "town": "London",
+      "county": "",
+      "route": "skilled worker",
+      "type": "worker",
+      "from_rating": "A",
+      "to_rating": null
+    },
+    "added": {
+      "date": "2026-06-08",
+      "event_type": "added",
+      "licence_id": "97ce31d8baedae35",
+      "organisation_name": "Untap Ltd",
+      "town": "London",
+      "county": "London",
       "route": "skilled worker",
       "type": "worker",
       "from_rating": null,
