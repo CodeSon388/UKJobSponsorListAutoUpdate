@@ -2,7 +2,7 @@ name: Daily UK Sponsor Register Update
 
 on:
   schedule:
-    - cron: '0 6,12,18 * * *'  # Runs at 06:00, 12:00, and 18:00 UTC daily
+    - cron: '0 19 * * 1-5'  # 19:00 UTC (7pm), Monday–Friday only
   workflow_dispatch:      # Allows manual trigger
 
 permissions:
@@ -37,6 +37,8 @@ jobs:
         git add -f master_register.csv stats.json history.json daily_delta.json
         # Event-log directory + per-licence month index (created on first churn day)
         if [ -d events ]; then git add -f events/; fi
+        # Daily source-CSV archive (last 10 days) + manifest; -A so prunes (deletions) are staged too
+        if [ -d daily_csv ]; then git add -A daily_csv/; fi
         # Diagnostic logs (only present when there's something to log)
         for f in county_corrections.json suspected_false_churn.json parse_failures.json rating_anomalies.json; do
           if [ -f "$f" ]; then git add -f "$f"; fi

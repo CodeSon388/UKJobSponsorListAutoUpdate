@@ -181,13 +181,19 @@ locally, then restore it once the rebuilt `events/` is pushed.
 
 ## Automation
 
-The GitHub Actions workflow `.github/workflows/daily_update.yml` runs three
-times daily (06:00, 12:00, 18:00 UTC). It:
+The GitHub Actions workflow `.github/workflows/daily_update.yml` runs once per
+weekday at 19:00 UTC (7pm), Monday–Friday (`cron: '0 19 * * 1-5'`). It:
 
 1. Checks out the repo, sets up Python 3.9, installs `requirements.txt`.
 2. Runs `python tracker.py`.
 3. Commits and pushes any changes to `master_register.csv`, `stats.json`,
-   `history.json`, `daily_delta.json`, `events/`, and the diagnostic JSON files.
+   `history.json`, `daily_delta.json`, `events/`, `daily_csv/`, and the
+   diagnostic JSON files.
+
+`tracker.py` also archives the raw gov.uk source CSV under `daily_csv/`
+(named by publication date), keeping only the most recent
+`CSV_RETENTION` (10) copies and pruning older ones. `daily_csv/manifest.json`
+lists the retained files and powers the dashboard's public download section.
 
 ---
 

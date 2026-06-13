@@ -543,6 +543,22 @@
         </div>
 
         <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e5e7eb; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; text-align: center;">
+            <div id="downloads" style="display: none; margin-bottom: 2rem;">
+                <h3 style="margin: 0 0 0.75rem; font-size: 1rem; color: var(--text-primary);">Public Data Downloads</h3>
+                <p style="margin: 0 0 0.75rem;">
+                    Latest source register CSV:
+                    <a id="downloadLatest" href="#" style="color: var(--accent); font-weight: 600;"></a>
+                </p>
+                <p style="margin: 0 0 0.5rem;">Recent daily snapshots (last 10):</p>
+                <ul id="downloadList" style="list-style: none; padding: 0; margin: 0 0 1rem; font-size: 0.8rem;"></ul>
+                <p style="margin: 0; font-size: 0.8rem;">
+                    Derived data:
+                    <a href="master_register.csv" style="color: var(--accent);">master_register.csv</a> ·
+                    <a href="stats.json" style="color: var(--accent);">stats.json</a> ·
+                    <a href="history.json" style="color: var(--accent);">history.json</a> ·
+                    <a href="daily_delta.json" style="color: var(--accent);">daily_delta.json</a>
+                </p>
+            </div>
             <p><strong>Disclaimer:</strong> This website uses data sourced from the UK Government's
                 <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers#full-publication-update-history"
                     target="_blank" style="color: var(--accent);">Register of Worker and Temporary Worker licensed sponsors</a>.
@@ -1352,9 +1368,42 @@
 
         setPeriodDefaults();
 
+        // ------------------------------------------------------- Downloads
+        function formatBytes(n) {
+            if (!n && n !== 0) return '';
+            if (n < 1024) return n + ' B';
+            if (n < 1024 * 1024) return (n / 1024).toFixed(0) + ' KB';
+            return (n / (1024 * 1024)).toFixed(1) + ' MB';
+        }
+
+        async function loadDownloads() {
+            try {
+                const r = await fetch('daily_csv/manifest.json');
+                if (!r.ok) throw new Error('manifest unavailable');
+                const m = await r.json();
+                if (!m.latest) throw new Error('no source CSVs yet');
+
+                const latest = document.getElementById('downloadLatest');
+                latest.href = 'daily_csv/' + m.latest;
+                latest.textContent = m.latest;
+
+                const list = document.getElementById('downloadList');
+                list.innerHTML = (m.files || []).map(f =>
+                    `<li><a href="daily_csv/${f.filename}" style="color: var(--accent);">${f.date}</a>`
+                    + ` <span style="color: var(--text-secondary);">(${formatBytes(f.bytes)})</span></li>`
+                ).join('');
+
+                document.getElementById('downloads').style.display = 'block';
+            } catch (e) {
+                // No manifest yet (e.g. before the first run) — leave the section hidden.
+                console.warn('Downloads section skipped:', e.message);
+            }
+        }
+
         loadStats();
         loadHistory();
         loadFullData();
+        loadDownloads();
     </script>
 </body>
 

@@ -8,7 +8,7 @@ This API provides public access to the accumulated database of UK licensed spons
 **URL**: `https://Codeson388.github.io/UKJobSponsorListAutoUpdate/daily_delta.json`
 - **Purpose**: Low-bandwidth way to get only the sponsors added or removed in the latest update.
 - **Format**: JSON
-- **Update Frequency**: 3x Daily (06:00, 12:00, 18:00 UTC)
+- **Update Frequency**: Once per weekday at 19:00 UTC (Monday–Friday)
 
 ### 2. Live Statistics
 **URL**: `https://Codeson388.github.io/UKJobSponsorListAutoUpdate/stats.json`
@@ -25,6 +25,12 @@ This API provides public access to the accumulated database of UK licensed spons
 - **Purpose**: Complete accumulated database containing every sponsor ever seen.
 - **Format**: CSV (~15MB+)
 - **Columns**: Organisation Name, Town/City, County, Type & Rating, Route, first_seen, last_updated, removed_date
+
+### 5. Daily Source CSV Archive
+**Manifest URL**: `https://Codeson388.github.io/UKJobSponsorListAutoUpdate/daily_csv/manifest.json`
+- **Purpose**: The raw gov.uk register CSV as downloaded each run, archived verbatim for public reference. Only the **last 10** dated copies are retained; older ones are auto-pruned.
+- **Format**: `manifest.json` lists `{ latest, generated_at, files: [{ date, filename, bytes }] }`.
+- **File URLs**: `https://Codeson388.github.io/UKJobSponsorListAutoUpdate/daily_csv/<filename>` (e.g. `daily_csv/2026-06-13_-_Worker_and_Temporary_Worker.csv`). The newest file is named in `manifest.latest`.
 
 ## Usage Policy
 

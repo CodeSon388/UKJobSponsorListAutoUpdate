@@ -69,6 +69,12 @@ PARSE_FAILURES_FILE = "parse_failures.json"
 FALSE_CHURN_FILE = "suspected_false_churn.json"
 
 RATING_ANOMALIES_FILE = "rating_anomalies.json"
+
+# Daily source-CSV archive, committed to the repo for public download.
+DAILY_CSV_DIR = "daily_csv"
+CSV_MANIFEST_FILE = os.path.join(DAILY_CSV_DIR, "manifest.json")
+CSV_RETENTION = 10  # keep the 10 most-recent dated source CSVs; prune older ones
+
 REQUEST_TIMEOUT_SECONDS = 30
 LEVENSHTEIN_THRESHOLD = 3  # max edit distance for false-churn pairing
 FALSE_CHURN_DAY_WINDOW = 3  # days
@@ -113,12 +119,86 @@ def get_csv_url() -> tuple[str, str]:
     return url, extracted_date
 
 
-def download_csv(url: str) -> pd.DataFrame:
-    """Download the gov.uk CSV into a DataFrame."""
+def download_csv(url: str) -> tuple[pd.DataFrame, bytes]:
+    """Download the gov.uk CSV. Returns (parsed DataFrame, raw response bytes).
+
+    The raw bytes are returned so the original file can be archived verbatim
+    via save_source_csv() instead of re-serialising the DataFrame.
+    """
     logging.info("Downloading CSV...")
     response = requests.get(url, timeout=REQUEST_TIMEOUT_SECONDS)
     response.raise_for_status()
-    return pd.read_csv(io.BytesIO(response.content))
+    content = response.content
+    return pd.read_csv(io.BytesIO(content)), content
+
+
+# ------------------------------------------------------------- source archive
+def save_source_csv(content: bytes, file_date: str) -> str:
+    """Archive the raw source CSV under daily_csv/, named by publication date.
+
+    Same-date re-runs overwrite identical bytes, so no new git blob is created.
+    Returns the relative path written.
+    """
+    os.makedirs(DAILY_CSV_DIR, exist_ok=True)
+    filename = f"{file_date}_-_Worker_and_Temporary_Worker.csv"
+    path = os.path.join(DAILY_CSV_DIR, filename)
+    with open(path, "wb") as f:
+        f.write(content)
+    logging.info(f"Archived source CSV: {path} ({len(content)} bytes)")
+    return path
+
+
+def _dated_source_csvs() -> list[str]:
+    """Return daily_csv/*.csv filenames whose first 10 chars are a valid date,
+    sorted newest-first (ISO dates sort chronologically as strings)."""
+    if not os.path.isdir(DAILY_CSV_DIR):
+        return []
+    names = []
+    for name in os.listdir(DAILY_CSV_DIR):
+        if not name.endswith(".csv"):
+            continue
+        try:
+            datetime.strptime(name[:10], "%Y-%m-%d")
+        except (ValueError, IndexError):
+            continue
+        names.append(name)
+    return sorted(names, reverse=True)
+
+
+def prune_daily_csv(keep: int = CSV_RETENTION) -> None:
+    """Keep only the `keep` most-recent dated source CSVs; delete the rest."""
+    dated = _dated_source_csvs()
+    for name in dated[keep:]:
+        path = os.path.join(DAILY_CSV_DIR, name)
+        os.remove(path)
+        logging.info(f"Pruned old source CSV: {path}")
+
+
+def write_csv_manifest() -> None:
+    """Write daily_csv/manifest.json listing the retained source CSVs.
+
+    The dashboard reads this to render download links; `latest` is the newest
+    filename so the page can build a stable 'latest' link without a duplicate
+    file being committed.
+    """
+    dated = _dated_source_csvs()
+    files = [
+        {
+            "date": name[:10],
+            "filename": name,
+            "bytes": os.path.getsize(os.path.join(DAILY_CSV_DIR, name)),
+        }
+        for name in dated
+    ]
+    manifest = {
+        "latest": dated[0] if dated else None,
+        "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "files": files,
+    }
+    os.makedirs(DAILY_CSV_DIR, exist_ok=True)
+    with open(CSV_MANIFEST_FILE, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2)
+    logging.info(f"Wrote {CSV_MANIFEST_FILE} ({len(files)} files)")
 
 
 # ---------------------------------------------------------------- normalise
@@ -1011,8 +1091,9 @@ def write_parse_failures(failures: list[dict], file_date: str) -> None:
 def main() -> int:
     try:
         csv_url, file_date = get_csv_url()
-        today_raw = download_csv(csv_url)
+        today_raw, raw_bytes = download_csv(csv_url)
         logging.info(f"Downloaded {len(today_raw)} rows for {file_date}")
+        save_source_csv(raw_bytes, file_date)
 
         today_norm, parse_failures = normalise_today(today_raw)
         write_parse_failures(parse_failures, file_date)
@@ -1067,6 +1148,11 @@ def main() -> int:
         generate_stats(new_master, events, file_date)
         update_history(events, new_master, file_date)
         detect_false_churn(events, file_date)
+
+        # Retain only the last CSV_RETENTION dated source CSVs and refresh the
+        # public download manifest the dashboard reads.
+        prune_daily_csv()
+        write_csv_manifest()
 
         logging.info("Tracker run completed.")
         return 0
